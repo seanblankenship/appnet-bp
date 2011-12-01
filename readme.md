@@ -1,8 +1,9 @@
-# Standard Site Boilerplate for Appnet (based on html5boilerplate)
+# Appnet Site Template
+(based off of h5bp.com)
 
-Developed by:	[Appnet][http://appnet.com]
-Version: 		3.0
-Last Updated: 	December 1, 2011
+Developed by:   [Appnet][http://appnet.com]
+Version:        3.0
+Last Updated:   December 1, 2011
 
 Changelog:
 
@@ -12,38 +13,33 @@ v 3.0           restructured entire site template
 
 ##  programming navigation links
 	
-	ARTICLE MODULE
-		article.php?table=article&amp;mode=search							<-- latest article
-		article_list.php?table=article&amp;mode=search&amp;archived=false	<-- all articles
+    ARTICLE MODULE
+        article.php?table=article&amp;mode=search                           <-- latest article
+        article_list.php?table=article&amp;mode=search&amp;archived=false   <-- all articles
 
-	RENTAL MODULE
-		result.php?mode=search&amp;table=rental
+    RENTAL MODULE
+        result.php?mode=search&amp;table=rental
 	
-	PHOTO GALLERY MODULE
-		photo_list.php?table=photo&amp;mode=search&amp;archived=false		<-- standard link
-		photo.php?table=photo&amp;mode=search&amp;feed=list					<-- categories link
+    PHOTO GALLERY MODULE
+        photo_list.php?table=photo&amp;mode=search&amp;archived=false       <-- standard link
+        photo.php?table=photo&amp;mode=search&amp;feed=list                 <-- categories link
 	
-	REAL ESTATE MODULE
-		result.php?table=realman&amp;mode=search&amp;type=XXXXX
+    REAL ESTATE MODULE
+        result.php?table=realman&amp;mode=search&amp;type=XXXXX
 	
-	EVENTS MODULE
-		events.php																											<-- links to the large calendar
-		events.php?view=w&amp;m=<?php echo date("m"); ?>&amp;y=<?php echo date("Y"); ?>&amp;d=<?php echo date("d"); ?>		<-- links to the current day/week
+    EVENTS MODULE
+        events.php                                                                                                      <-- links to the large calendar
+        events.php?view=w&amp;m=<?php echo date("m"); ?>&amp;y=<?php echo date("Y"); ?>&amp;d=<?php echo date("d"); ?>  <-- links to the current day/week
 
 
 
 ## instructions
 
-	TWITTER
-		use <div id="twitter"></div> to display the tweets wherever you would like them
-		to style the tweets, use the ul and ul li elements to target the unordered list that is created
-		quick note: retweets will not show up in this list. if you have $twitter_tweets set to 5 and the
-		last five posts that have been made are all retweets, nothing will show up (if 3 of last 5 posts
-		were retweets, only the 2 real posts will display...it will return nothing for the 3 retweets)
+TWITTER
+use <div id="twitter"></div> to display the tweets wherever you would like them to style the tweets, use the ul and ul li elements to target the unordered list that is created quick note: retweets will not show up in this list. if you have $twitter_tweets set to 5 and the last five posts that have been made are all retweets, nothing will show up (if 3 of last 5 posts were retweets, only the 2 real posts will display...it will return nothing for the 3 retweets)
 
-	CONTACT, 404B, OK
-		paste the following code and change $pageName to "contact", "contactRE", "404b", or "ok"
-		<?php include "include.pages.php"; ?>
+CONTACT, 404B, OK
+paste the following code and change $pageName to "contact", "contactRE", "404b", or "ok" <?php include "include.pages.php"; ?>
 	
 	IMAGE ROLLOVERS
 		For the rollovers to work, the rollover image must be the same names as the original image+o.jpg.
