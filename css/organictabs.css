@@ -1,0 +1,25 @@
+#description-box {float:left; width:651px;}
+	.hide {position:absolute; top:-9999px; left:-9999px;}
+	
+#description-box .nav {list-style:none; margin:0; overflow:hidden;}
+	#description-box .nav li {float:left; margin:0 10px 0 0; width:110px;}
+	#description-box .nav li.nav-one {argin:0 10px 0 0; width:165px;}
+	#description-box .nav li.last {margin-right:0;}
+	#description-box .nav li a {display:block; padding:5px; text-align:center; -moz-border-radius:5px 5px 0 0; -webkit-border-radius:5px 5px 0 0; border-radius:5px 5px 0 0; }
+	
+		#description-box ul li.nav-one a:link, #description-box ul li.nav-one a:visited,#description-box ul li.nav-one a:active {background-color:#d9792f; color:#fff;}
+		#description-box ul li.nav-two a:link, #description-box ul li.nav-two a:visited, #description-box ul li.nav-two a:active {background-color:#587d00; color:#fff;}
+		#description-box ul li.nav-three a:link, #description-box ul li.nav-three a:visited, #description-box ul li.nav-three a:active {background-color:#6f0907; color:#fff;}
+		#description-box ul li.nav-four a:link, #description-box ul li.nav-four a:visited, #description-box ul li.nav-four a:active {background-color:#344755; color:#fff;}
+		
+			#description-box ul li.nav-one a.current {background-color:#bfbfbf; color:#000; padding:6px 5px;}
+			#description-box ul li.nav-two a.current{background-color:#bfbfbf; color:#000; padding:6px 5px;}
+			#description-box ul li.nav-three a.current {background-color:#bfbfbf; color:#000; padding:6px 5px;}
+			#description-box ul li.nav-four a.current {background-color:#bfbfbf; color:#000; padding:6px 5px;}
+			
+				#description-box ul li.nav-one a:hover {color:#000; text-decoration:none;}
+				#description-box ul li.nav-two a:hover {color:#000; text-decoration:none;}
+				#description-box ul li.nav-three a:hover {color:#000; text-decoration:none;}
+				#description-box ul li.nav-four a:hover {color:#000; text-decoration:none;}
+				
+	#description-box .list-wrap {border:1px solid #bfbfbf; margin-bottom:25px; padding:15px;}

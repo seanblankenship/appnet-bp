@@ -1,0 +1,11 @@
+#navlist ul {line-height:20px; margin:0; padding:0; position:absolute; top:20px; left:0; width:180px; z-index:1000;}
+
+#navlist ul li a:link, #navlist ul li a:active, #navlist ul li a:visited {background:#fff; color:#000; display:block; height:36px; line-height:36px; padding:0px 15px;}
+	#navlist ul li a:hover {background:#000; color:#fff;}
+
+#navlist li ul a {float:left; width:170px;}
+
+#navlist ul ul {top:auto; left:170px; margin:0;}
+
+#navlist li:hover ul ul, #navlist li:hover ul ul ul, #navlist li:hover ul ul ul ul {display:none;}
+#navlist li:hover ul, #navlist li li:hover ul, #navlist li li li:hover ul, #navlist li li li li:hover ul {display:block;}
