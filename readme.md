@@ -1,12 +1,15 @@
 # Appnet Site Template
 
-**Version:**        3.0
+**Version:**        3.01
 
 **Last Updated:**   December 1, 2011
 
     Changelog:
 
-    v 3.0   restructured entire site template           
+    v 3.01  fixed formatting issues on 404b.php
+            updated jquery 1.6.4 to 1.7.1
+
+    v 3.00  restructured entire site template           
 
 
 
