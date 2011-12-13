@@ -1,10 +1,13 @@
 # Appnet Site Template
 
-**Version:**        3.01
+**Version:**        3.02
 
-**Last Updated:**   December 8, 2011
+**Last Updated:**   December 13, 2011
 
     Changelog:
+
+    v 3.02  added pageName and included the config in header.htm (no longer have to add it in body.htm)
+            formatting issue with header.htm
 
     v 3.01  fixed formatting issues on 404b.php
             updated jquery 1.6.4 to 1.7.1
