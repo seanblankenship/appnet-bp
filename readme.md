@@ -6,7 +6,9 @@
 
     Changelog:
 
-    v 3.03  added emailLink() function to write email links easier
+    v 3.03  removed unitpngfix as it is no longer needed
+            removed rollover.js file and calls from various places (outdated and not used)
+            added emailLink() function to write email links easier
 
     v 3.02  added pageName and included the config in header.htm (no longer have to add it in body.htm)
             formatting issue with header.htm

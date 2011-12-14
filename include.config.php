@@ -37,7 +37,7 @@ $fader="0";
 $faderHeight="250px";
 
 // Dropdown Navigation
-$dropdownnav="1"; 
+$dropdownnav="0"; 
 
 // Validate Reach Quickly Form
 $quickCommentForm="0";
@@ -50,9 +50,6 @@ $twitter_display="0";
 $twitter_pageName="default";	// this is the same as the $pageName variable at the top of the desired page (ie $pageName="default" or $pageName="404b")
 $twitter_name="twitter";		// this is their @whatever name
 $twitter_tweets="5";			// this is the number of latest tweets you would like to be displayed
-
-// Image Rollovers
-$rollovers="0"; 
 
 
 // ================================================================

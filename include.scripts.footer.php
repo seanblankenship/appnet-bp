@@ -81,19 +81,6 @@ if ($twitter_display=="1" && $pageName==$twitter_pageName) { ?>
     });
 </script>
 
-<?php } // image rollovers
-if ($rollovers=="1") { ?>
-<script src="js/rollovers.js"></script>
-
-<?php } // regular lightbox
-if ($use_lightbox=="yes") { ?>
-<script src="js/jquery.lightbox-0.5.min.js"></script>
-<script>
-    $(function() {
-        $('.gallery a').lightBox();
-    });
-</script>
-
 <?php } // sexy lightbox
 if ($use_s_lightbox=="yes") { ?>
 <script src="js/jquery.easing.1.3.js"></script>
