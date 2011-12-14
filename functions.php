@@ -54,8 +54,10 @@ function writeGetDirections(){
 	echo '</form>'."\n";	
 }
 
-// 	makes $myEmail clickable
-$myEmailLink = "<a href='mailto:$myEmail'>$myEmail</a>";
+// 	makes email addresses clickable
+function emailLink($email) {
+    echo '<a href="mailto:'.$email.'">'.$email.'</a>';
+}
 
 // 	sets myPhoneMoreInfo for include.moreinfo.php
 $myPhone = $myPhoneTollFree." or ".$myPhoneLocal;	

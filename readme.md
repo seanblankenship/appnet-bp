@@ -1,10 +1,12 @@
 # Appnet Site Template
 
-**Version:**        3.02
+**Version:**        3.03
 
-**Last Updated:**   December 13, 2011
+**Last Updated:**   December 14, 2011
 
     Changelog:
+
+    v 3.03  added emailLink() function to write email links easier
 
     v 3.02  added pageName and included the config in header.htm (no longer have to add it in body.htm)
             formatting issue with header.htm

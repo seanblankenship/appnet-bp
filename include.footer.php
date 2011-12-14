@@ -28,16 +28,16 @@
                 <h5>Contact Information</h5>
                 <ul class="ci clearfix">
                     <li><strong>Address:</strong><?php
-                        echo (!empty($myCompany)) ? '<br />'.$myCompany : '';
-                        echo (!empty($myAddressOne)) ? '<br />'.$myAddressOne : '';
-                        echo (!empty($myAddressTwo)) ? '<br />'.$myAddressTwo : '';
-                        echo (!empty($myCity)) ? '<br />'.$myCity.', '.$myState.' '.$myZip : ''; ?></li>
+                        echo (!empty($myCompany)) ? '<br>'.$myCompany : '';
+                        echo (!empty($myAddressOne)) ? '<br>'.$myAddressOne : '';
+                        echo (!empty($myAddressTwo)) ? '<br>'.$myAddressTwo : '';
+                        echo (!empty($myCity)) ? '<br>'.$myCity.', '.$myState.' '.$myZip : ''; ?></li>
                     <li><strong>Phone:</strong><?php
-                        echo (!empty($myPhoneLocal)) ? '<br />Ph: '.$myPhoneLocal : '';
-                        echo (!empty($myPhoneTollFree)) ? '<br />Ph: '.$myPhoneTollFree : '';
-                        echo (!empty($myFax)) ? '<br />Fax: '.$myFax : ''; ?></li>
-                    <li><strong>Email:</strong><?php 
-                        echo (!empty($myEmailLink)) ? '<br />'.$myEmailLink : ''; ?></li>
+                        echo (!empty($myPhoneLocal)) ? '<br>Ph: '.$myPhoneLocal : '';
+                        echo (!empty($myPhoneTollFree)) ? '<br>Ph: '.$myPhoneTollFree : '';
+                        echo (!empty($myFax)) ? '<br>Fax: '.$myFax : ''; ?></li>
+                    <li><strong>Email:</strong><br><?php 
+                        echo (!empty($myEmail)) ? emailLink($myEmail) : ''; ?></li>
                 </ul>
             </div>
         </div>
