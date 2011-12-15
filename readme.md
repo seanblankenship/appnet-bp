@@ -77,7 +77,7 @@ use the code below as a starting point for body.htm or footer.htm files if neede
 
 ```php
 <?php 
-    if ( $_REQUEST["subtype"] == "announcements") {
+    if ($_REQUEST["subtype"] == "announcements") {
         echo "";
     } elseif (strpos($_SERVER['SCRIPT_FILENAME'],"events.php")>0) {
         echo "";
