@@ -62,7 +62,7 @@ function emailLink($email) {
 //  more simple print_r() function
 function pr($var) {
     echo "<pre>";
-    print_r($var)
+    print_r($var);
     echo "</pre>";
 }
 
