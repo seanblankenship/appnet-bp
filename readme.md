@@ -63,8 +63,9 @@ links to the large calendar
 
 links to the current day/week
 
-    events.php?view=w&amp;m=<?php echo date("m"); ?>&amp;y=<?php echo date("Y"); ?>&amp;d=<?php echo date("d"); ?>
-
+```php
+events.php?view=w&amp;m=<?php echo date("m"); ?>&amp;y=<?php echo date("Y"); ?>&amp;d=<?php echo date("d"); ?>
+```
 
 
 
@@ -75,15 +76,15 @@ links to the current day/week
 use the code below as a starting point for body.htm or footer.htm files if needed
 
 ```php
-    <?php 
-        if ( $_REQUEST["subtype"] == "announcements") {
-            echo "";
-        } elseif (strpos($_SERVER['SCRIPT_FILENAME'],"events.php")>0) {
-            echo "";
-        } else {
-            echo "";
-        }
-    ?>
+<?php 
+    if ( $_REQUEST["subtype"] == "announcements") {
+        echo "";
+    } elseif (strpos($_SERVER['SCRIPT_FILENAME'],"events.php")>0) {
+        echo "";
+    } else {
+        echo "";
+    }
+?>
 ```
 
 
@@ -103,7 +104,9 @@ to use titles, add the title attribute to the anchor tag (ie `<a title="this is 
 
 add `$use_s_lightbox = "yes";` to the top of your doucment next to the `$pageName="XXXX"` variable, it will look like this:
 
-    <?php $pageName="default"; $use_s_lightbox="yes"; ?>
+```php
+<?php $pageName="default"; $use_s_lightbox="yes"; ?>
+```
 
 finally, all links must be setup as follows:
 
