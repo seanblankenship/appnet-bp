@@ -59,6 +59,13 @@ function emailLink($email) {
     echo '<a href="mailto:'.$email.'">'.$email.'</a>';
 }
 
+//  more simple print_r() function
+function pr($var) {
+    echo "<pre>";
+    print_r($var)
+    echo "</pre>";
+}
+
 // 	sets myPhoneMoreInfo for include.moreinfo.php
 $myPhone = $myPhoneTollFree." or ".$myPhoneLocal;	
 if($myPhoneLocal=="" || $myPhoneTollFree=="") {

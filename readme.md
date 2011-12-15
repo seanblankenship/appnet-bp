@@ -1,10 +1,12 @@
 # Appnet Site Template
 
-**Version:**        3.03
+**Version:**        3.04
 
-**Last Updated:**   December 14, 2011
+**Last Updated:**   December 15, 2011
 
     Changelog:
+
+    v 3.04  added pr() to functions.php; pr() wraps print_r() with <pre> tags and accepts a varible to be printed 
 
     v 3.03  removed unitpngfix as it is no longer needed
             removed rollover.js file and calls from various places (outdated and not used)
@@ -72,6 +74,7 @@ links to the current day/week
 
 use the code below as a starting point for body.htm or footer.htm files if needed
 
+```php
     <?php 
         if ( $_REQUEST["subtype"] == "announcements") {
             echo "";
@@ -81,6 +84,7 @@ use the code below as a starting point for body.htm or footer.htm files if neede
             echo "";
         }
     ?>
+```
 
 
 ### contact.php and ok.php
