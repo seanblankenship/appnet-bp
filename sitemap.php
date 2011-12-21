@@ -11,7 +11,7 @@ if ($handle = opendir($my_root)) {
     while (false !== ($entry = readdir($handle))) {
 
         // create an array of files that are not to be included
-        $bad_files = array('.', '..', '.git', '404b', '404b.php', 'body.htm', 'css', 'email.php', 'footer.htm', 'functions.php', 'header.htm', 'images', 'include.aside.php', 'include.config.php', 'include.contact.php', 'include.footer.php', 'include.header.php', 'include.moreinfo.php', 'include.navigation.php', 'include.scripts.footer.php', 'include.scripts.header.php', 'include.styles.php', 'js', 'key_f.php', 'readme.md', 'sitemap.php', 'style.css');
+        $bad_files = array('.', '..', '.htaccess', '.git', '[your type]_featured.php', '404b', '404b.php', 'article.php', 'article_featured.php', 'article_featured.php.older', 'article_list.php', 'article_output.php', 'article_recent.php', 'ar_output.php', 'ar_o_list.php', 'ar_o_list_xml.php', 'body.htm', 'css', 'details.php', 'details.php.backup', 'email.php', 'emailfriend.php', 'emailfriend.php(1)', 'emailfriend.php.backup', 'email_rm.php', 'email_rm.php(1)', 'email_rm.php.backup', 'featured.include.php', 'featured.include.realestate.fade.php', 'featured.land.include.php', 'featured.rental.include.php', 'footer.htm', 'footer_print.htm', 'functions.php', 'header.htm', 'header_print.htm', 'images', 'include.aside.php', 'include.config.php', 'include.contact.php', 'include.footer.php', 'include.header.php', 'include.moreinfo.php', 'include.navigation.php', 'include.scripts.footer.php', 'include.scripts.header.php', 'include.styles.php', 'js', 'key_f.php', 'lib', 'manager', 'ok.php', 'output.php', 'readme.md', 'result.php', 'rss_list.php', 'search.php', 'sitemap.php', 'sitemap.inc.php', 'templates', 'test.php', 'style.css');
 
         // create an array of extensions that are not to be included
         $bad_extensions = array('css', 'jpg', 'jpeg', 'png', 'bmp', 'gif', 'ini');
@@ -31,6 +31,8 @@ if ($handle = opendir($my_root)) {
     closedir($handle);
 }
 
-(file_exists("sitemaps.inc.php")) ? include('sitemaps.inc.php') : '';
+if (file_exists("sitemaps.inc.php")){
+    include('sitemaps.inc.php');
+}
 
 ?>
