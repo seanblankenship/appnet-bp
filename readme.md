@@ -1,10 +1,12 @@
 # Appnet Site Template
 
-**Version:**        3.04
+**Version:**        3.05
 
-**Last Updated:**   December 15, 2011
+**Last Updated:**   December 21, 2011
 
     Changelog:
+
+    v 3.05  automated the sitemap.php file
 
     v 3.04  added pr() to functions.php; pr() wraps print_r() with <pre> tags and accepts a varible to be printed 
 

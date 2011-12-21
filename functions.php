@@ -59,7 +59,7 @@ function emailLink($email) {
     echo '<a href="mailto:'.$email.'">'.$email.'</a>';
 }
 
-//  more simple print_r() function
+//  wrap print_r with <pre> tags
 function pr($var) {
     echo "<pre>";
     print_r($var);
