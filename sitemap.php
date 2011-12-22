@@ -30,7 +30,7 @@ if ($handle = opendir($my_root)) {
         $prefix_explode = explode('.', $entry);
         $prefix_explode = strtolower($prefix_explode[0]);
         
-        // write to the sitemap if the file is not in $bad_extension or $bad_array
+        // write to the sitemap if the $entry is not bad 
         if ((!in_array($entry, $bad_files)) && (!in_array($entry, $bad_folders)) && (!in_array($entry_explode, $bad_extensions)) && (!in_array($prefix_explode, $bad_prefixes))){
             echo '<a href="'.$myDomain.'/'.$entry.'">'.$myDomain.'/'.$entry.'</a><br>'."\n";
         }
@@ -45,3 +45,4 @@ if (file_exists("sitemaps.inc.php")){
 }
 
 ?>
+
