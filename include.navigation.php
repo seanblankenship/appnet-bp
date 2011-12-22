@@ -65,8 +65,8 @@ function writeNavigation($array, $writeSubNav="", $domain="", $cut_first="") {
                 echo '</ul></li>';
 
             // if the value is not an array
-    		} else {
-        		$values = checkTarget($value);
+            } else {
+                $values = checkTarget($value);
                 echo '<li'.($i==1 ? $first : ($i==$len ? $last : '')).'><a href="'.$domain.$values[0].'"'.$values[1].'>'.$key.'</a></li>'; 
             }
             $i++;
