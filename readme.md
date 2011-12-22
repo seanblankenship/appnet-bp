@@ -1,10 +1,13 @@
 # Appnet Site Template
 
-**Version:**        3.05
+**Version:**        3.06
 
-**Last Updated:**   December 21, 2011
+**Last Updated:**   December 22, 2011
 
     Changelog:
+
+    v 3.06  all pdfs linked from include.navigation.php now open in a new window by default
+            can now open a link in a new window by adding _new to the end of the link (ie http://google.com_new)
 
     v 3.05  automated the sitemap.php file
 
@@ -72,6 +75,13 @@ events.php?view=w&amp;m=<?php echo date("m"); ?>&amp;y=<?php echo date("Y"); ?>&
 
 
 ## Instructions
+
+### include.navigation.php
+
+To open a link in a new window, add _new to the end of the link (ie default.php_new or http://google.com_new)
+
+PDFs will always open in a new window by default
+
 
 ### if/else Code
 
