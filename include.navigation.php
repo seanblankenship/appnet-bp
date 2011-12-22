@@ -52,16 +52,16 @@ function writeNavigation($array, $writeSubNav="", $domain="", $cut_first="") {
                         // loop through the secondary dropdown
                         foreach (array_slice($value2, 1) as $key3 => $value3){
                             $values = checkTarget($value3);  
-    						echo '<li><a href="'.$domain.$values[0].'"'.$values[1].'>'.$key3.'</a></li>';
-    					}
+                            echo '<li><a href="'.$domain.$values[0].'"'.$values[1].'>'.$key3.'</a></li>';
+                        }
                         echo '</ul></li>';
 
                     // write the dropdown as normal
                     } else {
                         $values = checkTarget($value2); 
-    		    		echo '<li><a href="'.$domain.$values[0].'"'.$values[1].'>'.$key2.'</a></li>';
-    	    		}
-           		}
+                        echo '<li><a href="'.$domain.$values[0].'"'.$values[1].'>'.$key2.'</a></li>';
+                    }
+                }
                 echo '</ul></li>';
 
             // if the value is not an array
@@ -75,7 +75,7 @@ function writeNavigation($array, $writeSubNav="", $domain="", $cut_first="") {
         } else {
 
             // if dropdowns are turned off but there is still an array, ignore the array
-    		if(is_array($value)){
+            if(is_array($value)){
                 $link = $value[0];
                 $values = checkTarget($link);
                 echo '<li'.($i==1 ? $first : ($i==$len ? $last : '')).'><a href="'.$domain.$values[0].'"'.$values[1].'>'.$key.'</a></li>';
