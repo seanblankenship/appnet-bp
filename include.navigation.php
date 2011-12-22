@@ -1,17 +1,15 @@
 <?php
 
-// main navigation goes here
 $mainnav = array(
-    'Welcome'           => 'default.php',
-    'Dropdown'   => array(
-        'DropOne'		=> '#',
-        'DropTwo'		=> '#'
+    'Welcome'       => 'default.php',
+    'Dropdown'      => array(
+        'DropOne'       => '#',
+        'DropTwo'       => '#'
     ),
-    'Contact'           => 'contact.php'
+    'Contact'       => 'contact.php'
 );
 
 
-// do not edit below this line
 function writeNavigation($array, $writeSubNav="", $domain="", $cut_first="") {
 
     $domain .= ($domain=="" ? "" : "/"); 
@@ -46,7 +44,7 @@ function writeNavigation($array, $writeSubNav="", $domain="", $cut_first="") {
                 foreach (array_slice($value, 1) as $key2 => $value2){
 
                     // is there a secondary dropdown array
-    				if(is_array($value2)){
+                    if(is_array($value2)){
                         $link2 = $value2[0];
                         $values = checkTarget($link2);
                         echo '<li><a href="'.$domain.$values[0].'"'.$values[1].'>'.$key2.'</a><ul>';
