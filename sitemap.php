@@ -11,7 +11,7 @@ $bad_files = array('.htaccess', '[your type]_featured.php', '404b.php', 'article
 $bad_folders = array('.', '..', '.git', '404b', 'css', 'images', 'lib', 'manager', 'templates');
 
 // create an array of extensions that are not to be included
-$bad_extensions = array('bmp', 'css', '.gif', 'jpg', 'jpeg', 'ini', '.md', 'png'); 
+$bad_extensions = array('bmp', 'css', 'flv', 'gif', 'jpg', 'jpeg', 'js', 'ini', 'md', 'pdf', 'png', 'swf', 'txt'); 
 
 // catch any prefixes (ie include.file.php)
 $bad_prefixes = array('include'); 
