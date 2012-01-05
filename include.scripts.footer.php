@@ -57,7 +57,7 @@ if ($dropdownnav=="1"){ ?>
     });
 </script>
 
-<?php } // orgranic tabs
+<?php } // organic tabs
 if($use_tabs=="yes"){ ?>
 <script src="js/organictabs.jquery.js"></script>
 <script>
@@ -78,6 +78,15 @@ if ($twitter_display=="1" && $pageName==$twitter_pageName) { ?>
         showHeading: false,
         headingText: "Latest Tweets",
         showProfileLink: false
+    });
+</script>
+
+<?php } // regular lightbox
+if ($use_lightbox=="yes") { ?>
+<script src="js/jquery.lightbox-0.5.min.js"></script>
+<script>
+    $(function() {
+        $('.gallery a').lightBox();
     });
 </script>
 
