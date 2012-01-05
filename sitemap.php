@@ -11,7 +11,7 @@ $bad_files = array('.htaccess', '[your type]_featured.php', '404b.php', 'article
 $bad_folders = array('.', '..', '.git', '404b', 'css', 'images', 'lib', 'manager', 'templates');
 
 // create an array of extensions that are not to be included
-$bad_extensions = array('bmp', 'css', 'flv', 'gif', 'jpg', 'jpeg', 'js', 'ini', 'md', 'pdf', 'png', 'swf', 'txt'); 
+$bad_extensions = array('bmp', 'css', 'flv', 'gif', 'ini', 'jpg', 'jpeg', 'js', 'md', 'pdf', 'png', 'psd', 'swf', 'txt'); 
 
 // catch any prefixes (ie include.file.php)
 $bad_prefixes = array('include'); 
@@ -23,15 +23,16 @@ if ($handle = opendir($my_root)) {
     while (false !== ($entry = readdir($handle))) {
     
         // get the file extension
-        $entry_explode = explode('.', $entry);
-        $entry_explode = strtolower($entry_explode[1]);
+        $extension_explode = explode('.', $entry);
+        $eei = count($extension_explode)-1;
+        $extension_explode = strtolower($extension_explode[$eei]);
 
         // get the file prefix
         $prefix_explode = explode('.', $entry);
         $prefix_explode = strtolower($prefix_explode[0]);
         
         // write to the sitemap if the $entry is not bad 
-        if ((!in_array($entry, $bad_files)) && (!in_array($entry, $bad_folders)) && (!in_array($entry_explode, $bad_extensions)) && (!in_array($prefix_explode, $bad_prefixes))){
+        if ((!in_array($entry, $bad_files)) && (!in_array($entry, $bad_folders)) && (!in_array($extension_explode, $bad_extensions)) && (!in_array($prefix_explode, $bad_prefixes))){
             echo '<a href="'.$myDomain.'/'.$entry.'">'.$myDomain.'/'.$entry.'</a><br>'."\n";
         }
 
