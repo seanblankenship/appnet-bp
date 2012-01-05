@@ -1,7 +1,7 @@
 <?php 
 
 // get myDomain info
-include("include.config.php");
+include "include.config.php";
 $my_root = "C:\\users\\".$server_folder_name;
 
 // create an array of files that are not to be included
@@ -42,7 +42,7 @@ if ($handle = opendir($my_root)) {
 }
 
 if (file_exists("sitemaps.inc.php")){
-    include('sitemaps.inc.php');
+    include "sitemaps.inc.php";
 }
 
 ?>

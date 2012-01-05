@@ -1,6 +1,6 @@
 <?php
 $pageName = "404b";
-include("include.config.php");
+include "include.config.php";
 ?>
 <!doctype html>
 <!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
@@ -10,13 +10,13 @@ include("include.config.php");
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">  
-<title><?php echo($myCompany); ?> :: 404 Error</title>
+<title><?php echo $myCompany; ?> :: 404 Error</title>
 <style type="text/css">
-@import url('<?php echo($myDomain); ?>/css/reset.css');
+@import url('<?php echo $myDomain; ?>/css/reset.css');
 @import url('//fonts.googleapis.com/css?family=Ubuntu&v1');
 @import url('//fonts.googleapis.com/css?family=Ultra&v1');
 body {
-	background: #fff url('<?php echo($myDomain); ?>/404b/bg.jpg') center top repeat-x;
+	background: #fff url('<?php echo $myDomain; ?>/404b/bg.jpg') center top repeat-x;
 	color: #000;
 	font: 14px/21px Ubuntu, Arial, Helvetica, sans-serif;
 	margin: 0;
@@ -119,16 +119,16 @@ nav {
 	<h1>404 Error</h1>
 	<div id="text">
 		<p>The page you requested cannot be located. Check the URL and try again. Perhaps the link was mistyped, or perhaps you've tried to visit a page that has been unplugged.</p>
-		<p>Please <a href="<?php echo($myDomain); ?>">click here to return to our home page</a>.</p>
+		<p>Please <a href="<?php echo $myDomain; ?>">click here to return to our home page</a>.</p>
 	</div>
 	<div id="quote">
 		<p>Hello, I.T...</p>
 		<p>Have you tried turning it off and on again?</p>
 	</div>
 	<h3>Site Navigation:</h3>
-	<nav><?php include("include.navigation.php"); ?></nav>
-	<p class="copyright">Copyright &copy; <?php echo($myDate); ?> <?php echo($myCompany); ?>. <a href="<?php echo($myStateurl[$myState]); ?>"><?php echo($myStatename[$myState]); ?> Web Design</a> by AppNet.com.</p>
+	<nav><?php include "include.navigation.php"; ?></nav>
+	<p class="copyright">Copyright &copy; <?php echo $myDate; ?> <?php echo $myCompany; ?>. <a href="<?php echo $myStateurl[$myState]; ?>"><?php echo $myStatename[$myState]; ?> Web Design</a> by AppNet.com.</p>
 </div>
-<?php include("include.scripts.footer.php"); ?> 
+<?php include "include.scripts.footer.php"; ?> 
 </body>
 </html>
