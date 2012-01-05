@@ -11,7 +11,7 @@ $serverFolder    = "something.com";
 $myDomain        = "http://".$serverFolder;
 $myEmail         = "info@".$serverFolder;
 		
-$publishdate     = "2011";
+$publishdate     = "2012";
 	
 $myAddressOne    = "";
 $myAddressTwo    = "";
