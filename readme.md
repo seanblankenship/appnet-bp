@@ -1,10 +1,15 @@
 # Appnet Site Template
 
-**Version:**        3.06
+**Version:**        3.07
 
-**Last Updated:**   December 22, 2011
+**Last Updated:**   January 4, 2012
 
     Changelog:
+
+    v 3.07  updated sitemap.php to improve functionality
+            updated date in include.config.php for 2012
+            various syntax fixes and slight tweaks
+            added email.php to the repo
 
     v 3.06  all pdfs linked from include.navigation.php now open in a new window by default
             can now open a link in a new window by adding _new to the end of the link (ie http://google.com_new)
