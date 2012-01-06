@@ -1,10 +1,12 @@
 # Appnet Site Template
 
-**Version:**        3.07
+**Version:**        3.08
 
-**Last Updated:**   January 4, 2012
+**Last Updated:**   January 6, 2012
 
-    Changelog:
+**Changelog:**
+
+    v 3.08  added ie9 targeting support with .ie9  
 
     v 3.07  updated sitemap.php to improve functionality
             updated date in include.config.php for 2012
