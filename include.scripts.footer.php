@@ -1,113 +1,107 @@
 <?php if($_REQUEST['m']!="product_detail"){ // this corrects an error with digishop and allows for all store functionality ?>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="js/jquery-1.7.1.min.js"><\/script>')</script>
-<?php } ?>
-
-<?php // spam protection ?>
-<script>
-    $.post("key_f.php", function(data) {
-        $("#success").val(data);
-        if ($("#success2").length > 0){
-            $("#success2").val(data);
-        }
-    });
-</script>
+<script>window.jQuery || document.write('<script src="js/jquery-1.7.1.min.js"><\/script>')</script><?php } ?>
 
 <?php // contact form validation
 if($pageName=="contact" || $pageName=="contactRE" || $quickCommentForm=="1"){ ?>
-<script src="js/jquery.validate.js"></script>
-<script>
-<?php if($pageName=="contact" || $pageName=="contactRE"){ ?>
-    $(document).ready(function(){
-        $("#commentForm").validate();
-    });<?php } if ($quickCommentForm=="1") { ?>
-    $(document).ready(function(){
-        $("#quickCommentForm").validate();
-    });<?php } ?>
-</script>
+<script src="js/jquery.validate.js"></script><?php } ?>
 
-<?php } // image fader
+<?php // image fader
 if ($fader=="1" && $pageName=="default") { ?>
-<script src="js/jquery.innerfade.js"></script>
-<script>
-    $(function() {
-        $("#fader").innerfade({
-            animationtype: 'fade',
-            speed: 1500,
-            timeout: 4000,
-            type: 'sequence',
-            containerheight: '<?php echo($faderHeight); ?>'
-        });
-    });
-</script>
+<script src="js/jquery.innerfade.js"></script><?php } ?>
 
-<?php } // dropdown navigation
-if ($dropdownnav=="1"){ ?>
-<script>
-    function mainmenu(){
-        $("#navlist ul").css({display:"none"}); // Opera Fix
-        $("#navlist li").hover(function(){
-            $(this).find('ul:first').css({visibility:"visible",display:"none"}).show(400);
-        },function(){
-            $(this).find('ul:first').css({visibility:"hidden"});
-        });
-    }	
-    $(document).ready(function(){
-        mainmenu();
-    });
-</script>
-
-<?php } // organic tabs
-if($use_tabs=="yes"){ ?>
-<script src="js/organictabs.jquery.js"></script>
-<script>
-$(function() {
-    $("#description-box").organicTabs();
-});
-</script>
-
-<?php } // twitter
-if ($twitter_display=="1" && $pageName==$twitter_pageName) { ?>
-<script src="js/jquery.twitter.js"></script>
-<script>
-    $("#twitter").getTwitter({
-        userName: "<?php echo($twitter_name); ?>",
-        numTweets: <?php echo($twitter_tweets); ?>,
-        loaderText: "Loading tweets...",
-        slideIn: false,
-        showHeading: false,
-        headingText: "Latest Tweets",
-        showProfileLink: false
-    });
-</script>
-
-<?php } // regular lightbox
+<?php // lightbox
 if ($use_lightbox=="yes") { ?>
-<script src="js/jquery.lightbox-0.5.min.js"></script>
-<script>
-    $(function() {
-        $('.gallery a').lightBox();
-    });
-</script>
+<script src="js/jquery.lightbox-0.5.min.js"></script><?php } ?>
 
-<?php } // sexy lightbox
+<?php // sexy lightbox
 if ($use_s_lightbox=="yes") { ?>
 <script src="js/jquery.easing.1.3.js"></script>
-<script src="js/s-lightbox.v2.2.jquery.min.js"></script>
+<script src="js/s-lightbox.v2.2.jquery.min.js"></script><?php } ?>
+
+<?php // organic tabs
+if($use_tabs=="yes"){ ?>
+<script src="js/jquery.organictabs.js"></script><?php } ?>
+
+<?php  // twitter
+if ($twitter_display=="1" && $pageName==$twitter_pageName) { ?>
+<script src="js/jquery.twitter.js"></script><?php } ?>
+
 <script>
-    $(document).ready(function(){
-        SexyLightbox.initialize({
-            imagesdir: 'css/images',
-            color:'white',
-            OverlayStyles:{
-                'background-color':'#000',
-                'opacity': 0.6
-            }
-        });
+$.post("key_f.php", function(data){
+    $("#success").val(data);
+    if ($("#success2").length > 0){
+        $("#success2").val(data);
+    }
+});
+
+<?php if($pageName=="contact" || $pageName=="contactRE"){ // comment form validation ?>
+$(function() {
+    $("#commentForm").validate();
+});<?php } if ($quickCommentForm=="1"){ ?>
+$(function() {
+    $("#quickCommentForm").validate();
+});<?php } ?>
+
+<?php if ($dropdownnav=="1"){ // dropdown navigation ?> 
+function mainmenu(){
+    $("#navlist ul").css({display:"none"});
+    $("#navlist li").hover(function(){
+        $(this).find('ul:first').css({visibility:"visible",display:"none"}).show(400);
+    },function(){
+        $(this).find('ul:first').css({visibility:"hidden"});
     });
+}	
+$(function() {
+    mainmenu();
+});<?php } ?>
+
+<?php if ($fader=="1" && $pageName=="default"){ // image fader ?>      
+$(function() {
+    $("#fader").innerfade({
+        animationtype: 'fade',
+        speed: 1500,
+        timeout: 4000,
+        type: 'sequence',
+        containerheight: '<?php echo($faderHeight); ?>'
+    });
+});<?php } ?>
+
+<?php if ($use_lightbox=="yes") { // lightbox ?>    
+$(function() {
+    $('.gallery a').lightBox();
+});<?php } ?>
+
+<?php if ($use_s_lightbox=="yes") { // sexy lightbox ?>
+$(function(){
+    SexyLightbox.initialize({
+        imagesdir: 'css/images',
+        color:'white',
+        OverlayStyles:{
+            'background-color':'#000',
+            'opacity': 0.6
+        }
+    });
+});<?php } ?>
+
+<?php if ($use_tabs=="yes"){ // organic tabs ?>
+$(function() {
+    $("#description-box").organicTabs();
+});<?php } ?>
+
+<?php if ($twitter_display=="1" && $pageName==$twitter_pageName){ // twitter ?>
+$("#twitter").getTwitter({
+    userName: "<?php echo($twitter_name); ?>",
+    numTweets: <?php echo($twitter_tweets); ?>,
+    loaderText: "Loading tweets...",
+    slideIn: false,
+    showHeading: false,
+    headingText: "Latest Tweets",
+    showProfileLink: false
+});<?php } ?>
 </script>
 
-<?php } // installs chrome frame if ie6 ?>
+<?php // installs chrome frame if ie6 ?>
 <!--[if lt IE 7 ]>
 <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
 <script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
