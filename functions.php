@@ -9,49 +9,95 @@ if ($hideme=="1"){
 	
 //  function for writing images, one after another
 function writeImgs($f,$m,$l) {
-	while(file_exists($f.$m.$l)) {
-		echo '<img src="'.$f.$m.$l.'" alt="" />';
-		$m++;
+    if (file_exists($f.$m.$l)){
+    	while(file_exists($f.$m.$l)) {
+    		echo '<img src="'.$f.$m.$l.'" alt="" />';
+            $m++;
+        }
+    } else {
+        echo "upload a photo";
 	}
 }
 	
 //  function for writing random images
 function writeRandomImg($f,$m,$l) {
-	$arr = array();
-	while(file_exists($f.$m.$l)) {
-		$arr[$m] = '<img src="'.$f.$m.$l.'" alt="" />';
-		$m++;
-	}
-	$random = array_rand($arr);
-	echo $arr[$random];
+    if (file_exists($f.$m.$l)){
+    	$arr = array();
+    	while(file_exists($f.$m.$l)) {
+    		$arr[$m] = '<img src="'.$f.$m.$l.'" alt="" />';
+    		$m++;
+    	}
+    	$random = array_rand($arr);
+    	echo $arr[$random];
+    } else {
+        echo "upload a photo";
+	}    
 }
 
 //  creates a get directions button for location pages
 function writeGetDirections(){
-	$myAddressString = "";
-	if (!empty($GLOBALS['myAddressOne'])){
-		$myAddressOne = $GLOBALS['myAddressOne'];
+
+    // set global
+    global $myAddressOne, $myAddressTwo, $myCity, $myState, $myZip;
+
+    // set variables 
+    $myAddressString = "";
+	if (!empty($myAddressOne)){
 		$myAddressString = $myAddressOne;
-	} if (!empty($GLOBALS['myAddressTwo'])){
-		$myAddressTwo = $GLOBALS['myAddressTwo'];
+	} if (!empty($myAddressTwo)){
 		$myAddressString .= (empty($myAddressString) ? $myAddressTwo : ', '.$myAddressTwo);
-	} if (!empty($GLOBALS['myCity'])){
-		$myCity = $GLOBALS['myCity'];
+	} if (!empty($myCity)){
 		$myAddressString .= (empty($myAddressString) ? $myCity : ', '.$myCity);
-	} if (!empty($GLOBALS['myState'])){
-		$myState = $GLOBALS['myState'];
+	} if (!empty($myState)){
 		$myAddressString .= (empty($myAddressString) ? $myState : ', '.$myState);
-	} if (!empty($GLOBALS['myZip'])){
-		$myZip = $GLOBALS['myZip'];
+	} if (!empty($myZip)){
 		$myAddressString .= (empty($myAddressString) ? $myZip : ', '.$myZip);
 	}
-	
+
+    // write the form
+    echo '<h3>Get Directions</h3>';
 	echo '<form action="http://maps.google.com/maps" method="get" id="getDirections" target="_blank">'."\n";
-	echo '<label for="saddr">Enter Your Address:</label><br />'."\n";
-	echo '<input type="text" name="saddr" />'."\n";
-	echo '<input type="hidden" name="daddr" value="'.$myAddressString.'" />'."\n";
-	echo '<input type="submit" class="submit" value="Get Directions" />'."\n";
+	echo '<label for="saddr">Enter Your Address:</label><br>'."\n";
+	echo '<input type="text" name="saddr" id="saddr">'."\n";
+	echo '<input type="hidden" name="daddr" value="'.$myAddressString.'"><br>'."\n";
+	echo '<input type="submit" class="submit" value="Get Directions">'."\n";
 	echo '</form>'."\n";	
+}
+
+//  creates a google map based on the location info in the config
+function writeGoogleMap(){
+
+    // get potential arguments
+    $args = func_get_args();
+            
+    // declare variables based on arguments found
+    $width = ($args[0]) ? $args[0] : "100%";
+    $height = ($args[1]) ? $args[1] : "400";
+    $zoom = ($args[2]) ? $args[2] : "15";
+
+    // get global variables
+    global $myAddressOne, $myAddressTwo, $myCity, $myState, $myZip; 
+
+    // set everything up
+    $myAddressOne = ($myAddressOne!="") ? str_replace(" ", "+", $myAddressOne) : "";
+    if ($myAddressTwo!=""){ 
+        $myAddressTwo = str_replace(" ", "+", $myAddressTwo);
+        $myAddressTwo = ",+".$myAddressTwo;
+    }
+    if ($myCity!=""){ 
+        $myCity = str_replace(" ", "+", $myCity);
+        $myCity = ",+".$myCity;
+    }
+    $myState = ($myState!="") ? ",+".$myState : "";
+    $myZip = ($myZip!="") ? ",+".$myZip : "";
+
+    // write the map or give an error
+    if ($myAddressOne=="" && $myCity=="" && $myState=="" && $myZip==""){
+        echo 'you\'ve done it wrong | fill out $myAddressOne, $myCity, $myState, or $myZip';
+    } else {
+        echo '<iframe width="'.$width.'" height="'.$height.'" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q='.$myAddressOne.$myAddressTwo.$myCity.$myState.$myZip.'&amp;aq=0&amp;&amp;ie=UTF8&amp;hq=&amp;hnear='.$myAddressOne.$myAddressTwo.$myCity.$myState.$myZip.'&amp;t=m&amp;z='.$zoom.'&amp;iwloc=near&amp;output=embed"></iframe>'."\n";
+        echo '<p><a href="http://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q='.$myAddressOne.$myAddressTwo.$myCity.$myState.$myZip.'&amp;aq=0&amp;&amp;ie=UTF8&amp;hq=&amp;hnear='.$myAddressOne.$myAddressTwo.$myCity.$myState.$myZip.'&amp;t=m&amp;'.$zoom.'&amp;iwloc=A" target="_blank">View Larger Map</a></p>'."\n";
+    }    
 }
 
 //  makes email addresses clickable
