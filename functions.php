@@ -76,7 +76,11 @@ function writeGoogleMap(){
     $zoom = ($args[2]) ? $args[2] : "15";
 
     // get global variables
-    global $myAddressOne, $myAddressTwo, $myCity, $myState, $myZip; 
+    $myAddressOne   = $GLOBALS['myAddressOne'];
+    $myAddressTwo   = $GLOBALS['myAddressTwo'];
+    $myCity         = $GLOBALS['myCity'];
+    $myState        = $GLOBALS['myState'];
+    $myZip          = $GLOBALS['myZip'];
 
     // set everything up
     $myAddressOne = ($myAddressOne!="") ? str_replace(" ", "+", $myAddressOne) : "";
@@ -97,7 +101,7 @@ function writeGoogleMap(){
     } else {
         echo '<iframe width="'.$width.'" height="'.$height.'" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q='.$myAddressOne.$myAddressTwo.$myCity.$myState.$myZip.'&amp;aq=0&amp;&amp;ie=UTF8&amp;hq=&amp;hnear='.$myAddressOne.$myAddressTwo.$myCity.$myState.$myZip.'&amp;t=m&amp;z='.$zoom.'&amp;iwloc=near&amp;output=embed"></iframe>'."\n";
         echo '<p><a href="http://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q='.$myAddressOne.$myAddressTwo.$myCity.$myState.$myZip.'&amp;aq=0&amp;&amp;ie=UTF8&amp;hq=&amp;hnear='.$myAddressOne.$myAddressTwo.$myCity.$myState.$myZip.'&amp;t=m&amp;'.$zoom.'&amp;iwloc=A" target="_blank">View Larger Map</a></p>'."\n";
-    }    
+    }
 }
 
 //  makes email addresses clickable
