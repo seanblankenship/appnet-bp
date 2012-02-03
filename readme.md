@@ -1,11 +1,18 @@
 # Appnet Site Template
 
-**Version:**        3.08
+**Version:**        3.09
 
-**Last Updated:**   January 6, 2012
+**Last Updated:**   February 2, 2012
 
 **Changelog:**
 
+    v 3.09  modified include.scripts.footer.php for better performance
+            adjusted writeImgs() and writeRandomImg() to prompt for photo upload if no photo exists
+            created writeGoogleMap function that automatically creates iframed google map based on variables in config
+            refactored the writeGetDirections function
+            reordered the stylesheet and made some minor modifications based on usefullness
+            got rid of the icons that appeared on links; they were causing more problems than they were worth
+    
     v 3.08  added ie9 targeting support with .ie9  
 
     v 3.07  updated sitemap.php to improve functionality

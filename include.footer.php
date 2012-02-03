@@ -6,7 +6,7 @@
                 writeNavigation($mainnav,0,'');
 				echo ($pageName == "default") ? '<li><a href="sitemap.php">Sitemap</a></li>' : '';
 		    ?></ul>
-            <small>Copyright &copy; <?php echo($myDate); ?><?php echo (!empty($myCompany)) ? ' '.$myCompany : ''; ?>.<br /><a href="<?php echo $myStateurl[$myState]; ?>"><?php echo $myStatename[$myState]; ?> Web Design</a> by AppNet.com.</small>
+            <small>Copyright &copy; <?php echo($myDate); ?><?php echo (!empty($myCompany)) ? ' '.$myCompany : ''; ?>.<br><a href="<?php echo $myStateurl[$myState]; ?>"><?php echo $myStatename[$myState]; ?> Web Design</a> by AppNet.com.</small>
         </div>
         <div class="r">
             <div class="l">
