@@ -1,177 +1,411 @@
-/******************************************/
-/*                                        */
-/*  Author: Appnet                        */
-/*  Author URI: http://www.appnet.com/    */
-/*                                        */
-/******************************************/
+/* =============================================================================
+ *
+ *      Author: Appnet 
+ *      Author URI: http://www.appnet.com/
+ *
+ * ========================================================================== */ 
 
-/******************************************/
-/*  reset / icons / google fonts          */
-/******************************************/
+/* =============================================================================
+ *
+ *      LOAD THE RESET AND GOOGLE FONTS
+ *
+ * ========================================================================== */ 
 
 @import url('css/reset.css');		/* css reset */
-@import url('css/iconize.css');		/* href icons */
 @import url('//fonts.googleapis.com/css?family=Droid+Sans');
 @import url('//fonts.googleapis.com/css?family=Ubuntu');
 
 
-/******************************************/
-/*  base elements                         */
-/******************************************/
+/* =============================================================================
+ *
+ *      BASE ELEMENTS
+ *
+ * ========================================================================== */
 
-body {background:#fff; color:#000; font:13px/20px 'Droid Sans', Arial, Helvetica, sans-serif; min-width:960px;}
-
-#pagewrap, .container {margin:0 auto; width:960px;}
-	
-h1, h2, h3, h4, h5, h6 {font-family:Ubuntu; font-weight:normal; margin:0; padding:0;}
-	h1 {font-size:24px; padding:10px 0;}
-	h2 {font-size:22px; padding:10px 0;}
-	h3 {font-size:20px; padding:10px 0 5px 0;}
-	h4 {font-size:18px; padding:5px 0;}
-	h5 {font-size:18px; padding:10px 0;}
-	h6 {font-size:14px; padding:5px 0;}
-
-p, ul, ol {margin:0 0 15px 0;}
-	ul li, ol li {margin:0 0 0 18px;}
-
-/** images / iframes **/
-img.center {margin:10px auto;}
-img.align-r {float:right; margin:0 0 10px 10px;}
-img.align-l {float:left; margin:0 10px 10px 0;}
-iframe, .border {background:#fff; border:1px solid #000; padding:4px;}
-.shadow {-webkit-box-shadow:0 0 3px #666; -moz-box-shadow:0 0 3px #666; box-shadow:0 0 3px #666;}
-
-/* use this class to take the icon off of a link */
-.imageLink {background:none !important; padding-right:0px !important;}
-
-/* adjust the selection tool colors */
-::-moz-selection {background:#3399ff; color:#fff; text-shadow:0 1px 0 #0a3b6c;}
-::selection {background:#3399ff; color:#fff; text-shadow:0 1px 0 #0a3b6c;}
-
-/* main site links */
-a:active {position:relative; top:1px;}
-	a:active img, nav a:active {position:relative; top:0;}
-
-a:link, a:visited, a:active {color:#000; border-bottom:1px solid #000; text-decoration:none;
-	-webkit-transition: color .4s ease, border-bottom .4s ease;
-	-moz-transition: color .4s ease, border-bottom .4s ease;
-	-o-transition: color .4s ease, border-bottom .4s ease;
-	-ms-transition: color .4s ease, border-bottom .4s ease;
-	transition: color .4s ease, border-bottom .4s ease;
+body {
+    background: #fff;
+    color: #000;
+    font: 13px/20px 'Droid Sans', Arial, Helvetica, sans-serif;
+    min-width: 960px;
 }
-	a:hover {color:#900; border-bottom:1px solid #900; text-decoration:none;}   
 
+#pagewrap, .container {margin: 0 auto; width: 960px;}
 
-/******************************************/
-/*  forms                                 */
-/******************************************/
+h1, h2, h3, h4, h5, h6 {
+    font-family: Ubuntu, Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+}
+    h1 {font-size: 24px; padding: 10px 0;}
+    h2 {font-size: 22px; padding: 10px 0;}
+    h3 {font-size: 20px; padding: 10px 0 5px 0;}
+    h4 {font-size: 18px; padding: 5px 0;}
+    h5 {font-size: 18px; padding: 10px 0;}
+    h6 {font-size: 14px; padding: 5px 0;}
 
-#commentForm {margin:0 0 15px 0; padding:0 0 15px 0;}
-	#commentForm h3 {clear:both; padding:20px 0 5px 0;}
-		#commentForm h3.first {padding:0 0 5px 0;}
-	#commentForm h4 {clear:both; padding:20px 0 5px 0;}
-	#commentForm div {clear:both; display:block;}
-		#commentForm div.warning { font-size:13px; height:25px; line-height:25px; margin:0 0 10px 10px; padding:0 0 0 35px; width:215px;}
-		#commentForm span.star {color:#ff0000;}
-	#commentForm label {float:left; height:26px; line-height:26px; margin:3px 0; width:130px;}
-	#commentForm input, #commentForm textarea, #commentForm select {float:left; font:13px/18px 'Droid Sans', Arial, Helvetica, sans-serif; margin:3px 0; padding:5px; width:300px;}   
-	#commentForm input.submit {cursor:pointer; margin:10px 0 0 130px; width:85px;}
-		#commentForm input.reset {margin:10px 0 0 10px;}
-	
-	/** reach quickly form **/
-	#reachQuickly {width:100%;}
-	#reachQuickly div.warning {clear:both; float:left; padding:0 0 0 36px; text-align:left; width:194px;}
-	#reachQuickly label {float:left; margin:3px 0 0 0; width:100%;}
-	#reachQuickly input, #reachQuickly textarea, #reachQuickly select {float:left; font:12px/16px 'Droid Sans', Arial, Helvetica, sans-serif; margin:0 0 3px 0; padding:5px; width:286px;}   
-	#reachQuickly input.submit {cursor:pointer; margin:3px 0 0 0; width:298px;}
-	
-	/** det directions form **/
-	#getDirections td {font-size:12px;}
-	#getDirections input, #getDirections textarea, #getDirections select {font:12px/16px 'Droid Sans', Arial, Helvetica, sans-serif; margin:3px 0; padding:5px; width:150px;}   
-	#getDirections input.submit {cursor:pointer; margin:0; width:112px;}
-		
-	/** form colors **/
-	div.warning {background:#fbe3e4 url('css/images/error.gif') no-repeat 10px center; border:1px solid #fbc2c4; color:#900;}
-	input, textarea, select {background:#f5f5f5; border:1px solid #ccc; color:#666;
-		-webkit-transition: background .4s ease, border .4s ease, color .4s ease;
-		-moz-transition: background .4s ease, border .4s ease, color .4s ease;
-		-o-transition: background .4s ease, border .4s ease, color .4s ease;
-		-ms-transition: background .4s ease, border .4s ease, color .4s ease;
-		transition: background .4s ease, border .4s ease, color .4s ease;
-	}  
-	input:focus, textarea:focus, select:focus {background:#fff; border:1px solid #999; color:#333;}
-	input.submit {background:#333; border:1px solid #222; color:#fff;
-		-webkit-transition: background .4s ease;
-		-moz-transition: background .4s ease;
-		-o-transition: background .4s ease;
-		-ms-transition: background .4s ease;
-		transition: background .4s ease;
-	}
-		input.submit:hover {background:#444;}
+p, ul, ol {margin: 0 0 15px 0;}
+    ul li, ol li {margin: 0 0 0 18px;}
 
-
-/******************************************/
-/*  content                               */
-/******************************************/
-
-header {}
-    #fader {}
-
-nav {}
-    ul#navlist {list-style:none; margin:0; padding:0;}
-    	ul#navlist li {float:left; margin:0; padding:0; position:relative;}
-    		.ie6 ul#navlist ul {display:none !important;} /* disables dropdowns in ie6 */
-    ul#navlist li a:link, ul#navlist li a:visited, ul#navlist li a:active {border-bottom:0; color:#000;}
-    	ul#navlist li a:hover {border-bottom:0; color:#000;}   
-
-
-#content {}
-
-aside {float:right; margin:0 0 20px 20px; width:270px;}
-
-.moreinfo {padding:15px 0;}
-	.moreinfo p {margin:0; padding:0;}
-
-
-footer {color:#000; font-size:12px; line-height:16px; padding-bottom:20px;}
-
-	footer a:link, footer a:visited, footer a:active {color:#000; border-bottom:1px solid #fff; font-weight:normal;}
-		footer a:hover {color:#000; border-bottom:1px solid #000; font-weight:normal;}
-	
-	footer .l {float:left; padding:0 10px; width:300px;}
-	footer .r {float:right; width:640px;}
-		footer .r .l {float:left; padding:0 10px; width:300px;}
-		footer .r .r {float:right; padding:0 10px; width:300px;}
-
-	footer .sl {list-style:none; margin:0; padding:0;}
-		footer .sl li {float:left; margin:0; padding:0 0 7px 0; width:100%;}
-	footer .ci {list-style:none; margin:0; padding:0;}
-		footer .ci li {float:left; margin:0; padding:0 0 7px 0; width:50%;}
-	
-	footer small {clear:both; display:block; margin:0; padding:15px 0;}
-	
-	
-	
-/******************************************/
-/*  media queries                         */
-/******************************************/
 
 /*
+ *  IMAGES
+ */
 
-@media only screen and (min-width: 0) {
-    body:after {content:"0 to 320px"; background-color:hsla(45,60%,40%,0.7);}
-} 
-@media only screen and (min-width: 320px) {
+img.center {display: block; margin: 10px auto;}
+img.align-r {float: right; margin: 0 0 10px 10px;}
+img.align-l {float: left; margin: 0 10px 10px 0;}
+img.border {
+    background: #fff;
+    border: 1px solid #000;
+    padding: 4px;
+}
+
+
+/*
+ *  IFRAMES
+ */ 
+
+iframe {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+
+/*
+ *  MISC
+ */
+
+.shadow {
+    -webkit-box-shadow: 0 0 3px #666;
+    -moz-box-shadow: 0 0 3px #666;
+    box-shadow: 0 0 3px #666;
+}
+
+::-moz-selection {
+    background: #3399ff;
+    color: #fff;
+    text-shadow: 0 1px 0 #0a3b6c;
+}
+::selection {
+    background: #3399ff;
+    color: #fff;
+    text-shadow: 0 1px 0 #0a3b6c;
+}
+
+
+
+/* =============================================================================
+ *
+ *     MAIN CONTENT
+ *
+ * ========================================================================== */
+ 
+a:active {position: relative; top: 1px;}
+    a:active img, nav a:active {position: relative; top: 0;}
+
+a:link, a:visited, a:active {
+    color: #000;
+    border-bottom: 1px solid #000;
+    text-decoration: none;
+    
+    -webkit-transition: color .4s ease, border-bottom .4s ease;
+    -moz-transition: color .4s ease, border-bottom .4s ease;
+    -o-transition: color .4s ease, border-bottom .4s ease;
+    -ms-transition: color .4s ease, border-bottom .4s ease;
+    transition: color .4s ease, border-bottom .4s ease;
+}
+    a:hover {
+        color: #900;
+        border-bottom: 1px solid #900;
+        text-decoration: none;
+    }
+
+
+/*
+ *  HEADER AREA
+ */
+ 
+header {}
+
+#fader {}
+
+nav {}
+
+ul#navlist {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+    ul#navlist li {
+        float: left;
+        margin: 0;
+        padding: 0;
+        position: relative;
+    }
+        .ie6 ul#navlist ul {display:none !important;} /* disables dropdowns in ie6 */
+
+ul#navlist li a:link, ul#navlist li a:visited, ul#navlist li a:active {
+    border-bottom: 0;
+    color: #000;
+}
+    ul#navlist li a:hover {
+        border-bottom: 0;
+        color: #000;
+    }
+
+
+/*
+ *  CONTENT AREA
+ */
+ 
+#content {}
+
+.moreinfo {padding: 15px 0;}
+.moreinfo p {margin: 0; padding: 0;}
+
+
+aside {
+    float: right;
+    margin: 0 0 20px 20px;
+    width: 270px;
+}
+
+
+/*
+ *  FOOTER AREA
+ */
+ 
+footer {
+    color: #000;
+    font-size: 12px;
+    line-height: 16px;
+    padding-bottom: 20px;
+}
+
+footer a:link,footer a:visited,footer a:active {
+    border-bottom: 1px solid #fff;
+    color: #000;
+    font-weight: normal;
+}
+    footer a:hover {
+        border-bottom: 1px solid #000;
+        color: #000;
+        font-weight: normal;
+    }
+
+footer .l {
+    float: left;
+    padding: 0 10px;
+    width: 300px;
+}
+
+footer .r {
+    float: right;
+    width: 640px;
+}
+    footer .r .l {
+        float: left;
+        padding: 0 10px;
+        width: 300px;
+    }    
+    footer .r .r {
+        float: right;
+        padding: 0 10px;
+        width: 300px;
+    }
+
+footer .sl {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+    footer .sl li {
+        float: left;
+        margin: 0;
+        padding: 0 0 7px 0;
+        width: 100%;
+    }
+
+footer .ci {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+    footer .ci li {
+        float: left;
+        margin: 0;
+        padding: 0 0 7px 0;
+        width: 50%;
+    }
+
+footer small {
+    clear: both;
+    display: block;
+    margin: 0;
+    padding: 15px 0;
+}
+
+
+
+/* =============================================================================
+ *
+ *      FORMS
+ *
+ * ========================================================================== */ 
+
+form {margin: 0 0 15px 0; padding: 0 0 15px 0;}
+    form div {clear: both; display: block;}
+    form div.warning {
+        font-size: 13px;
+        height: 25px;
+        line-height: 25px;
+        margin: 0 0 10px 10px;
+        padding: 0 0 0 35px;
+        width: 215px;
+    }
+    form span.star {color: #ff0000;}
+    form label {
+        float: left;
+        height: 26px;
+        line-height: 26px;
+        margin: 3px 0;
+        width: 130px;
+    }
+    form input, #commentForm textarea, #commentForm select {
+        float: left;
+        font: 13px/18px 'Droid Sans', Arial, Helvetica, sans-serif;
+        margin: 3px 0;
+        padding: 5px;
+        width: 300px;
+    }
+    form input.submit {
+        cursor: pointer;
+        margin: 10px 0 0 130px;
+        width: 85px;
+    }
+
+
+/*
+ *  FORM COLORS
+ */
+
+div.warning {
+    background: #fbe3e4 url('css/images/error.gif') no-repeat 10px center;
+    border: 1px solid #fbc2c4;
+    color: #900;
+}
+input, textarea, select {
+    background: #f5f5f5;
+    border: 1px solid #ccc;
+    color: #666;
+    
+    -webkit-transition: background .4s ease, border .4s ease, color .4s ease;
+    -moz-transition: background .4s ease, border .4s ease, color .4s ease;
+    -o-transition: background .4s ease, border .4s ease, color .4s ease;
+    -ms-transition: background .4s ease, border .4s ease, color .4s ease;
+    transition: background .4s ease, border .4s ease, color .4s ease;
+}
+input:focus,textarea:focus,select:focus {
+    background: #fff;
+    border: 1px solid #999;
+    color: #333;
+}
+input.submit {
+    background: #333;
+    border: 1px solid #222;
+    color: #fff;
+    
+    -webkit-transition: background .4s ease;
+    -moz-transition: background .4s ease;
+    -o-transition: background .4s ease;
+    -ms-transition: background .4s ease;
+    transition: background .4s ease;
+}
+input.submit:hover {background: #444;}    
+
+
+/*
+ *  COMMENT FORM
+ */
+
+#commentForm h3 {clear: both; padding: 20px 0 5px 0;}
+#commentForm h3.first {padding: 0 0 5px 0;}
+#commentForm h4 {clear: both; padding: 20px 0 5px 0;}
+#commentForm input.reset {margin: 10px 0 0 10px;}
+
+	
+/*
+ *  REACH QUICKLY FORM
+ */
+
+#reachQuickly {width: 100%;}
+    #reachQuickly div.warning {
+        clear: both;
+        float: left;
+        padding: 0 0 0 36px;
+        text-align: left;
+        width: 194px;
+    }
+    #reachQuickly label {
+        float: left;
+        margin: 3px 0 0 0;
+        width: 100%;
+    }
+    #reachQuickly input, #reachQuickly textarea, #reachQuickly select {
+        float: left;
+        font: 12px/16px 'Droid Sans', Arial, Helvetica, sans-serif;
+        margin: 0 0 3px 0;
+        padding: 5px;
+        width: 286px;
+    }
+    #reachQuickly input.submit {
+        cursor: pointer;
+        margin: 3px 0 0 0;
+        width: 298px;
+    }
+
+	
+/*
+ *  GET DIRECTIONS FORM
+ */
+
+#getDirections {margin: 0 0 15px 0; padding: 0;}
+    #getDirections td {font-size: 12px;}
+    #getDirections input, #getDirections textarea, #getDirections select {
+        font: 12px/16px 'Droid Sans', Arial, Helvetica, sans-serif;
+        margin: 3px 0 6px 0;
+        padding: 5px;
+        width: 250px;
+    }
+    #getDirections input.submit {
+        cursor: pointer;
+        margin: 0;
+        width: 112px;
+    }
+
+
+
+/* =============================================================================
+ *
+ *      MEDIA QUERIES
+ *
+ * ========================================================================== */ 
+
+/* 
+
+@media screen and (max-width: 1280px) {
+    body:after {content:"960 to 1280px"; background-color:hsla(270,60%,40%,0.7);}
+}
+@media screen and (max-width: 960px) {
+    body:after {content:"480 to 960px"; background-color:hsla(180,60%,40%,0.7);}
+}
+@media screen and (max-width: 480px) {
     body:after {content:"320 to 480px"; background-color:hsla(90,60%,40%,0.7);}
 }
-@media only screen and (min-width: 480px) {
-    body:after {content:"480 to 768px"; background-color:hsla(180,60%,40%,0.7);}
-}
-@media only screen and (min-width: 768px) {
-    body:after {content:"768 to 1024px"; background-color:hsla(270,60%,40%,0.7);}
-}
-@media only screen and (min-width: 1024px) {
-    body:after {content:"1024 and up"; background-color: hsla(360,60%,40%,0.7);}
-}
+@media screen and (max-width: 320px) {
+    body:after {content:"0 to 320px"; background-color:hsla(45,60%,40%,0.7);}
+}  
 
 */
