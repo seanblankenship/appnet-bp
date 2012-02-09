@@ -11,7 +11,7 @@
  *
  * ========================================================================== */ 
 
-@import url('css/reset.css');		/* css reset */
+@import url('css/reset.css');
 @import url('//fonts.googleapis.com/css?family=Droid+Sans');
 @import url('//fonts.googleapis.com/css?family=Ubuntu');
 
@@ -184,7 +184,7 @@ footer {
     padding-bottom: 20px;
 }
 
-footer a:link,footer a:visited,footer a:active {
+footer a:link, footer a:visited, footer a:active {
     border-bottom: 1px solid #fff;
     color: #000;
     font-weight: normal;
@@ -273,7 +273,7 @@ form {margin: 0 0 15px 0; padding: 0 0 15px 0;}
         margin: 3px 0;
         width: 130px;
     }
-    form input, #commentForm textarea, #commentForm select {
+    form input, textarea, select {
         float: left;
         font: 13px/18px 'Droid Sans', Arial, Helvetica, sans-serif;
         margin: 3px 0;
@@ -377,7 +377,7 @@ input.submit:hover {background: #444;}
         font: 12px/16px 'Droid Sans', Arial, Helvetica, sans-serif;
         margin: 3px 0 6px 0;
         padding: 5px;
-        width: 250px;
+        width: 95%;
     }
     #getDirections input.submit {
         cursor: pointer;

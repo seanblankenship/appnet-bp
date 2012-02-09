@@ -56,7 +56,7 @@ function writeGetDirections(){
 
     // write the form
     echo '<h3>Get Directions</h3>';
-	echo '<form action="http://maps.google.com/maps" method="get" id="getDirections" target="_blank">'."\n";
+	echo '<form action="http://maps.google.com/maps" method="get" id="getDirections" class="clearfix" target="_blank">'."\n";
 	echo '<label for="saddr">Enter Your Address:</label><br>'."\n";
 	echo '<input type="text" name="saddr" id="saddr">'."\n";
 	echo '<input type="hidden" name="daddr" value="'.$myAddressString.'"><br>'."\n";
