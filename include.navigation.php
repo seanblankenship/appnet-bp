@@ -2,7 +2,7 @@
 
 $mainnav = array(
     'Welcome'       => 'default.php',
-    'Dropdown'      => array(
+    'Dropdown'      => array('#',
         'DropOne'       => '#',
         'DropTwo'       => '#'
     ),

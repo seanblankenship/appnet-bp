@@ -1,6 +1,4 @@
-<?php if($_REQUEST['m']!="product_detail"){ // this corrects an error with digishop and allows for all store functionality ?>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="js/jquery-1.7.1.min.js"><\/script>')</script><?php } ?>
+<?php echo ((isset($_REQUEST['m'])) && ($_REQUEST['m']=="product_detail")) ? '' : '<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>'."\n".'<script>window.jQuery || document.write(\'<script src="js/jquery-1.7.1.min.js"><\/script>\')</script>'; ?>
 
 <?php // contact form validation
 if($pageName=="contact" || $pageName=="contactRE" || $quickCommentForm=="1"){ ?>
@@ -11,16 +9,16 @@ if ($fader=="1" && $pageName=="default") { ?>
 <script src="js/jquery.innerfade.js"></script><?php } ?>
 
 <?php // lightbox
-if ($use_lightbox=="yes") { ?>
+if ((isset($use_lightbox)) && ($use_lightbox=="yes")) { ?>
 <script src="js/jquery.lightbox-0.5.min.js"></script><?php } ?>
 
 <?php // sexy lightbox
-if ($use_s_lightbox=="yes") { ?>
+if ((isset($use_lightbox)) && ($use_s_lightbox=="yes")) { ?>
 <script src="js/jquery.easing.1.3.js"></script>
 <script src="js/s-lightbox.v2.2.jquery.min.js"></script><?php } ?>
 
 <?php // organic tabs
-if($use_tabs=="yes"){ ?>
+if((isset($use_lightbox)) && ($use_tabs=="yes")){ ?>
 <script src="js/jquery.organictabs.js"></script><?php } ?>
 
 <?php  // twitter
@@ -67,12 +65,12 @@ $(function() {
     });
 });<?php } ?>
 
-<?php if ($use_lightbox=="yes") { // lightbox ?>    
+<?php if ((isset($use_lightbox)) && ($use_lightbox=="yes")) { // lightbox ?>    
 $(function() {
     $('.gallery a').lightBox();
 });<?php } ?>
 
-<?php if ($use_s_lightbox=="yes") { // sexy lightbox ?>
+<?php if ((isset($use_lightbox)) && ($use_s_lightbox=="yes")) { // sexy lightbox ?>
 $(function(){
     SexyLightbox.initialize({
         imagesdir: 'css/images',
@@ -84,7 +82,7 @@ $(function(){
     });
 });<?php } ?>
 
-<?php if ($use_tabs=="yes"){ // organic tabs ?>
+<?php if ((isset($use_lightbox)) && ($use_tabs=="yes")){ // organic tabs ?>
 $(function() {
     $("#description-box").organicTabs();
 });<?php } ?>
