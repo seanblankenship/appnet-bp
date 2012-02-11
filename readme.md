@@ -87,7 +87,7 @@ writeGoogleMap() takes up to three arguments; they are `$width`, `$height`, and 
 
 To use this function in its most simple form, just type: `<?php writeGoogleMap(); ?>`. This will create a map based on the information in _config.php with a width of 100%, a height of 400px, and a zoom level of 15. To change any of these values, just pass arguments to the function. Make sure if you are passing pixels values to not include 'px', only the number.
 
-As an example, if you wanted to create a 200px x 200px map with a zoom level of 15, you would type: `<?php writeGoogleMap('200', '200'); ?>. You wouldn't need to include the zoom level since it already defaults to 15.
+As an example, if you wanted to create a 200px x 200px map with a zoom level of 15, you would type: `<?php writeGoogleMap('200', '200'); ?>`. You wouldn't need to include the zoom level since it already defaults to 15.
 
 
 ### emailLink()
