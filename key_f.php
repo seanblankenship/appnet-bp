@@ -1,5 +1,5 @@
 <?
-include_once "include.config.php";
+include_once "_config.php";
 $my_doc_root = "C:\\users\\".$server_folder_name;
 
 //////////////////////////////////////////////////////////////////

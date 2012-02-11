@@ -57,4 +57,4 @@ $twitter_tweets="5";			// this is the number of latest tweets you would like to 
 // ================================================================     
 
 $filename = basename($_SERVER['SCRIPT_NAME']);
-if ($filename!="key_f.php"){ include "functions.php"; }
+if ($filename!="key_f.php"){ include "inc/functions.php"; }

@@ -1,6 +1,6 @@
 <?php
 $pageName = "default";
-include "include.config.php";
+include "_config.php";
 ?>
 <!doctype html>
 <!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
@@ -15,24 +15,24 @@ include "include.config.php";
 
 <title><?php echo $myCompany; ?></title>
 
-<?php include "include.styles.php"; ?>
-<?php include "include.scripts.header.php"; ?>
+<?php include "inc/styles.php"; ?>
+<?php include "inc/scripts.header.php"; ?>
 
 </head>
 
 <body>
 
 <!-- HEADER -->
-<?php include "include.header.php"; ?>
+<?php include "inc/header.php"; ?>
  	
 <!-- CONTENT -->
-<?php include "include.moreinfo.php"; ?>
+<?php include "inc/moreinfo.php"; ?>
  		
 <!-- FOOTER -->
-<?php include "include.footer.php"; ?>
+<?php include "inc/footer.php"; ?>
  
 <!-- SCRIPTS -->
-<?php include "include.scripts.footer.php"; ?>
+<?php include "inc/scripts.footer.php"; ?>
 
 </body>
 </html>

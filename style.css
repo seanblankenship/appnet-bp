@@ -1,13 +1,7 @@
 /* =============================================================================
  *
- *      Author: Appnet 
- *      Author URI: http://www.appnet.com/
- *
- * ========================================================================== */ 
-
-/* =============================================================================
- *
- *      LOAD THE RESET AND GOOGLE FONTS
+ *      Author:Appnet 
+ *      Author URI:http://www.appnet.com/
  *
  * ========================================================================== */ 
 
@@ -23,42 +17,42 @@
  * ========================================================================== */
 
 body {
-    background: #fff;
-    color: #000;
-    font: 13px/20px 'Droid Sans', Arial, Helvetica, sans-serif;
-    min-width: 960px;
+    background:#fff;
+    color:#000;
+    font:13px/20px 'Droid Sans', Arial, Helvetica, sans-serif;
+    min-width:960px;
 }
 
-#pagewrap, .container {margin: 0 auto; width: 960px;}
+#pagewrap, .container {margin:0 auto; width:960px;}
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: Ubuntu, Arial, Helvetica, sans-serif;
-    font-weight: normal;
-    margin: 0;
-    padding: 0;
+    font-family:Ubuntu, Arial, Helvetica, sans-serif;
+    font-weight:normal;
+    margin:0;
+    padding:0;
 }
-    h1 {font-size: 24px; padding: 10px 0;}
-    h2 {font-size: 22px; padding: 10px 0;}
-    h3 {font-size: 20px; padding: 10px 0 5px 0;}
-    h4 {font-size: 18px; padding: 5px 0;}
-    h5 {font-size: 18px; padding: 10px 0;}
-    h6 {font-size: 14px; padding: 5px 0;}
+    h1 {font-size:24px; padding:10px 0;}
+    h2 {font-size:22px; padding:10px 0;}
+    h3 {font-size:20px; padding:10px 0 5px 0;}
+    h4 {font-size:18px; padding:5px 0;}
+    h5 {font-size:18px; padding:10px 0;}
+    h6 {font-size:14px; padding:5px 0;}
 
-p, ul, ol {margin: 0 0 15px 0;}
-    ul li, ol li {margin: 0 0 0 18px;}
+p, ul, ol {margin:0 0 15px 0;}
+    ul li, ol li {margin:0 0 0 18px;}
 
 
 /*
  *  IMAGES
  */
 
-img.center {display: block; margin: 10px auto;}
-img.align-r {float: right; margin: 0 0 10px 10px;}
-img.align-l {float: left; margin: 0 10px 10px 0;}
+img.center {display:block; margin:10px auto;}
+img.align-r {float:right; margin:0 0 10px 10px;}
+img.align-l {float:left; margin:0 10px 10px 0;}
 img.border {
-    background: #fff;
-    border: 1px solid #000;
-    padding: 4px;
+    background:#fff;
+    border:1px solid #000;
+    padding:4px;
 }
 
 
@@ -67,9 +61,9 @@ img.border {
  */ 
 
 iframe {
-    border: 0;
-    margin: 0;
-    padding: 0;
+    border:0;
+    margin:0;
+    padding:0;
 }
 
 
@@ -78,20 +72,20 @@ iframe {
  */
 
 .shadow {
-    -webkit-box-shadow: 0 0 3px #666;
-    -moz-box-shadow: 0 0 3px #666;
-    box-shadow: 0 0 3px #666;
+    -webkit-box-shadow:0 0 3px #666;
+    -moz-box-shadow:0 0 3px #666;
+    box-shadow:0 0 3px #666;
 }
 
 ::-moz-selection {
-    background: #3399ff;
-    color: #fff;
-    text-shadow: 0 1px 0 #0a3b6c;
+    background:#3399ff;
+    color:#fff;
+    text-shadow:0 1px 0 #0a3b6c;
 }
 ::selection {
-    background: #3399ff;
-    color: #fff;
-    text-shadow: 0 1px 0 #0a3b6c;
+    background:#3399ff;
+    color:#fff;
+    text-shadow:0 1px 0 #0a3b6c;
 }
 
 
@@ -102,24 +96,24 @@ iframe {
  *
  * ========================================================================== */
  
-a:active {position: relative; top: 1px;}
-    a:active img, nav a:active {position: relative; top: 0;}
+a:active {position:relative; top:1px;}
+    a:active img, nav a:active {position:relative; top:0;}
 
 a:link, a:visited, a:active {
-    color: #000;
-    border-bottom: 1px solid #000;
-    text-decoration: none;
+    color:#000;
+    border-bottom:1px solid #000;
+    text-decoration:none;
     
-    -webkit-transition: color .4s ease, border-bottom .4s ease;
-    -moz-transition: color .4s ease, border-bottom .4s ease;
-    -o-transition: color .4s ease, border-bottom .4s ease;
-    -ms-transition: color .4s ease, border-bottom .4s ease;
-    transition: color .4s ease, border-bottom .4s ease;
+    -webkit-transition:color .4s ease, border-bottom .4s ease;
+    -moz-transition:color .4s ease, border-bottom .4s ease;
+    -o-transition:color .4s ease, border-bottom .4s ease;
+    -ms-transition:color .4s ease, border-bottom .4s ease;
+    transition:color .4s ease, border-bottom .4s ease;
 }
     a:hover {
-        color: #900;
-        border-bottom: 1px solid #900;
-        text-decoration: none;
+        color:#900;
+        border-bottom:1px solid #900;
+        text-decoration:none;
     }
 
 
@@ -134,25 +128,25 @@ header {}
 nav {}
 
 ul#navlist {
-	list-style: none;
-	margin: 0;
-	padding: 0;
+	list-style:none;
+	margin:0;
+	padding:0;
 }
     ul#navlist li {
-        float: left;
-        margin: 0;
-        padding: 0;
-        position: relative;
+        float:left;
+        margin:0;
+        padding:0;
+        position:relative;
     }
         .ie6 ul#navlist ul {display:none !important;} /* disables dropdowns in ie6 */
 
 ul#navlist li a:link, ul#navlist li a:visited, ul#navlist li a:active {
-    border-bottom: 0;
-    color: #000;
+    border-bottom:0;
+    color:#000;
 }
     ul#navlist li a:hover {
-        border-bottom: 0;
-        color: #000;
+        border-bottom:0;
+        color:#000;
     }
 
 
@@ -162,14 +156,14 @@ ul#navlist li a:link, ul#navlist li a:visited, ul#navlist li a:active {
  
 #content {}
 
-.moreinfo {padding: 15px 0;}
-.moreinfo p {margin: 0; padding: 0;}
+.moreinfo {padding:15px 0;}
+.moreinfo p {margin:0; padding:0;}
 
 
 aside {
-    float: right;
-    margin: 0 0 20px 20px;
-    width: 270px;
+    float:right;
+    margin:0 0 20px 20px;
+    width:270px;
 }
 
 
@@ -178,73 +172,73 @@ aside {
  */
  
 footer {
-    color: #000;
-    font-size: 12px;
-    line-height: 16px;
-    padding-bottom: 20px;
+    color:#000;
+    font-size:12px;
+    line-height:16px;
+    padding-bottom:20px;
 }
 
 footer a:link, footer a:visited, footer a:active {
-    border-bottom: 1px solid #fff;
-    color: #000;
-    font-weight: normal;
+    border-bottom:1px solid #fff;
+    color:#000;
+    font-weight:normal;
 }
     footer a:hover {
-        border-bottom: 1px solid #000;
-        color: #000;
-        font-weight: normal;
+        border-bottom:1px solid #000;
+        color:#000;
+        font-weight:normal;
     }
 
 footer .l {
-    float: left;
-    padding: 0 10px;
-    width: 300px;
+    float:left;
+    padding:0 10px;
+    width:300px;
 }
 
 footer .r {
-    float: right;
-    width: 640px;
+    float:right;
+    width:640px;
 }
     footer .r .l {
-        float: left;
-        padding: 0 10px;
-        width: 300px;
+        float:left;
+        padding:0 10px;
+        width:300px;
     }    
     footer .r .r {
-        float: right;
-        padding: 0 10px;
-        width: 300px;
+        float:right;
+        padding:0 10px;
+        width:300px;
     }
 
 footer .sl {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+    list-style:none;
+    margin:0;
+    padding:0;
 }
     footer .sl li {
-        float: left;
-        margin: 0;
-        padding: 0 0 7px 0;
-        width: 100%;
+        float:left;
+        margin:0;
+        padding:0 0 7px 0;
+        width:100%;
     }
 
 footer .ci {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+    list-style:none;
+    margin:0;
+    padding:0;
 }
     footer .ci li {
-        float: left;
-        margin: 0;
-        padding: 0 0 7px 0;
-        width: 50%;
+        float:left;
+        margin:0;
+        padding:0 0 7px 0;
+        width:50%;
     }
 
 footer small {
-    clear: both;
-    display: block;
-    margin: 0;
-    padding: 15px 0;
+    clear:both;
+    display:block;
+    margin:0;
+    padding:15px 0;
 }
 
 
@@ -255,35 +249,35 @@ footer small {
  *
  * ========================================================================== */ 
 
-form {margin: 0 0 15px 0; padding: 0 0 15px 0;}
-    form div {clear: both; display: block;}
+form {margin:0 0 15px 0; padding:0 0 15px 0;}
+    form div {clear:both; display:block;}
     form div.warning {
-        font-size: 13px;
-        height: 25px;
-        line-height: 25px;
-        margin: 0 0 10px 10px;
-        padding: 0 0 0 35px;
-        width: 215px;
+        font-size:13px;
+        height:25px;
+        line-height:25px;
+        margin:0 0 10px 10px;
+        padding:0 0 0 35px;
+        width:215px;
     }
-    form span.star {color: #ff0000;}
+    form span.star {color:#ff0000;}
     form label {
-        float: left;
-        height: 26px;
-        line-height: 26px;
-        margin: 3px 0;
-        width: 130px;
+        float:left;
+        height:26px;
+        line-height:26px;
+        margin:3px 0;
+        width:130px;
     }
     form input, textarea, select {
-        float: left;
-        font: 13px/18px 'Droid Sans', Arial, Helvetica, sans-serif;
-        margin: 3px 0;
-        padding: 5px;
-        width: 300px;
+        float:left;
+        font:13px/18px 'Droid Sans', Arial, Helvetica, sans-serif;
+        margin:3px 0;
+        padding:5px;
+        width:300px;
     }
     form input.submit {
-        cursor: pointer;
-        margin: 10px 0 0 130px;
-        width: 85px;
+        cursor:pointer;
+        margin:10px 0 0 130px;
+        width:85px;
     }
 
 
@@ -292,78 +286,78 @@ form {margin: 0 0 15px 0; padding: 0 0 15px 0;}
  */
 
 div.warning {
-    background: #fbe3e4 url('css/images/error.gif') no-repeat 10px center;
-    border: 1px solid #fbc2c4;
-    color: #900;
+    background:#fbe3e4 url('css/images/error.gif') no-repeat 10px center;
+    border:1px solid #fbc2c4;
+    color:#900;
 }
 input, textarea, select {
-    background: #f5f5f5;
-    border: 1px solid #ccc;
-    color: #666;
+    background:#f5f5f5;
+    border:1px solid #ccc;
+    color:#666;
     
-    -webkit-transition: background .4s ease, border .4s ease, color .4s ease;
-    -moz-transition: background .4s ease, border .4s ease, color .4s ease;
-    -o-transition: background .4s ease, border .4s ease, color .4s ease;
-    -ms-transition: background .4s ease, border .4s ease, color .4s ease;
-    transition: background .4s ease, border .4s ease, color .4s ease;
+    -webkit-transition:background .4s ease, border .4s ease, color .4s ease;
+    -moz-transition:background .4s ease, border .4s ease, color .4s ease;
+    -o-transition:background .4s ease, border .4s ease, color .4s ease;
+    -ms-transition:background .4s ease, border .4s ease, color .4s ease;
+    transition:background .4s ease, border .4s ease, color .4s ease;
 }
 input:focus,textarea:focus,select:focus {
-    background: #fff;
-    border: 1px solid #999;
-    color: #333;
+    background:#fff;
+    border:1px solid #999;
+    color:#333;
 }
 input.submit {
-    background: #333;
-    border: 1px solid #222;
-    color: #fff;
+    background:#333;
+    border:1px solid #222;
+    color:#fff;
     
-    -webkit-transition: background .4s ease;
-    -moz-transition: background .4s ease;
-    -o-transition: background .4s ease;
-    -ms-transition: background .4s ease;
-    transition: background .4s ease;
+    -webkit-transition:background .4s ease;
+    -moz-transition:background .4s ease;
+    -o-transition:background .4s ease;
+    -ms-transition:background .4s ease;
+    transition:background .4s ease;
 }
-input.submit:hover {background: #444;}    
+input.submit:hover {background:#444;}    
 
 
 /*
  *  COMMENT FORM
  */
 
-#commentForm h3 {clear: both; padding: 20px 0 5px 0;}
-#commentForm h3.first {padding: 0 0 5px 0;}
-#commentForm h4 {clear: both; padding: 20px 0 5px 0;}
-#commentForm input.reset {margin: 10px 0 0 10px;}
+#commentForm h3 {clear:both; padding:20px 0 5px 0;}
+#commentForm h3.first {padding:0 0 5px 0;}
+#commentForm h4 {clear:both; padding:20px 0 5px 0;}
+#commentForm input.reset {margin:10px 0 0 10px;}
 
 	
 /*
  *  REACH QUICKLY FORM
  */
 
-#reachQuickly {width: 100%;}
+#reachQuickly {width:100%;}
     #reachQuickly div.warning {
-        clear: both;
-        float: left;
-        padding: 0 0 0 36px;
-        text-align: left;
-        width: 194px;
+        clear:both;
+        float:left;
+        padding:0 0 0 36px;
+        text-align:left;
+        width:194px;
     }
     #reachQuickly label {
-        float: left;
-        margin: 3px 0 0 0;
-        width: 100%;
+        float:left;
+        margin:3px 0 0 0;
+        width:100%;
     }
     #reachQuickly input, #reachQuickly textarea, #reachQuickly select {
-        float: left;
-        font: 12px/16px 'Droid Sans', Arial, Helvetica, sans-serif;
-        margin: 0 0 3px 0;
-        padding: 5px;
-        width: 286px;
+        float:left;
+        font:12px/16px 'Droid Sans', Arial, Helvetica, sans-serif;
+        margin:0 0 3px 0;
+        padding:5px;
+        width:286px;
     }
     #reachQuickly input.submit {
-        cursor: pointer;
-        margin: 3px 0 0 0;
-        width: 298px;
+        cursor:pointer;
+        margin:3px 0 0 0;
+        width:298px;
     }
 
 	
@@ -371,18 +365,18 @@ input.submit:hover {background: #444;}
  *  GET DIRECTIONS FORM
  */
 
-#getDirections {margin: 0 0 15px 0; padding: 0;}
-    #getDirections td {font-size: 12px;}
+#getDirections {margin:0 0 15px 0; padding:0;}
+    #getDirections td {font-size:12px;}
     #getDirections input, #getDirections textarea, #getDirections select {
-        font: 12px/16px 'Droid Sans', Arial, Helvetica, sans-serif;
-        margin: 3px 0 6px 0;
-        padding: 5px;
-        width: 95%;
+        font:12px/16px 'Droid Sans', Arial, Helvetica, sans-serif;
+        margin:3px 0 6px 0;
+        padding:5px;
+        width:95%;
     }
     #getDirections input.submit {
-        cursor: pointer;
-        margin: 0;
-        width: 112px;
+        cursor:pointer;
+        margin:0;
+        width:112px;
     }
 
 
@@ -395,16 +389,16 @@ input.submit:hover {background: #444;}
 
 /* 
 
-@media screen and (max-width: 1280px) {
+@media screen and (max-width:1280px) {
     body:after {content:"960 to 1280px"; background-color:hsla(270,60%,40%,0.7);}
 }
-@media screen and (max-width: 960px) {
+@media screen and (max-width:960px) {
     body:after {content:"480 to 960px"; background-color:hsla(180,60%,40%,0.7);}
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width:480px) {
     body:after {content:"320 to 480px"; background-color:hsla(90,60%,40%,0.7);}
 }
-@media screen and (max-width: 320px) {
+@media screen and (max-width:320px) {
     body:after {content:"0 to 320px"; background-color:hsla(45,60%,40%,0.7);}
 }  
 

@@ -1,43 +1,12 @@
 # Appnet Site Template
 
-**Version:**        3.09
+**Version:**        4.0.0
 
-**Last Updated:**   February 2, 2012
+**Last Updated:**   February 10, 2012
 
 **Changelog:**
 
-    v 3.09  modified include.scripts.footer.php for better performance
-            adjusted writeImgs() and writeRandomImg() to prompt for photo upload if no photo exists
-            created writeGoogleMap function that automatically creates iframed google map based on variables in config
-            refactored the writeGetDirections function
-            reordered the stylesheet and made some minor modifications based on usefullness
-            got rid of the icons that appeared on links; they were causing more problems than they were worth
-    
-    v 3.08  added ie9 targeting support with .ie9  
-
-    v 3.07  updated sitemap.php to improve functionality
-            updated date in include.config.php for 2012
-            various syntax fixes and slight tweaks
-            added email.php to the repo
-
-    v 3.06  all pdfs linked from include.navigation.php now open in a new window by default
-            can now open a link in a new window by adding _new to the end of the link (ie http://google.com_new)
-
-    v 3.05  automated the sitemap.php file
-
-    v 3.04  added pr() to functions.php; pr() wraps print_r() with <pre> tags and accepts a varible to be printed 
-
-    v 3.03  removed unitpngfix as it is no longer needed
-            removed rollover.js file and calls from various places (outdated and not used)
-            added emailLink() function to write email links easier
-
-    v 3.02  added pageName and included the config in header.htm (no longer have to add it in body.htm)
-            formatting issue with header.htm
-
-    v 3.01  fixed formatting issues on 404b.php
-            updated jquery 1.6.4 to 1.7.1
-
-    v 3.00  restructured entire site template           
+    v 4.0.0 restructured the entire site template
 
 
 
@@ -88,9 +57,62 @@ events.php?view=w&amp;m=<?php echo date("m"); ?>&amp;y=<?php echo date("Y"); ?>&
 
 
 
-## Instructions
+## functions.php  
 
-### include.navigation.php
+### writeImgs()
+
+writeImgs() takes three arguments; they are `$f`, `$m`, and `$l`. These arguments translate to three parts of the filename of an image. This function is usually used in the inc/header.php file to write fader images.
+
+To use this function, type something similar to: `<?php writeImgs('fader', '1', '.jpg'); ?>`. This will look for fader1.jpg in the directory and then, if it is found, write it and then look for fader2.jpg, etc...
+
+
+### writeRandomImg()
+
+writeRandomImg() takes three arguments; they are `$f`, `$m`, and `$l`. These arguments translate to three parts of the filename of an image.
+
+To use this function, type something similar to: `<?php writeRandomImg('image', '1', '.jpg'); ?>`. This example searches the directory for image1.jpg then, in order, loads image1.jpg, image2.jpg, etc. into an array then spits out a random img.
+
+
+### writeGetDirections()
+
+There are no arguments to pass to this function.
+
+To use this function, just type: `<?php writeGetDirections(); ?>`. It will, using the information found in _config.php, write a form in which the user can enter their address information. By pressing submit in this form, they are sent to a google map with directions from the location they entered to the location entered in _config.php
+
+
+
+### writeGoogleMap()
+
+writeGoogleMap() takes up to three arguments; they are `$width`, `$height`, and `$zoom`. If no arguments are entered, these values are defaulted to '100%', '400', and '15', respectively.
+
+To use this function in its most simple form, just type: `<?php writeGoogleMap(); ?>`. This will create a map based on the information in _config.php with a width of 100%, a height of 400px, and a zoom level of 15. To change any of these values, just pass arguments to the function. Make sure if you are passing pixels values to not include 'px', only the number.
+
+As an example, if you wanted to create a 200px x 200px map with a zoom level of 15, you would type: `<?php writeGoogleMap('200', '200'); ?>. You wouldn't need to include the zoom level since it already defaults to 15.
+
+
+### emailLink()
+
+emailLink() requires one argument; `$email`.
+
+This function takes the email address entered into it and simply spits out that email address as a fully formed link.
+
+
+### pr()
+
+pr() requires one argument; `$arg`.
+
+This function wraps whatever has been passed to it in `<pre>` tags and runs the `print_r()` function on the argument that has been passed.
+
+
+### other functions
+
+The other functions listed in inc/functions.php should not need explained. For the most part, they are automatically configured through the build process and should never need to be changed or set anywhere else.
+
+
+
+## Instructions  
+
+### /inc/navigation.php
 
 To open a link in a new window, add _new to the end of the link (ie default.php_new or http://google.com_new)
 
@@ -116,12 +138,12 @@ use the code below as a starting point for body.htm or footer.htm files if neede
 
 ### contact.php and ok.php
 
-paste the following code and change `$pageName` to "contact", "contactRE", or "ok" `<?php include "include.pages.php"; ?>`
+paste the following code: `<?php include "inc/contact.php"; ?>`, then change `$pageName` to "contact", "contactRE", or "ok"
 
 
 ### Lightbox
 
-add `$use_lightbox = "yes";` to the top of your document next to the `$pageName="XXXX"` variable (it will look like this `<?php $pageName="default"; $use_lightbox="yes"; ?>` )and `class="gallery"` must wrap the gallery (ie `<table class="gallery">` or `<ul class="gallery">`)
+add `$use_lightbox = "yes";` to the top of your document next to the `$pageName="XXXX"` variable (it will look like this `<?php $pageName="default"; $use_lightbox="yes"; ?>`) and `class="gallery"` must wrap the gallery (ie `<table class="gallery">` or `<ul class="gallery">`)
 
 to use titles, add the title attribute to the anchor tag (ie `<a title="this is a title" href="#">IMG</a>`)
 	
@@ -142,10 +164,3 @@ finally, all links must be setup as follows:
 ### Displaying Tweets
 
 use `<div id="twitter"></div>` to display the tweets wherever you would like them to style the tweets, use the ul and ul li elements to target the unordered list that is created quick note: retweets will not show up in this list. if you have `$twitter_tweets` set to 5 and the last five posts that have been made are all retweets, nothing will show up (if 3 of last 5 posts were retweets, only the 2 real posts will display...it will return nothing for the 3 retweets)
-
-
-### Image Rollovers
-
-For the rollovers to work, the rollover image must be the same names as the original image+o.jpg.
-(i.e. if nav\_01.jpg is the original image, the rollover image must be named nav\_01o.jpg for this to work)
-If you want to use .gif or .png files instead of .jpg files, all you need to do is open rollovers.js and find .jpg and replace with .gif or .png

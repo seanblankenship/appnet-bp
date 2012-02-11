@@ -5,4 +5,3 @@ echo ((isset($use_lightbox)) && ($use_lightbox=="yes")) ? '<link rel="stylesheet
 echo ((isset($use_lightbox)) && ($use_s_lightbox=="yes")) ? '<link rel="stylesheet" href="css/s-lightbox.css">' : '';
 echo ($mobile=="1") ? '<meta name="viewport" content="width=device-width,initial-scale=1">' : '';
 ?>
-

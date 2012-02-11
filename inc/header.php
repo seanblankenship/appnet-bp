@@ -1,5 +1,5 @@
 <header>
-    <nav><?php include "include.navigation.php"; ?></nav>
+    <nav><?php include "inc/navigation.php"; ?></nav>
     <div id="fader"><?php
         if ($pageName == "default") { 
             writeImgs("fader","1",".jpg");
