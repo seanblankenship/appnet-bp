@@ -1,10 +1,12 @@
 # Appnet Site Template
 
-**Version:**        4.0.0
+**Version:**        4.1.0
 
-**Last Updated:**   February 10, 2012
+**Last Updated:**   February 13, 2012
 
 **Changelog:**
+
+    v 4.1.0 fixed an error with inc/scripts.footer.php
 
     v 4.0.0 restructured the entire site template
 

@@ -260,21 +260,21 @@ form {margin:0 0 15px 0; padding:0 0 15px 0;}
         width:215px;
     }
     form span.star {color:#ff0000;}
-    form label {
+    label {
         float:left;
         height:26px;
         line-height:26px;
         margin:3px 0;
         width:130px;
     }
-    form input, textarea, select {
+    input, textarea, select {
         float:left;
         font:13px/18px 'Droid Sans', Arial, Helvetica, sans-serif;
         margin:3px 0;
         padding:5px;
         width:300px;
     }
-    form input.submit {
+    input.submit {
         cursor:pointer;
         margin:10px 0 0 130px;
         width:85px;
@@ -301,7 +301,7 @@ input, textarea, select {
     -ms-transition:background .4s ease, border .4s ease, color .4s ease;
     transition:background .4s ease, border .4s ease, color .4s ease;
 }
-input:focus,textarea:focus,select:focus {
+input:focus, textarea:focus, select:focus {
     background:#fff;
     border:1px solid #999;
     color:#333;
