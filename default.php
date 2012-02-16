@@ -15,24 +15,24 @@ include "_config.php";
 
 <title><?php echo $myCompany; ?></title>
 
-<?php include "inc/styles.php"; ?>
-<?php include "inc/scripts.header.php"; ?>
+<?php include "inc/styles.inc.php"; ?>
+<?php include "inc/scripts.header.inc.php"; ?>
 
 </head>
 
 <body>
 
 <!-- HEADER -->
-<?php include "inc/header.php"; ?>
+<?php include "inc/header.inc.php"; ?>
  	
 <!-- CONTENT -->
-<?php include "inc/moreinfo.php"; ?>
+<?php include "inc/moreinfo.inc.php"; ?>
  		
 <!-- FOOTER -->
-<?php include "inc/footer.php"; ?>
+<?php include "inc/footer.inc.php"; ?>
  
 <!-- SCRIPTS -->
-<?php include "inc/scripts.footer.php"; ?>
+<?php include "inc/scripts.footer.inc.php"; ?>
 
 </body>
 </html>

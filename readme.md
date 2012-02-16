@@ -1,10 +1,12 @@
 # Appnet Site Template
 
-**Version:**        4.1.0
+**Version:**        4.2.0
 
-**Last Updated:**   February 13, 2012
+**Last Updated:**   February 16, 2012
 
 **Changelog:**
+
+    v 4.2.0 renamed include files to cause less confusion
 
     v 4.1.0 fixed an error with inc/scripts.footer.php
 

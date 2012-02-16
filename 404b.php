@@ -127,9 +127,9 @@ nav {
 		<p>Have you tried turning it off and on again?</p>
 	</div>
 	<h3>Site Navigation:</h3>
-	<nav><?php include "inc/include.navigation.php"; ?></nav>
+	<nav><?php include "inc/navigation.inc.php"; ?></nav>
 	<p class="copyright">Copyright &copy; <?php echo $myDate; ?> <?php echo $myCompany; ?>. <a href="<?php echo $myStateurl[$myState]; ?>"><?php echo $myStatename[$myState]; ?> Web Design</a> by AppNet.com.</p>
 </div>
-<?php include "inc/include.scripts.footer.php"; ?> 
+<?php include "inc/scripts.footer.inc.php"; ?> 
 </body>
 </html>
