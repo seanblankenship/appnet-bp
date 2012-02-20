@@ -159,6 +159,9 @@ ul#navlist li a:link, ul#navlist li a:visited, ul#navlist li a:active {
 .moreinfo {padding:15px 0;}
 .moreinfo p {margin:0; padding:0;}
 
+ul.gallery {list-style:none; margin;0; padding:0;}
+    ul.gallery li {float:left; margin:0; padding:0; text-align:center;} 
+
 
 aside {
     float:right;
@@ -250,7 +253,7 @@ footer small {
  * ========================================================================== */ 
 
 form {margin:0 0 15px 0; padding:0 0 15px 0;}
-    form div {clear:both; display:block;}
+    form div {clear:both; display:block; overflow:hidden;}
     form div.warning {
         font-size:13px;
         height:25px;
@@ -274,6 +277,8 @@ form {margin:0 0 15px 0; padding:0 0 15px 0;}
         padding:5px;
         width:300px;
     }
+        select {width:312px;}
+        input:focus, textarea:focus, select:focus {outline:none;}
     input.submit {
         cursor:pointer;
         margin:10px 0 0 130px;

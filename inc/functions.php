@@ -11,7 +11,7 @@ if ($hideme=="1"){
 function writeImgs($f,$m,$l) {
     if (file_exists($f.$m.$l)){
     	while(file_exists($f.$m.$l)) {
-    		echo '<img src="'.$f.$m.$l.'" alt="" />';
+    		echo '<img src="'.$f.$m.$l.'" alt="">';
             $m++;
         }
     } else {
@@ -24,7 +24,7 @@ function writeRandomImg($f,$m,$l) {
     if (file_exists($f.$m.$l)){
     	$arr = array();
     	while(file_exists($f.$m.$l)) {
-    		$arr[$m] = '<img src="'.$f.$m.$l.'" alt="" />';
+    		$arr[$m] = '<img src="'.$f.$m.$l.'" alt="">';
     		$m++;
     	}
     	$random = array_rand($arr);
@@ -55,7 +55,6 @@ function writeGetDirections(){
 	}
 
     // write the form
-    echo '<h3>Get Directions</h3>';
 	echo '<form action="http://maps.google.com/maps" method="get" id="getDirections" class="clearfix" target="_blank">'."\n";
 	echo '<label for="saddr">Enter Your Address:</label><br>'."\n";
 	echo '<input type="text" name="saddr" id="saddr">'."\n";

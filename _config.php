@@ -40,7 +40,7 @@ $faderHeight="250px";
 $dropdownnav="0"; 
 
 // Validate Reach Quickly Form
-$quickCommentForm="0";
+$quickCommentForm="1";
 
 // Adaptive / Responsive
 $mobile="0";
