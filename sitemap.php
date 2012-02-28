@@ -38,8 +38,8 @@ if ($handle = opendir($my_root)) {
     closedir($handle);
 }
 
-if (file_exists("sitemaps.inc.php")){
-    include "sitemaps.inc.php";
+if (file_exists("sitemap.inc.php")){
+    include "sitemap.inc.php";
 }
 
 ?>

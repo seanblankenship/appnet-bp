@@ -1,10 +1,12 @@
 # Appnet Site Template
 
-**Version:**        4.3.0
+**Version:**        4.4.0
 
-**Last Updated:**   February 20, 2012
+**Last Updated:**   February 28, 2012
 
 **Changelog:**
+
+    v 4.4.0 critical fix to sitemap.php
 
     v 4.3.0 updated inc/contact.inc.php to use 'for' correctly on labels
             small text changes/corrections
