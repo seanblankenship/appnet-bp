@@ -1,10 +1,12 @@
 # Appnet Site Template
 
-**Version:**        4.4.0
+**Version:**        4.4.1
 
 **Last Updated:**   February 28, 2012
 
 **Changelog:**
+
+    v 4.1.1 updated array bad_files in sitemap.php
 
     v 4.4.0 critical fix to sitemap.php
 
