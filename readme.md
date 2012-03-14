@@ -1,12 +1,16 @@
 # Appnet Site Template
 
-**Version:**        4.4.1
+**Version:**        4.4.3
 
-**Last Updated:**   February 28, 2012
+**Last Updated:**   March 14, 2012
 
 **Changelog:**
 
-    v 4.1.1 updated array bad_files in sitemap.php
+    v 4.4.3 fixed includes on header.htm and footer.htm
+
+    v 4.4.2 added a class of 'nobord' to kill border-bottom on links
+
+    v 4.4.1 updated array bad_files in sitemap.php
 
     v 4.4.0 critical fix to sitemap.php
 

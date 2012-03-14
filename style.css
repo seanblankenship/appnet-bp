@@ -116,6 +116,8 @@ a:link, a:visited, a:active {
         text-decoration:none;
     }
 
+a.nobord {border:0 !important;} /* lose the default border-bottom */ 
+
 
 /*
  *  HEADER AREA
