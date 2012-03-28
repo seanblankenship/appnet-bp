@@ -331,10 +331,13 @@ input.submit:hover {background:#444;}
  *  COMMENT FORM
  */
 
+#commentForm {width:500px;}
 #commentForm h3 {clear:both; padding:20px 0 5px 0;}
 #commentForm h3.first {padding:0 0 5px 0;}
 #commentForm h4 {clear:both; padding:20px 0 5px 0;}
 #commentForm input.reset {margin:10px 0 0 10px;}
+#commentForm label.error {display:block; margin:0 0 15px 120px;}
+#commentForm div.warning {width:275px;} 
 
 	
 /*
@@ -385,28 +388,3 @@ input.submit:hover {background:#444;}
         margin:0;
         width:112px;
     }
-
-
-
-/* =============================================================================
- *
- *      MEDIA QUERIES
- *
- * ========================================================================== */ 
-
-/* 
-
-@media screen and (max-width:1280px) {
-    body:after {content:"960 to 1280px"; background-color:hsla(270,60%,40%,0.7);}
-}
-@media screen and (max-width:960px) {
-    body:after {content:"480 to 960px"; background-color:hsla(180,60%,40%,0.7);}
-}
-@media screen and (max-width:480px) {
-    body:after {content:"320 to 480px"; background-color:hsla(90,60%,40%,0.7);}
-}
-@media screen and (max-width:320px) {
-    body:after {content:"0 to 320px"; background-color:hsla(45,60%,40%,0.7);}
-}  
-
-*/

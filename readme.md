@@ -1,10 +1,13 @@
 # Appnet Site Template
 
-**Version:**        4.4.3
+**Version:**        4.4.4
 
-**Last Updated:**   March 14, 2012
+**Last Updated:**   March 28, 2012
 
 **Changelog:**
+
+    v 4.4.4 updated style.css to delete media queries and restyled the warnings on the contact form
+            created css/mq.css to deal with media queries in the future
 
     v 4.4.3 fixed includes on header.htm and footer.htm
 
