@@ -1,10 +1,12 @@
 # Appnet Site Template
 
-**Version:**        4.4.4
+**Version:**        4.5.0
 
-**Last Updated:**   March 28, 2012
+**Last Updated:**   April 3, 2012
 
 **Changelog:**
+
+    v 4.5.0 updated functions.php to include correct copyright links for new appnet.com
 
     v 4.4.4 updated style.css to delete media queries and restyled the warnings on the contact form
             created css/mq.css to deal with media queries in the future
