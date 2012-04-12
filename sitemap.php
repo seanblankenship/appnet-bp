@@ -11,7 +11,7 @@ $bad_files = array('.htaccess', '_config.php', '[your type]_featured.php', '404b
 $bad_folders = array('.', '..', '.git', '404b', 'css', 'images', 'inc', 'js', 'lib', 'manager', 'templates');
 
 // create an array of extensions that are to be included
-$good_extensions = array('htm', 'html', 'php'); 
+$good_extensions = array('php'); 
 
 // read the directory and spit out all files/directories
 if ($handle = opendir($my_root)) {

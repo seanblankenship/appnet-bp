@@ -1,10 +1,12 @@
 # Appnet Site Template
 
-**Version:**        4.5.0
+**Version:**        4.5.1
 
-**Last Updated:**   April 3, 2012
+**Last Updated:**   April 12, 2012
 
 **Changelog:**
+
+    v 4.5.1 minor code tweaks of things that were bugging me
 
     v 4.5.0 updated functions.php to include correct copyright links for new appnet.com
 
