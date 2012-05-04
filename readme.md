@@ -1,10 +1,16 @@
 # Appnet Site Template
 
-**Version:**        4.5.1
+**Version:**        4.6.0
 
-**Last Updated:**   April 12, 2012
+**Last Updated:**   May 4, 2012
 
 **Changelog:**
+
+    v 4.6.0 deleted all 404 error info from this site template
+            made small tweaks for php and stylesheet issues
+            changed all links from appnet.com to www.appnet.com in copyright
+            rebuilt sitemap page to be seperated by letter and fit into design instead of white page
+            sitemap page now uses header.htm, body.htm and footer.htm to build itself (same as programming)
 
     v 4.5.1 minor code tweaks of things that were bugging me
 
@@ -147,12 +153,12 @@ use the code below as a starting point for body.htm or footer.htm files if neede
 
 ```php
 <?php 
-    if ($_REQUEST["subtype"] == "announcements") {
+    if ($_REQUEST["table"] == "realman") {
         echo "";
     } elseif (strpos($_SERVER['SCRIPT_FILENAME'],"events.php")>0) {
         echo "";
     } else {
-        echo "";
+        echo $myCompany;
     }
 ?>
 ```

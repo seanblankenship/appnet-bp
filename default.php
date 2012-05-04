@@ -1,6 +1,6 @@
 <?php
 $pageName = "default";
-include "_config.php";
+include_once "_config.php";
 ?>
 <!doctype html>
 <!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->

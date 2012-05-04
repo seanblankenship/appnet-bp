@@ -100,19 +100,19 @@ a:active {position:relative; top:1px;}
     a:active img, nav a:active {position:relative; top:0;}
 
 a:link, a:visited, a:active {
-    color:#000;
-    border-bottom:1px solid #000;
+    border-bottom:1px dotted #090;
+    color:#090;
     text-decoration:none;
     
-    -webkit-transition: color .4s ease, border-bottom .4s ease;
-    -moz-transition:    color .4s ease, border-bottom .4s ease;
-    -o-transition:      color .4s ease, border-bottom .4s ease;
-    -ms-transition:     color .4s ease, border-bottom .4s ease;
-    transition:         color .4s ease, border-bottom .4s ease;
+    -webkit-transition: background .4s ease, color .4s ease, border-bottom .4s ease;
+    -moz-transition:    background .4s ease, color .4s ease, border-bottom .4s ease;
+    -o-transition:      background .4s ease, color .4s ease, border-bottom .4s ease;
+    -ms-transition:     background .4s ease, color .4s ease, border-bottom .4s ease;
+    transition:         background .4s ease, color .4s ease, border-bottom .4s ease;
 }
     a:hover {
+        border-bottom:1px dotted #900;
         color:#900;
-        border-bottom:1px solid #900;
         text-decoration:none;
     }
 
@@ -158,8 +158,16 @@ ul#navlist li a:link, ul#navlist li a:visited, ul#navlist li a:active {
  
 #content {}
 
-.moreinfo {padding:15px 0;}
-.moreinfo p {margin:0; padding:0;}
+article {}
+
+aside {
+    float:right;
+    margin:0 0 20px 20px;
+    width:270px;
+}
+
+.moreinfo {padding:5px 0 15px 0;}
+    .moreinfo p {margin:0; padding:0;}
 
 ul.gallery {
     list-style:none; 
@@ -171,14 +179,23 @@ ul.gallery {
         margin:0; 
         padding:0; 
         text-align:center;
-    } 
+    }
 
-
-aside {
-    float:right;
-    margin:0 0 20px 20px;
-    width:270px;
+ul.sitemap {
+    list-style:none; 
+    margin:0 0 15px 0;
+    padding:0;
 }
+    ul.sitemap li {
+        float:left;
+        font-size:13px;
+        height:20px;
+        line-height:20px;
+        margin:0; 
+        overflow:hidden;
+        padding:0 1% 0 0; 
+        width:32.3333%;
+    }
 
 
 /*
@@ -193,14 +210,12 @@ footer {
 }
 
 footer a:link, footer a:visited, footer a:active {
-    border-bottom:1px solid #fff;
+    border-bottom:1px dotted #fff;
     color:#000;
-    font-weight:normal;
 }
     footer a:hover {
-        border-bottom:1px solid #000;
+        border-bottom:1px dotted #000;
         color:#000;
-        font-weight:normal;
     }
 
 footer .l {
@@ -233,7 +248,7 @@ footer .sl {
         float:left;
         margin:0;
         padding:0 0 7px 0;
-        width:100%;
+        width:50%;
     }
 
 footer .ci {
@@ -251,6 +266,7 @@ footer .ci {
 footer small {
     clear:both;
     display:block;
+    font-size:100%;
     margin:0;
     padding:15px 0;
 }
