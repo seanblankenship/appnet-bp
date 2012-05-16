@@ -3,6 +3,23 @@
  *      Author:Appnet 
  *      Author URI:http://www.appnet.com/
  *
+ *      1) BASE ELEMENTS
+ *          - images
+ *          - iframes
+ *          - misc
+ *      2) MAIN CONTENT
+ *          - header
+ *          - content
+ *          - footer
+ *      3) FORMS
+ *          - colors
+ *          - commentForm
+ *          - reachQuickly
+ *          - getDirections
+ *      4) PROGRAMMING
+ *          - search.php
+ *          - sitemap.php
+ *
  * ========================================================================== */ 
 
 @import url('css/reset.css');
@@ -12,7 +29,7 @@
 
 /* =============================================================================
  *
- *      BASE ELEMENTS
+ *      1) BASE ELEMENTS
  *
  * ========================================================================== */
 
@@ -43,7 +60,7 @@ p, ul, ol {margin:0 0 15px 0;}
 
 
 /*
- *  IMAGES
+ *  images
  */
 
 img.center {display:block; margin:10px auto;}
@@ -57,7 +74,7 @@ img.border {
 
 
 /*
- *  IFRAMES
+ *  iframes
  */ 
 
 iframe {
@@ -68,7 +85,7 @@ iframe {
 
 
 /*
- *  MISC
+ *  misc
  */
 
 .shadow {
@@ -92,7 +109,7 @@ iframe {
 
 /* =============================================================================
  *
- *     MAIN CONTENT
+ *     2) MAIN CONTENT
  *
  * ========================================================================== */
  
@@ -104,11 +121,11 @@ a:link, a:visited, a:active {
     color:#090;
     text-decoration:none;
     
-    -webkit-transition: background .4s ease, color .4s ease, border-bottom .4s ease;
-    -moz-transition:    background .4s ease, color .4s ease, border-bottom .4s ease;
-    -o-transition:      background .4s ease, color .4s ease, border-bottom .4s ease;
-    -ms-transition:     background .4s ease, color .4s ease, border-bottom .4s ease;
-    transition:         background .4s ease, color .4s ease, border-bottom .4s ease;
+    -webkit-transition: background .4s ease, border-bottom .4s ease, color .4s ease;
+    -moz-transition:    background .4s ease, border-bottom .4s ease, color .4s ease;
+    -o-transition:      background .4s ease, border-bottom .4s ease, color .4s ease;
+    -ms-transition:     background .4s ease, border-bottom .4s ease, color .4s ease;
+    transition:         background .4s ease, border-bottom .4s ease, color .4s ease;
 }
     a:hover {
         border-bottom:1px dotted #900;
@@ -120,7 +137,7 @@ a.nobord {border:0 !important;} /* lose the default border-bottom */
 
 
 /*
- *  HEADER AREA
+ *  header
  */
  
 header {}
@@ -153,7 +170,7 @@ ul#navlist li a:link, ul#navlist li a:visited, ul#navlist li a:active {
 
 
 /*
- *  CONTENT AREA
+ *  content
  */
  
 #content {}
@@ -181,25 +198,9 @@ ul.gallery {
         text-align:center;
     }
 
-ul.sitemap {
-    list-style:none; 
-    margin:0 0 15px 0;
-    padding:0;
-}
-    ul.sitemap li {
-        float:left;
-        font-size:13px;
-        height:20px;
-        line-height:20px;
-        margin:0; 
-        overflow:hidden;
-        padding:0 1% 0 0; 
-        width:32.3333%;
-    }
-
 
 /*
- *  FOOTER AREA
+ *  footer
  */
  
 footer {
@@ -275,7 +276,7 @@ footer small {
 
 /* =============================================================================
  *
- *      FORMS
+ *      3) FORMS
  *
  * ========================================================================== */ 
 
@@ -314,7 +315,7 @@ form {margin:0 0 15px 0; padding:0 0 15px 0;}
 
 
 /*
- *  FORM COLORS
+ *  colors
  */
 
 div.warning {
@@ -353,7 +354,7 @@ input.submit:hover {background:#444;}
 
 
 /*
- *  COMMENT FORM
+ *  commentForm
  */
 
 #commentForm {width:500px;}
@@ -366,7 +367,7 @@ input.submit:hover {background:#444;}
 
 	
 /*
- *  REACH QUICKLY FORM
+ *  reachQuickly
  */
 
 #reachQuickly {width:100%;}
@@ -397,7 +398,7 @@ input.submit:hover {background:#444;}
 
 	
 /*
- *  GET DIRECTIONS FORM
+ *  getDirections
  */
 
 #getDirections {margin:0 0 15px 0; padding:0;}
@@ -412,4 +413,67 @@ input.submit:hover {background:#444;}
         cursor:pointer;
         margin:0;
         width:112px;
+    }
+
+
+
+/* =============================================================================
+ *
+ *      4) PROGRAMMING
+ *
+ * ========================================================================== */   
+
+/*
+ *  search.php
+ */
+
+#moduleSearch {width:500px;}
+#moduleSearch h2 {
+    margin:0; 
+    padding:20px 0 5px 0;
+    text-transform:capitalize;
+}
+#moduleSearch div.multi label.main {}
+#moduleSearch div.multi label.secondary {padding-right:5px; text-align:right; width:15px;}
+#moduleSearch div.multi select.value {width:80px;}
+#moduleSearch div.multi input.value {width:68px;}
+#moduleSearch div.multi select.modifier {width:212px;}
+#moduleSearch input.reset {margin:10px 0 0 10px;}
+#moduleSearch ul {
+    list-style:none; 
+    margin:0 0 15px 0; 
+    padding:0;
+}
+    #moduleSearch ul li {
+        float:left; 
+        margin:0; 
+        padding:0;
+        width:50%;
+    }
+    #moduleSearch ul li input {
+        background:none;
+        border:0;
+        margin-top:10px; 
+        width:30px;
+    }
+
+
+/*
+ *  sitemap.php
+ */
+
+ul.sitemap {
+    list-style:none; 
+    margin:0 0 15px 0;
+    padding:0;
+}
+    ul.sitemap li {
+        float:left;
+        font-size:13px;
+        height:20px;
+        line-height:20px;
+        margin:0; 
+        overflow:hidden;
+        padding:0 1% 0 0; 
+        width:32.3333%;
     }

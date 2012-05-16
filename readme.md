@@ -1,10 +1,13 @@
 # Appnet Site Template
 
-**Version:**        4.6.0
+**Version:**        4.6.1
 
-**Last Updated:**   May 4, 2012
+**Last Updated:**   May 16, 2012
 
 **Changelog:**
+
+    v 4.6.1 updated style.css to include styling for search.php
+            also added table of contents to stylesheet for ease of use
 
     v 4.6.0 deleted all 404 error info from this site template
             made small tweaks for php and stylesheet issues
