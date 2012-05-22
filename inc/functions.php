@@ -1,11 +1,4 @@
 <?php
-
-//  this hides/shows the input for spam protection
-if ($hideme=="1"){
-	$input_type="hidden";	
-} else {
-	$input_type="text";
-}
 	
 //  function for writing images, one after another
 function writeImgs($f,$m,$l) {

@@ -48,9 +48,5 @@ $twitter_name="twitter";		// this is their @whatever name
 $twitter_tweets="5";			// this is the number of latest tweets you would like to be displayed
 
 
-// ================================================================
-// 	include all functions (unless key_f.php)
-// ================================================================     
-
-$filename = basename($_SERVER['SCRIPT_NAME']);
-if ($filename!="key_f.php"){ include "inc/functions.php"; }
+// include all functions
+include "inc/functions.php";
