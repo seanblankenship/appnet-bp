@@ -26,13 +26,6 @@ if ($twitter_display=="1" && $pageName==$twitter_pageName) { ?>
 <script src="js/jquery.twitter.js"></script><?php } ?>
 
 <script>
-$.post("key_f.php", function(data){
-    $("#success").val(data);
-    if ($("#success2").length > 0){
-        $("#success2").val(data);
-    }
-});
-
 <?php if($pageName=="contact" || $pageName=="contactRE"){ // comment form validation ?>
 $(function() {
     $("#commentForm").validate();

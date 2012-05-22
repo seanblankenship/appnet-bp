@@ -15,7 +15,6 @@
                     <input type="hidden" name="Subject" value="<?php echo $myCompany; ?> - Reach Us Quickly">
                     <input type="hidden" name="LocOK" value="ok.php">
                     <input type="hidden" name="To" value="<?php echo $myEmail; ?>">
-                    <script>document.write('<input type="<?php echo $input_type; ?>" id="success2" name="key" value="">');</script>
                     <div id="reachQuickly">
                         <label for="Name">Name:</label><input type="text" name="Name" id="Name" class="required">
                         <label for="Sender">Email:</label><input type="text" name="Sender" id="Sender" class="required email">

@@ -1,10 +1,12 @@
-# Appnet Site Template
+# Main Site Template
 
-**Version:**        4.6.1
+**Version:**        4.7.0
 
-**Last Updated:**   May 16, 2012
+**Last Updated:**   May 22, 2012
 
 **Changelog:**
+
+    v 4.7.0 taking off spam checks code as it is no longer needed on our new email server
 
     v 4.6.1 updated style.css to include styling for search.php
             also added table of contents to stylesheet for ease of use

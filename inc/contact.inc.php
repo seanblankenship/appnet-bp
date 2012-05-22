@@ -39,7 +39,6 @@ if ($pageName=="ok") {
     $writeAge           = '<div><label for="Age">Age:</label><input type="text" size="30" name="Age" id="Age" value=""></div>'."\n";
     $writeGarage        = '<div><label for="Garage">Garage:</label><input type="text" size="30" name="Garage" id="Garage" value=""></div>'."\n";
     $writeBasement      = '<div><label for="Basement">Basement:</label><input type="text" size="30" name="Basement" id="Basement" value=""></div>'."\n";
-    $writeHiddenFields  = '<div><script>document.write(\'<input type="'.$GLOBALS['input_type'].'" id="success" name="key" value="">\');</script></div>'."\n";
     $writeButtons       = '<div><input type="submit" value="Submit" class="submit" name="Submit"><input type="reset" value="Reset" class="submit reset" name="Reset"></div>'."\n";
 
     // write the correct form
@@ -60,9 +59,6 @@ if ($pageName=="ok") {
         echo $writePhone;
         echo $writeComments;
 			
-        // write the spam protection
-        echo $writeHiddenFields;
-					
         // write the buttons
         echo $writeButtons;
 			
@@ -99,9 +95,6 @@ if ($pageName=="ok") {
 				
         echo '<h3>Other Criteria</h3>';
         echo $writeComments;
-
-        // write the spam protection
-        echo $writeHiddenFields;
 				
         // write the buttons
         echo $writeButtons;

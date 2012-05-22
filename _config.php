@@ -28,10 +28,6 @@ $myFax           = "";
 // 	Site Add-Ons // 1=yes 0=no // instructions in README
 // ================================================================
 
-// Spam Protection
-$hideme="0";	
-$server_folder_name=$serverFolder;
-
 // Image Fader
 $fader="0"; 
 $faderHeight="250px";
