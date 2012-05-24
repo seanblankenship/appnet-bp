@@ -1,5 +1,5 @@
 <?
-$verbage = "<p>If you are repeatedly getting this message, but you are sending a legitimate email, please send your message to ".$_POST["To"]."</p>";
+/*$verbage = "<p>If you are repeatedly getting this message, but you are sending a legitimate email, please send your message to ".$_POST["To"]."</p>";
 
 if ( $_COOKIE["appnetforms"]["one"] != "488574303dkid;IWORKWITH_appnet_they_are_greatlqpoiu348uoipj!)".mktime(0,0,0,date("m"),date("d"),date("Y"))."(U#POIJ#FL#W9;oqdvv9((*_)*U()UJ!!!@@!" ){
 	die("<p>Spam checks failed sorry [cookie]</p> $verbage");
@@ -7,7 +7,7 @@ if ( $_COOKIE["appnetforms"]["one"] != "488574303dkid;IWORKWITH_appnet_they_are_
 
 if ( $_SERVER["INSTANCE_ID"] != $_POST["key"] ){
 	die("<p>Spam checks failed sorry [key].</p> $verbage");
-}
+} */
 
 // Check to make sure it is coming from the place it is hosted on
 if ( strpos($_SERVER['HTTP_REFERER'],$_SERVER['SERVER_NAME']) === false){
