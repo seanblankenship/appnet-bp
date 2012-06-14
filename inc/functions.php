@@ -57,15 +57,7 @@ function writeGetDirections(){
 }
 
 //  creates a google map based on the location info in the config
-function writeGoogleMap(){
-
-    // get potential arguments
-    $args = func_get_args();
-            
-    // declare variables based on arguments found
-    $width = ($args[0]) ? $args[0] : "100%";
-    $height = ($args[1]) ? $args[1] : "400";
-    $zoom = ($args[2]) ? $args[2] : "15";
+function writeGoogleMap($width="100%", $height="400", $zoom="15"){
 
     // get global variables
     $myAddressOne   = $GLOBALS['myAddressOne'];

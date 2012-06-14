@@ -1,10 +1,12 @@
 # Main Site Template
 
-**Version:**        4.7.0
+**Version:**        4.7.1
 
-**Last Updated:**   May 22, 2012
+**Last Updated:**   June 14, 2012
 
 **Changelog:**
+
+    v 4.7.1 bug fix with sitemap.php
 
     v 4.7.0 taking off spam checks code as it is no longer needed on our new email server
 
