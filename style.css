@@ -1,7 +1,7 @@
 /* =============================================================================
  *
  *      Author:Appnet 
- *      Author URI:http://www.appnet.com/
+ *      Author URI: http://www.appnet.com/
  *
  *      1) BASE ELEMENTS
  *          - images
@@ -48,12 +48,36 @@ h1, h2, h3, h4, h5, h6 {
     margin:0;
     padding:0;
 }
-    h1 {font-size:24px; padding:10px 0;}
-    h2 {font-size:22px; padding:10px 0;}
-    h3 {font-size:20px; padding:10px 0 5px 0;}
-    h4 {font-size:18px; padding:5px 0;}
-    h5 {font-size:18px; padding:10px 0;}
-    h6 {font-size:14px; padding:5px 0;}
+    h1 {
+    	font-size:24px; 
+    	line-height:30px;
+    	padding:10px 0;
+    }
+    h2 {
+    	font-size:22px; 
+    	line-height:28px;
+    	padding:10px 0;
+    }
+    h3 {
+    	font-size:20px;
+    	line-height:26px;
+    	padding:10px 0 5px 0;
+    }
+    h4 {
+    	font-size:18px; 
+    	line-height:24px;
+    	padding:5px 0;
+    }
+    h5 {
+    	font-size:18px; 
+    	line-height:24px;
+    	padding:10px 0;
+    }
+    h6 {
+    	font-size:14px; 
+    	line-height:20px;
+    	padding:5px 0;
+    }
 
 p, ul, ol {margin:0 0 15px 0;}
     ul li, ol li {margin:0 0 0 18px;}
@@ -68,7 +92,7 @@ img.align-r {float:right; margin:0 0 10px 10px;}
 img.align-l {float:left; margin:0 10px 10px 0;}
 img.border {
     background:#fff;
-    border:1px solid #000;
+    border:1px solid #ccc;
     padding:4px;
 }
 
@@ -183,8 +207,8 @@ aside {
     width:270px;
 }
 
-.moreinfo {padding:5px 0 15px 0;}
-    .moreinfo p {margin:0; padding:0;}
+#moreinfo {padding:5px 0 15px 0;}
+    #moreinfo p {margin:0; padding:0;}
 
 ul.gallery {
     list-style:none; 
@@ -203,12 +227,7 @@ ul.gallery {
  *  footer
  */
  
-footer {
-    color:#000;
-    font-size:12px;
-    line-height:16px;
-    padding-bottom:20px;
-}
+footer {}
 
 footer a:link, footer a:visited, footer a:active {
     border-bottom:1px dotted #fff;

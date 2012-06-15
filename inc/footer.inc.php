@@ -3,7 +3,7 @@
         <div class="l">
             <h5>Site Navigation</h5>
             <ul class="sl clearfix"><?php 
-                writeNavigation($mainnav,0,'');
+                echo nav($mainnav,0);
 				echo ($pageName == "default") ? '<li><a href="sitemap.php">Sitemap</a></li>' : '';
 		    ?></ul>
             <small>Copyright &copy; <?php echo $myDate; ?><?php echo (!empty($myCompany)) ? ' '.$myCompany : ''; ?>. <a href="<?php echo (!empty($myState)) ? $myStateurl[$myState] : 'http://www.appnet.com'; ?>"><?php echo (!empty($myState)) ? $myStatename[$myState].' ' : ''; ?>Web Design</a> by AppNet.com.</small>
@@ -36,7 +36,7 @@
                         echo (!empty($myPhoneTollFree)) ? '<br>Ph: '.$myPhoneTollFree : '';
                         echo (!empty($myFax)) ? '<br>Fax: '.$myFax : ''; ?></li>
                     <li><strong>Email:</strong><br><?php 
-                        echo (!empty($myEmail)) ? emailLink($myEmail) : ''; ?></li>
+                        echo (!empty($myEmail)) ? email_link($myEmail) : ''; ?></li>
                 </ul>
             </div>
         </div>

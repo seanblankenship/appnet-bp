@@ -50,3 +50,6 @@ $twitter_tweets="5";			// this is the number of latest tweets you would like to 
 
 // include all functions
 include "inc/functions.php";
+
+// include navigation
+include "inc/navigation.inc.php";

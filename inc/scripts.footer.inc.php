@@ -90,6 +90,11 @@ $("#twitter").getTwitter({
     headingText: "Latest Tweets",
     showProfileLink: false
 });<?php } ?>
+
+<?php // lose the borders on anchor tags surrounding images ?>
+$(document).ready(function(){
+    $('img').parent('a').addClass('nobord');
+});​
 </script>
 
 <?php // installs chrome frame if ie6 ?>

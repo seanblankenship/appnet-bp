@@ -1,10 +1,15 @@
 # Main Site Template
 
-**Version:**        4.7.1
+**Version:**        4.8.0
 
 **Last Updated:**   June 14, 2012
 
 **Changelog:**
+
+	v 4.8.0	added mobile device detection by default
+			added function that adds click to call functionality for phone numbers on mobile devices
+			added ability to add google map not based on variables in _config using google_map() 
+			refactored functions.php and updated most other files to reflect the changes
 
     v 4.7.1 bug fix with sitemap.php
 
@@ -92,49 +97,56 @@ events.php?view=w&amp;m=<?php echo date("m"); ?>&amp;y=<?php echo date("Y"); ?>&
 
 
 
-## functions.php  
+## functions.php 
 
-### writeImgs()
+### phone()
 
-writeImgs() takes three arguments; they are `$f`, `$m`, and `$l`. These arguments translate to three parts of the filename of an image. This function is usually used in the inc/header.php file to write fader images.
+`phone()` takes on argument; `$pn`
 
-To use this function, type something similar to: `<?php writeImgs('fader', '1', '.jpg'); ?>`. This will look for fader1.jpg in the directory and then, if it is found, write it and then look for fader2.jpg, etc...
+To use this function, type something similar to: `<?php echo phone($myPhoneLocal); ?>`. This will check if the user is on a mobile device, and if they are, add the ability to click on the phone number to call. 
+
+### write_imgs()
+
+`write_imgs()` takes three arguments; they are `$f`, `$m`, and `$l`. These arguments translate to three parts of the filename of an image. This function is usually used in the inc/header.php file to write fader images.
+
+To use this function, type something similar to: `<?php echo write_imgs('fader', '1', '.jpg'); ?>`. This will look for fader1.jpg in the directory and then, if it is found, write it and then look for fader2.jpg, etc...
 
 
-### writeRandomImg()
+### random_img()
 
-writeRandomImg() takes three arguments; they are `$f`, `$m`, and `$l`. These arguments translate to three parts of the filename of an image.
+`random_img()` takes three arguments; they are `$f`, `$m`, and `$l`. These arguments translate to three parts of the filename of an image.
 
-To use this function, type something similar to: `<?php writeRandomImg('image', '1', '.jpg'); ?>`. This example searches the directory for image1.jpg then, in order, loads image1.jpg, image2.jpg, etc. into an array then spits out a random img.
+To use this function, type something similar to: `<?php echo random_img('image', '1', '.jpg'); ?>`. This example searches the directory for image1.jpg then, in order, loads image1.jpg, image2.jpg, etc. into an array then spits out a random img.
 
 
-### writeGetDirections()
+### get_directions()
 
 There are no arguments to pass to this function.
 
-To use this function, just type: `<?php writeGetDirections(); ?>`. It will, using the information found in _config.php, write a form in which the user can enter their address information. By pressing submit in this form, they are sent to a google map with directions from the location they entered to the location entered in _config.php
+To use this function, just type: `<?php echo get_directions(); ?>`. It will, using the information found in _config.php, write a form in which the user can enter their address information. By pressing submit in this form, they are sent to a google map with directions from the location they entered to the location entered in _config.php
 
 
+### google_map()
 
-### writeGoogleMap()
+`google_map()` takes up to eight arguments; they are `$width`, `$height`, `$zoom`, `$addone`, `$addtwo`, `$city`, `$state`, and `$zip`. If no arguments are entered, these values are defaulted to '100%', '400', '15', $myAddressOne, $myAddressTwo, $myCity, $myState, and $myZip respectively.
 
-writeGoogleMap() takes up to three arguments; they are `$width`, `$height`, and `$zoom`. If no arguments are entered, these values are defaulted to '100%', '400', and '15', respectively.
-
-To use this function in its most simple form, just type: `<?php writeGoogleMap(); ?>`. This will create a map based on the information in _config.php with a width of 100%, a height of 400px, and a zoom level of 15. To change any of these values, just pass arguments to the function. Make sure if you are passing pixels values to not include 'px', only the number.
+To use this function in its most simple form, just type: `<?php echo google_map(); ?>`. This will create a map based on the information in _config.php with a width of 100%, a height of 400px, and a zoom level of 15. To change any of these values, just pass arguments to the function. Make sure if you are passing pixels values to not include 'px', only the number.
 
 As an example, if you wanted to create a 200px x 200px map with a zoom level of 15, you would type: `<?php writeGoogleMap('200', '200'); ?>`. You wouldn't need to include the zoom level since it already defaults to 15.
 
+Also, if you wanted to get a map based on an address that was not stored in the default variables in _config, use something similar to `<?php google_map(400,400,15,"123 King Street","Apt 1","Boone","NC",28607); ?>`
 
-### emailLink()
 
-emailLink() requires one argument; `$email`.
+### email_link()
+
+`email_link()` requires one argument; `$email`.
 
 This function takes the email address entered into it and simply spits out that email address as a fully formed link.
 
 
 ### pr()
 
-pr() requires one argument; `$arg`.
+`pr()` requires one argument; `$arg`.
 
 This function wraps whatever has been passed to it in `<pre>` tags and runs the `print_r()` function on the argument that has been passed.
 
@@ -147,7 +159,7 @@ The other functions listed in inc/functions.php should not need explained. For t
 
 ## Instructions  
 
-### /inc/navigation.php
+### /inc/navigation.inc.php
 
 To open a link in a new window, add _new to the end of the link (ie default.php_new or http://google.com_new)
 
