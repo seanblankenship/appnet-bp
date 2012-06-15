@@ -1,27 +1,3 @@
-/* =============================================================================
- *
- *      Author:Appnet 
- *      Author URI: http://www.appnet.com/
- *
- *      1) BASE ELEMENTS
- *          - images
- *          - iframes
- *          - misc
- *      2) MAIN CONTENT
- *          - header
- *          - content
- *          - footer
- *      3) FORMS
- *          - colors
- *          - commentForm
- *          - reachQuickly
- *          - getDirections
- *      4) PROGRAMMING
- *          - search.php
- *          - sitemap.php
- *
- * ========================================================================== */ 
-
 @import url('css/reset.css');
 @import url('//fonts.googleapis.com/css?family=Droid+Sans');
 @import url('//fonts.googleapis.com/css?family=Ubuntu');
@@ -29,9 +5,11 @@
 
 /* =============================================================================
  *
- *      1) BASE ELEMENTS
+ *      Author:     Appnet 
+ *      Author URI: http://www.appnet.com/
  *
- * ========================================================================== */
+ * ========================================================================== */ 
+
 
 body {
     background:#fff;
@@ -130,12 +108,9 @@ iframe {
 }
 
 
-
-/* =============================================================================
- *
- *     2) MAIN CONTENT
- *
- * ========================================================================== */
+/*
+ *  main links
+ */
  
 a:active {position:relative; top:1px;}
     a:active img, nav a:active {position:relative; top:0;}
@@ -290,209 +265,3 @@ footer small {
     margin:0;
     padding:15px 0;
 }
-
-
-
-/* =============================================================================
- *
- *      3) FORMS
- *
- * ========================================================================== */ 
-
-form {margin:0 0 15px 0; padding:0 0 15px 0;}
-    form div {clear:both; display:block; overflow:hidden;}
-    form div.warning {
-        font-size:13px;
-        height:25px;
-        line-height:25px;
-        margin:0 0 10px 10px;
-        padding:0 0 0 35px;
-        width:215px;
-    }
-    form span.star {color:#ff0000;}
-    label {
-        float:left;
-        height:26px;
-        line-height:26px;
-        margin:3px 0;
-        width:130px;
-    }
-    input, textarea, select {
-        float:left;
-        font:13px/18px 'Droid Sans', Arial, Helvetica, sans-serif;
-        margin:3px 0;
-        padding:5px;
-        width:300px;
-    }
-        select {width:312px;}
-        input:focus, textarea:focus, select:focus {outline:none;}
-    input.submit {
-        cursor:pointer;
-        margin:10px 0 0 130px;
-        width:85px;
-    }
-
-
-/*
- *  colors
- */
-
-div.warning {
-    background:#fbe3e4 url('css/images/error.gif') no-repeat 10px center;
-    border:1px solid #fbc2c4;
-    color:#900;
-}
-input, textarea, select {
-    background:#f5f5f5;
-    border:1px solid #ccc;
-    color:#666;
-    
-    -webkit-transition: background .4s ease, border .4s ease, color .4s ease;
-    -moz-transition:    background .4s ease, border .4s ease, color .4s ease;
-    -o-transition:      background .4s ease, border .4s ease, color .4s ease;
-    -ms-transition:     background .4s ease, border .4s ease, color .4s ease;
-    transition:         background .4s ease, border .4s ease, color .4s ease;
-}
-input:focus, textarea:focus, select:focus {
-    background:#fff;
-    border:1px solid #999;
-    color:#333;
-}
-input.submit {
-    background:#333;
-    border:1px solid #222;
-    color:#fff;
-    
-    -webkit-transition: background .4s ease;
-    -moz-transition:    background .4s ease;
-    -o-transition:      background .4s ease;
-    -ms-transition:     background .4s ease;
-    transition:         background .4s ease;
-}
-input.submit:hover {background:#444;}    
-
-
-/*
- *  commentForm
- */
-
-#commentForm {width:500px;}
-#commentForm h3 {clear:both; padding:20px 0 5px 0;}
-#commentForm h3.first {padding:0 0 5px 0;}
-#commentForm h4 {clear:both; padding:20px 0 5px 0;}
-#commentForm input.reset {margin:10px 0 0 10px;}
-#commentForm label.error {display:block; margin:0 0 15px 120px;}
-#commentForm div.warning {width:275px;} 
-
-	
-/*
- *  reachQuickly
- */
-
-#reachQuickly {width:100%;}
-    #reachQuickly div.warning {
-        clear:both;
-        float:left;
-        padding:0 0 0 36px;
-        text-align:left;
-        width:194px;
-    }
-    #reachQuickly label {
-        float:left;
-        margin:3px 0 0 0;
-        width:100%;
-    }
-    #reachQuickly input, #reachQuickly textarea, #reachQuickly select {
-        float:left;
-        font:12px/16px 'Droid Sans', Arial, Helvetica, sans-serif;
-        margin:0 0 3px 0;
-        padding:5px;
-        width:286px;
-    }
-    #reachQuickly input.submit {
-        cursor:pointer;
-        margin:3px 0 0 0;
-        width:298px;
-    }
-
-	
-/*
- *  getDirections
- */
-
-#getDirections {margin:0 0 15px 0; padding:0;}
-    #getDirections td {font-size:12px;}
-    #getDirections input, #getDirections textarea, #getDirections select {
-        font:12px/16px 'Droid Sans', Arial, Helvetica, sans-serif;
-        margin:3px 0 6px 0;
-        padding:5px;
-        width:95%;
-    }
-    #getDirections input.submit {
-        cursor:pointer;
-        margin:0;
-        width:112px;
-    }
-
-
-
-/* =============================================================================
- *
- *      4) PROGRAMMING
- *
- * ========================================================================== */   
-
-/*
- *  search.php
- */
-
-#moduleSearch {width:500px;}
-#moduleSearch h2 {
-    margin:0; 
-    padding:20px 0 5px 0;
-    text-transform:capitalize;
-}
-#moduleSearch div.multi label.main {}
-#moduleSearch div.multi label.secondary {padding-right:5px; text-align:right; width:15px;}
-#moduleSearch div.multi select.value {width:80px;}
-#moduleSearch div.multi input.value {width:68px;}
-#moduleSearch div.multi select.modifier {width:212px;}
-#moduleSearch input.reset {margin:10px 0 0 10px;}
-#moduleSearch ul {
-    list-style:none; 
-    margin:0 0 15px 0; 
-    padding:0;
-}
-    #moduleSearch ul li {
-        float:left; 
-        margin:0; 
-        padding:0;
-        width:50%;
-    }
-    #moduleSearch ul li input {
-        background:none;
-        border:0;
-        margin-top:10px; 
-        width:30px;
-    }
-
-
-/*
- *  sitemap.php
- */
-
-ul.sitemap {
-    list-style:none; 
-    margin:0 0 15px 0;
-    padding:0;
-}
-    ul.sitemap li {
-        float:left;
-        font-size:13px;
-        height:20px;
-        line-height:20px;
-        margin:0; 
-        overflow:hidden;
-        padding:0 1% 0 0; 
-        width:32.3333%;
-    }

@@ -1,54 +1,54 @@
 <?php
 
-//	include mobile detection
+//  include mobile detection
 include "__detect_mobile.php";
 $detect = new Mobile_Detect();
 if ($detect->isMobile()){
-	$ismobile = true;
+    $ismobile = true;
 }
 
-//	function for writing telephone numbers with ability to click to call
+//  function for writing telephone numbers with ability to click to call
 function phone($pn) {
-	global $ismobile;
-	if ($ismobile==true) {
-		$pn_stripped = preg_replace('/[^\d.]/', '', $pn);
-		$length = strlen($pn_stripped);
-		if($length==10){
-			$pn = '<a href="tel:+1'.$pn_stripped.'">'.$pn.'</a>';
-		} elseif($length==11) {
-			$pn = '<a href="tel:+'.$pn_stripped.'">'.$pn.'</a>';
-		}	
-	}
-	return $pn;	
+    global $ismobile;
+    if ($ismobile==true) {
+        $pn_stripped = preg_replace('/[^\d.]/', '', $pn);
+        $length = strlen($pn_stripped);
+        if($length==10){
+            $pn = '<a href="tel:+1'.$pn_stripped.'">'.$pn.'</a>';
+        } elseif($length==11) {
+            $pn = '<a href="tel:+'.$pn_stripped.'">'.$pn.'</a>';
+        }    
+    }
+    return $pn;    
 }
-	
+    
 //  function for writing images, one after another
 function write_imgs($f,$m,$l) {
     if (file_exists($f.$m.$l)){
-    	$arr = array();
-    	while(file_exists($f.$m.$l)) {
-    		$arr[] = '<img src="'.$f.$m.$l.'" alt="">';
+        $arr = array();
+        while(file_exists($f.$m.$l)) {
+            $arr[] = '<img src="'.$f.$m.$l.'" alt="">';
             $m++;
         }
         return implode("", $arr);
     } else {
         return "<p>upload a photo</p>";
-	}
+    }
 }
-	
+    
 //  function for writing random images
 function random_img($f,$m,$l) {
     if (file_exists($f.$m.$l)){
-    	$arr = array();
-    	while(file_exists($f.$m.$l)) {
-    		$arr[$m] = '<img src="'.$f.$m.$l.'" alt="">';
-    		$m++;
-    	}
-    	$random = array_rand($arr);
-    	return $arr[$random];
+        $arr = array();
+        while(file_exists($f.$m.$l)) {
+            $arr[$m] = '<img src="'.$f.$m.$l.'" alt="">';
+            $m++;
+        }
+        $random = array_rand($arr);
+        return $arr[$random];
     } else {
         return "<p>upload a photo</p>";
-	}    
+    }    
 }
 
 //  creates a get directions button for location pages
@@ -59,31 +59,31 @@ function get_directions(){
 
     // set variables 
     $myAddressString='';
-	if (!empty($myAddressOne)){
-		$myAddressString = $myAddressOne;
-	} if (!empty($myAddressTwo)){
-		$myAddressString .= (empty($myAddressString) ? $myAddressTwo : ', '.$myAddressTwo);
-	} if (!empty($myCity)){
-		$myAddressString .= (empty($myAddressString) ? $myCity : ', '.$myCity);
-	} if (!empty($myState)){
-		$myAddressString .= (empty($myAddressString) ? $myState : ', '.$myState);
-	} if (!empty($myZip)){
-		$myAddressString .= (empty($myAddressString) ? $myZip : ', '.$myZip);
-	}
+    if (!empty($myAddressOne)){
+        $myAddressString = $myAddressOne;
+    } if (!empty($myAddressTwo)){
+        $myAddressString .= (empty($myAddressString) ? $myAddressTwo : ', '.$myAddressTwo);
+    } if (!empty($myCity)){
+        $myAddressString .= (empty($myAddressString) ? $myCity : ', '.$myCity);
+    } if (!empty($myState)){
+        $myAddressString .= (empty($myAddressString) ? $myState : ', '.$myState);
+    } if (!empty($myZip)){
+        $myAddressString .= (empty($myAddressString) ? $myZip : ', '.$myZip);
+    }
 
-	if (!empty($myAddressString)){
-		$directions = '
-		<form action="http://maps.google.com/maps" method="get" id="getDirections" class="clearfix" target="_blank">
-			<label for="saddr">Enter Your Address:</label><br>
-			<input type="text" name="saddr" id="saddr">
-			<input type="hidden" name="daddr" value="'.$myAddressString.'"><br>
-			<input type="submit" class="submit" value="Get Directions">
-		</form>';	
-	} else {
-		$directions = '<p>fill out $myAddressOne, $myCity, $myState, or $myZip</p>';
-	}
-	
-	return $directions;	
+    if (!empty($myAddressString)){
+        $directions = '
+        <form action="http://maps.google.com/maps" method="get" id="getDirections" class="clearfix" target="_blank">
+            <label for="saddr">Enter Your Address:</label><br>
+            <input type="text" name="saddr" id="saddr">
+            <input type="hidden" name="daddr" value="'.$myAddressString.'"><br>
+            <input type="submit" class="submit" value="Get Directions">
+        </form>';    
+    } else {
+        $directions = '<p>fill out $myAddressOne, $myCity, $myState, or $myZip</p>';
+    }
+    
+    return $directions;    
 }
 
 //  creates a google map based on the location info in the config
@@ -131,7 +131,7 @@ function pr($var) {
     echo "</pre>";
 }
 
-//	writes site navigation
+//  writes site navigation
 function nav($array, $writeSubNav="", $domain="", $cut_first="") {
 
     $domain .= ($domain=="" ? "" : "/"); 
@@ -155,7 +155,7 @@ function nav($array, $writeSubNav="", $domain="", $cut_first="") {
         if ($writeSubNav=="1"){
 
             // if the value is an array (if there is a dropdown)
-        	if (is_array($value)){
+            if (is_array($value)){
                 $link = $value[0];                
 
                 // check if the link is supposed to open in a new window
@@ -210,13 +210,13 @@ function nav($array, $writeSubNav="", $domain="", $cut_first="") {
                 $nav_arr[] = '<li'.($i==1 ? $first : ($i==$len ? $last : '')).'><a href="'.$domain.$values[0].'"'.$values[1].'>'.$key.'</a></li>';
             }
             $i++;
-    	}
+        }
     }
     
     return implode("", $nav_arr);
 } 
 
-//	check if the link should open in a new window
+//  check if the link should open in a new window
 function checkTarget($link) {
     $target = substr($link,-4);
     if ($target=="_new"){
@@ -233,22 +233,26 @@ function checkTarget($link) {
 
 
 
+/*
+ *  set up some variables
+ */
+
 //  sets myPhoneMoreInfo for include.moreinfo.php
 $myPhoneTollFree = phone($myPhoneTollFree);
 $myPhoneLocal = phone($myPhoneLocal);
-$myPhone = $myPhoneTollFree." or ".$myPhoneLocal;	
+$myPhone = $myPhoneTollFree." or ".$myPhoneLocal;    
 if($myPhoneLocal=="" || $myPhoneTollFree=="") {
-	if($myPhoneLocal=="") {
-		if ($myPhoneTollFree==""){
-			$myPhoneMoreInfo = '<strong>fill out $myPhoneLocal or $myPhoneTollFree</strong>';	
-		} else {
-			$myPhoneMoreInfo = $myPhoneTollFree;
-		}
-	} elseif($myPhoneTollFree=="") {
-		$myPhoneMoreInfo = $myPhoneLocal;
-	}
+    if($myPhoneLocal=="") {
+        if ($myPhoneTollFree==""){
+            $myPhoneMoreInfo = '<strong>fill out $myPhoneLocal or $myPhoneTollFree</strong>';    
+        } else {
+            $myPhoneMoreInfo = $myPhoneTollFree;
+        }
+    } elseif($myPhoneTollFree=="") {
+        $myPhoneMoreInfo = $myPhoneLocal;
+    }
 } else {
-	$myPhoneMoreInfo = $myPhone;	
+    $myPhoneMoreInfo = $myPhone;    
 }
 
 //  copyright dates
@@ -256,118 +260,118 @@ $currentyear=date("o");
 if (empty($publishdate)){
     $myDate = $currentyear;
 } elseif ($publishdate!=$currentyear){
-	$myDate = $publishdate . '-' . $currentyear;
+    $myDate = $publishdate . '-' . $currentyear;
 } else {
-	$myDate = $publishdate;
+    $myDate = $publishdate;
 }
 
 //  controls state specific url linking information
 $appneturl = 'http://www.appnet.com';
 $myStateurl = array(
-	'AL' => $appneturl, 
-	'AK' => $appneturl, 
-	'AZ' => $appneturl.'/arizona-web-design.php', 
-	'AR' => $appneturl, 
-	'CA' => $appneturl.'/california-web-design.php', 
-	'CO' => $appneturl.'/colorado-web-design.php', 
-	'CT' => $appneturl.'/connecticut-web-design.php', 
-	'DE' => $appneturl, 
-	'DC' => $appneturl, 
-	'FL' => $appneturl.'/florida-web-design.php', 
-	'GA' => $appneturl.'/georgia-web-design.php', 
-	'HI' => $appneturl, 
-	'ID' => $appneturl, 
-	'IL' => $appneturl.'/illinois-web-design.php', 
-	'IN' => $appneturl, 
-	'IA' => $appneturl, 
-	'KS' => $appneturl, 
-	'KY' => $appneturl.'/kentucky-web-design.php', 
-	'LA' => $appneturl, 
-	'ME' => $appneturl, 
-	'MD' => $appneturl, 
-	'MA' => $appneturl, 
-	'MI' => $appneturl, 
-	'MN' => $appneturl, 
-	'MS' => $appneturl, 
-	'MO' => $appneturl.'/missouri-web-design.php', 
-	'MT' => $appneturl.'/montana-web-design.php', 
-	'NE' => $appneturl, 
-	'NV' => $appneturl.'/las-vegas-web-design.php', 
-	'NH' => $appneturl, 
-	'NJ' => $appneturl.'/new-jersey-web-design.php', 
-	'NM' => $appneturl, 
-	'NY' => $appneturl.'/new-york-web-design.php', 
-	'NC' => $appneturl.'/north-carolina-web-design.php', 
-	'ND' => $appneturl, 
-	'OH' => $appneturl, 
-	'OK' => $appneturl, 
-	'OR' => $appneturl, 
-	'PA' => $appneturl.'/pennsylvania-web-design.php', 
-	'RI' => $appneturl, 
-	'SC' => $appneturl.'/south-carolina-web-design.php', 
-	'SD' => $appneturl, 
-	'TN' => $appneturl.'/tennessee-web-design.php', 
-	'TX' => $appneturl.'/houston-texas-web-design.php', 
-	'UT' => $appneturl, 
-	'VT' => $appneturl, 
-	'VA' => $appneturl.'/virginia-web-design.php', 
-	'WA' => $appneturl.'/washington-web-design.php', 
-	'WV' => $appneturl.'/west-virginia-web-design.php', 
-	'WI' => $appneturl, 
-	'WY' => $appneturl
+    'AL' => $appneturl, 
+    'AK' => $appneturl, 
+    'AZ' => $appneturl.'/arizona-web-design.php', 
+    'AR' => $appneturl, 
+    'CA' => $appneturl.'/california-web-design.php', 
+    'CO' => $appneturl.'/colorado-web-design.php', 
+    'CT' => $appneturl.'/connecticut-web-design.php', 
+    'DE' => $appneturl, 
+    'DC' => $appneturl, 
+    'FL' => $appneturl.'/florida-web-design.php', 
+    'GA' => $appneturl.'/georgia-web-design.php', 
+    'HI' => $appneturl, 
+    'ID' => $appneturl, 
+    'IL' => $appneturl.'/illinois-web-design.php', 
+    'IN' => $appneturl, 
+    'IA' => $appneturl, 
+    'KS' => $appneturl, 
+    'KY' => $appneturl.'/kentucky-web-design.php', 
+    'LA' => $appneturl, 
+    'ME' => $appneturl, 
+    'MD' => $appneturl, 
+    'MA' => $appneturl, 
+    'MI' => $appneturl, 
+    'MN' => $appneturl, 
+    'MS' => $appneturl, 
+    'MO' => $appneturl.'/missouri-web-design.php', 
+    'MT' => $appneturl.'/montana-web-design.php', 
+    'NE' => $appneturl, 
+    'NV' => $appneturl.'/las-vegas-web-design.php', 
+    'NH' => $appneturl, 
+    'NJ' => $appneturl.'/new-jersey-web-design.php', 
+    'NM' => $appneturl, 
+    'NY' => $appneturl.'/new-york-web-design.php', 
+    'NC' => $appneturl.'/north-carolina-web-design.php', 
+    'ND' => $appneturl, 
+    'OH' => $appneturl, 
+    'OK' => $appneturl, 
+    'OR' => $appneturl, 
+    'PA' => $appneturl.'/pennsylvania-web-design.php', 
+    'RI' => $appneturl, 
+    'SC' => $appneturl.'/south-carolina-web-design.php', 
+    'SD' => $appneturl, 
+    'TN' => $appneturl.'/tennessee-web-design.php', 
+    'TX' => $appneturl.'/houston-texas-web-design.php', 
+    'UT' => $appneturl, 
+    'VT' => $appneturl, 
+    'VA' => $appneturl.'/virginia-web-design.php', 
+    'WA' => $appneturl.'/washington-web-design.php', 
+    'WV' => $appneturl.'/west-virginia-web-design.php', 
+    'WI' => $appneturl, 
+    'WY' => $appneturl
 );
 
 //  controls state specific name information
 $myStatename = array(
-	'AL' => 'Alabama', 
-	'AK' => 'Alaska', 
-	'AZ' => 'Arizona', 
-	'AR' => 'Arkansas', 
-	'CA' => 'California', 
-	'CO' => 'Colorado', 
-	'CT' => 'Connecticut', 
-	'DE' => 'Delaware', 
-	'DC' => 'Washington DC', 
-	'FL' => 'Florida', 
-	'GA' => 'Georgia', 
-	'HI' => 'Hawaii', 
-	'ID' => 'Idaho', 
-	'IL' => 'Illinois', 
-	'IN' => 'Indiana', 
-	'IA' => 'Iowa', 
-	'KS' => 'Kansas', 
-	'KY' => 'Kentucky', 
-	'LA' => 'Louisiana', 
-	'ME' => 'Maine', 
-	'MD' => 'Maryland', 
-	'MA' => 'Massachusetts', 
-	'MI' => 'Michigans', 
-	'MN' => 'Minnesota', 
-	'MS' => 'Mississippi', 
-	'MO' => 'Missouri', 
-	'MT' => 'Montana', 
-	'NE' => 'Nebraska', 
-	'NV' => 'Nevada', 
-	'NH' => 'New Hampshire', 
-	'NJ' => 'New Jersey', 
-	'NM' => 'New Mexico', 
-	'NY' => 'New York', 
-	'NC' => 'North Carolina', 
-	'ND' => 'North Dakota', 
-	'OH' => 'Ohio', 
-	'OK' => 'Oklahoma', 
-	'OR' => 'Oregon', 
-	'PA' => 'Pennsylvania', 
-	'RI' => 'Rhode Island', 
-	'SC' => 'South Carolina', 
-	'SD' => 'South Dakota', 
-	'TN' => 'Tennessee', 
-	'TX' => 'Texas', 
-	'UT' => 'Utah', 
-	'VT' => 'Vermont', 
-	'VA' => 'Virginia', 
-	'WA' => 'Washington', 
-	'WV' => 'West Virginia', 
-	'WI' => 'Wisconsin', 
-	'WY' => 'Wyoming'
+    'AL' => 'Alabama', 
+    'AK' => 'Alaska', 
+    'AZ' => 'Arizona', 
+    'AR' => 'Arkansas', 
+    'CA' => 'California', 
+    'CO' => 'Colorado', 
+    'CT' => 'Connecticut', 
+    'DE' => 'Delaware', 
+    'DC' => 'Washington DC', 
+    'FL' => 'Florida', 
+    'GA' => 'Georgia', 
+    'HI' => 'Hawaii', 
+    'ID' => 'Idaho', 
+    'IL' => 'Illinois', 
+    'IN' => 'Indiana', 
+    'IA' => 'Iowa', 
+    'KS' => 'Kansas', 
+    'KY' => 'Kentucky', 
+    'LA' => 'Louisiana', 
+    'ME' => 'Maine', 
+    'MD' => 'Maryland', 
+    'MA' => 'Massachusetts', 
+    'MI' => 'Michigans', 
+    'MN' => 'Minnesota', 
+    'MS' => 'Mississippi', 
+    'MO' => 'Missouri', 
+    'MT' => 'Montana', 
+    'NE' => 'Nebraska', 
+    'NV' => 'Nevada', 
+    'NH' => 'New Hampshire', 
+    'NJ' => 'New Jersey', 
+    'NM' => 'New Mexico', 
+    'NY' => 'New York', 
+    'NC' => 'North Carolina', 
+    'ND' => 'North Dakota', 
+    'OH' => 'Ohio', 
+    'OK' => 'Oklahoma', 
+    'OR' => 'Oregon', 
+    'PA' => 'Pennsylvania', 
+    'RI' => 'Rhode Island', 
+    'SC' => 'South Carolina', 
+    'SD' => 'South Dakota', 
+    'TN' => 'Tennessee', 
+    'TX' => 'Texas', 
+    'UT' => 'Utah', 
+    'VT' => 'Vermont', 
+    'VA' => 'Virginia', 
+    'WA' => 'Washington', 
+    'WV' => 'West Virginia', 
+    'WI' => 'Wisconsin', 
+    'WY' => 'Wyoming'
 );

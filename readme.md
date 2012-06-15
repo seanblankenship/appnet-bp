@@ -2,13 +2,14 @@
 
 **Version:**        4.8.0
 
-**Last Updated:**   June 14, 2012
+**Last Updated:**   June 15, 2012
 
 **Changelog:**
 
 	v 4.8.0	added mobile device detection by default
 			added function that adds click to call functionality for phone numbers on mobile devices
-			added ability to add google map not based on variables in _config using google_map() 
+			added ability to add google map not based on variables in _config using google_map()
+			broke style.css up a little; moved some styles into css/forms.css and css/programming.css 
 			refactored functions.php and updated most other files to reflect the changes
 
     v 4.7.1 bug fix with sitemap.php
