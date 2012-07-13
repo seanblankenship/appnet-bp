@@ -112,11 +112,8 @@ iframe {
  *  main links
  */
  
-a:active {position:relative; top:1px;}
-    a:active img, nav a:active {position:relative; top:0;}
-
 a:link, a:visited, a:active {
-    border-bottom:1px dotted #090;
+    border-bottom:1px dotted transparent;
     color:#090;
     text-decoration:none;
     
@@ -205,7 +202,7 @@ ul.gallery {
 footer {}
 
 footer a:link, footer a:visited, footer a:active {
-    border-bottom:1px dotted #fff;
+    border-bottom:1px dotted transparent;
     color:#000;
 }
     footer a:hover {

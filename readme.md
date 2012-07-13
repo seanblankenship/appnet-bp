@@ -1,10 +1,12 @@
 # Main Site Template
 
-**Version:**        4.8.0
+**Version:**        4.8.1
 
-**Last Updated:**   June 15, 2012
+**Last Updated:**   July 12, 2012
 
 **Changelog:**
+
+    v 4.8.1 style changes across all of the stylesheets [better html5 forms support]
 
 	v 4.8.0	added mobile device detection by default
 			added function that adds click to call functionality for phone numbers on mobile devices

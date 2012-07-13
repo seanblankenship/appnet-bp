@@ -6,37 +6,18 @@
  * ========================================================================== */ 
  
 
-form {margin:0 0 15px 0; padding:0 0 15px 0;}
-    form div {clear:both; display:block; overflow:hidden;}
-    form div.warning {
-        font-size:13px;
-        height:25px;
-        line-height:25px;
-        margin:0 0 10px 10px;
-        padding:0 0 0 35px;
-        width:215px;
-    }
-    form span.star {color:#ff0000;}
-    label {
-        float:left;
-        height:26px;
-        line-height:26px;
-        margin:3px 0;
-        width:130px;
-    }
-    input, textarea, select {
-        float:left;
+form {margin:0; padding:0; width:auto;}
+    form label {}
+    form input, form textarea, form select {
         font:13px/18px 'Droid Sans', Arial, Helvetica, sans-serif;
-        margin:3px 0;
         padding:5px;
-        width:300px;
     }
-        select {width:312px;}
-        input:focus, textarea:focus, select:focus {outline:none;}
-    input.submit {
+        form input:focus, form textarea:focus, form select:focus {outline:none;}
+    form input[type='submit'] {
         cursor:pointer;
-        margin:10px 0 0 130px;
-        width:85px;
+        margin:0 5px 0 0;
+        padding:5px 15px;
+        text-transform:uppercase;
     }
 
 
@@ -45,11 +26,17 @@ form {margin:0 0 15px 0; padding:0 0 15px 0;}
  */
 
 div.warning {
-    background:#fbe3e4 url('css/images/error.gif') no-repeat 10px center;
+    background:#fbe3e4 url('../css/images/error.gif') no-repeat 10px center;
     border:1px solid #fbc2c4;
     color:#900;
 }
-input, textarea, select {
+
+::-webkit-input-placeholder {color:#333;}
+::-moz-placeholder {color:#333;}
+
+input, textarea, select, 
+        form#reachQuickly input:invalid, form#reachQuickly textarea:invalid, form#reachQuickly select:invalid 
+{
     background:#f5f5f5;
     border:1px solid #ccc;
     color:#666;
@@ -60,12 +47,21 @@ input, textarea, select {
     -ms-transition:     background .4s ease, border .4s ease, color .4s ease;
     transition:         background .4s ease, border .4s ease, color .4s ease;
 }
-input:focus, textarea:focus, select:focus {
-    background:#fff;
-    border:1px solid #999;
-    color:#333;
-}
-input.submit {
+    input:invalid, textarea:invalid, select:invalid {
+        background:#fbe3e4;
+        border:1px solid #fbc2c4;
+        color:#900;
+    }
+        input:focus, textarea:focus, select:focus,
+            input:invalid:focus, textarea:invalid:focus, select:invalid:focus, 
+            form#reachQuickly input:invalid:focus, form#reachQuickly textarea:invalid:focus, form#reachQuickly select:invalid:focus
+        {
+            background:#fff;
+            border:1px solid #999;
+            color:#333;
+        }
+        
+input[type='submit'] {
     background:#333;
     border:1px solid #222;
     color:#fff;
@@ -76,66 +72,88 @@ input.submit {
     -ms-transition:     background .4s ease;
     transition:         background .4s ease;
 }
-input.submit:hover {background:#444;}    
+    input[type='submit']:hover {background:#444;}
 
 
 /*
  *  commentForm
  */
 
-#commentForm {width:500px;}
-#commentForm h3 {clear:both; padding:20px 0 5px 0;}
-#commentForm h3.first {padding:0 0 5px 0;}
-#commentForm h4 {clear:both; padding:20px 0 5px 0;}
-#commentForm input.reset {margin:10px 0 0 10px;}
-#commentForm label.error {display:block; margin:0 0 15px 120px;}
-#commentForm div.warning {width:275px;} 
+form#commentForm {margin:0 0 15px 0; padding:0 0 15px 0; width:500px;}
+    form#commentForm div {clear:both; display:block; overflow:hidden;}
+    form#commentForm div.warning {
+        height:25px;
+        line-height:25px;
+        margin:0 0 10px 10px;
+        padding:0 0 0 35px;
+        width:215px;
+    }
+    form#commentForm span.star {color:#ff0000;}
+    form#commentForm label {
+        float:left;
+        height:26px;
+        line-height:26px;
+        margin:3px 0;
+        width:130px;
+    }
+    form#commentForm input, form#commentForm textarea, form#commentForm select {
+        float:left;
+        margin:3px 0;
+        padding:5px;
+        width:300px;
+    }
+        form#commentForm select {width:312px;}
+    form#commentForm input[type='submit'] {
+        margin:5px 0 0 130px;
+        width:100px;
+    }
+    form#commentForm h3 {clear:both; padding:20px 0 5px 0;}
+    form#commentForm h3.first {padding:0 0 5px 0;}
+    form#commentForm h4 {clear:both; padding:20px 0 5px 0;}
+    form#commentForm input.reset {margin:10px 0 0 10px;}
+    form#commentForm label.error {display:block; margin:0 0 15px 120px;}
+    form#commentForm div.warning {width:275px;} 
 
 	
 /*
  *  reachQuickly
  */
 
-#reachQuickly {width:100%;}
-    #reachQuickly div.warning {
+form#reachQuickly {width:100%;}
+    form#reachQuickly div.warning {
         clear:both;
         float:left;
         padding:0 0 0 36px;
         text-align:left;
         width:194px;
     }
-    #reachQuickly label {
+    form#reachQuickly label {
         float:left;
         margin:3px 0 0 0;
         width:100%;
     }
-    #reachQuickly input, #reachQuickly textarea, #reachQuickly select {
+    form#reachQuickly input, form#reachQuickly textarea, form#reachQuickly select {
         float:left;
-        font:12px/16px 'Droid Sans', Arial, Helvetica, sans-serif;
         margin:0 0 3px 0;
-        padding:5px;
-        width:286px;
+        width:95%;
     }
-    #reachQuickly input.submit {
-        cursor:pointer;
-        margin:3px 0 0 0;
-        width:298px;
-    }
+        form#reachQuickly input[type='submit'] {padding:5px 15px; width:99%;}
+    /* required fields for this section are in the colors section above */
 
 	
 /*
  *  getDirections
  */
 
-#getDirections {margin:0 0 15px 0; padding:0;}
-    #getDirections td {font-size:12px;}
-    #getDirections input, #getDirections textarea, #getDirections select {
-        font:12px/16px 'Droid Sans', Arial, Helvetica, sans-serif;
+form#getDirections {margin:0 0 15px 0; padding:0;}
+    form#getDirections label {width:95%;}
+    form#getDirections td {font-size:12px;}
+    form#getDirections input, #getDirections textarea, #getDirections select {
         margin:3px 0 6px 0;
         padding:5px;
         width:95%;
     }
-    #getDirections input.submit {
+    form#getDirections input.submit {
         cursor:pointer;
         margin:0;
         width:112px;

@@ -11,14 +11,14 @@
         <div class="r">
             <div class="l">
                 <h5>Contact Us Quickly</h5>
-                <form id="quickCommentForm" action="email.php" method="post">
+                <form id="reachQuickly" action="email.php" method="post">
                     <input type="hidden" name="Subject" value="<?php echo $myCompany; ?> - Reach Us Quickly">
                     <input type="hidden" name="LocOK" value="ok.php">
                     <input type="hidden" name="To" value="<?php echo $myEmail; ?>">
                     <div id="reachQuickly">
-                        <label for="Name">Name:</label><input type="text" name="Name" id="Name" class="required">
-                        <label for="Sender">Email:</label><input type="text" name="Sender" id="Sender" class="required email">
-                        <label for="Comments">Message:</label><textarea id="Comments" name="Comments"></textarea>
+                        <label for="NameQ">Name:</label><input type="text" name="Name" id="NameQ" class="required" required>
+                        <label for="SenderQ">Email:</label><input type="email" name="Sender" id="SenderQ" class="required email" required>
+                        <label for="CommentsQ">Message:</label><textarea id="CommentsQ" name="Comments"></textarea>
                         <input type="submit" name="Submit" value="Submit" class="submit">
                     </div>
                 </form>
