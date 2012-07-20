@@ -1,10 +1,12 @@
 # Main Site Template
 
-**Version:**        4.8.1
+**Version:**        4.8.2
 
-**Last Updated:**   July 12, 2012
+**Last Updated:**   July 20, 2012
 
 **Changelog:**
+
+    v 4.8.2 updated $bad_files array in sitemap.php
 
     v 4.8.1 style changes across all of the stylesheets [better html5 forms support]
 
