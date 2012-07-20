@@ -7,6 +7,7 @@
 **Changelog:**
 
     v 4.8.2 updated $bad_files array in sitemap.php
+            fixed a few minor things in readme.md
 
     v 4.8.1 style changes across all of the stylesheets [better html5 forms support]
 
@@ -179,8 +180,10 @@ use the code below as a starting point for body.htm or footer.htm files if neede
 <?php 
     if ($_REQUEST["table"] == "realman") {
         echo "";
-    } elseif (strpos($_SERVER['SCRIPT_FILENAME'],"events.php")>0) {
+    } elseif (basename($_SERVER[PHP_SELF])=="events.php") {
         echo "";
+    } elseif (basename($_SERVER[PHP_SELF])=="sitemap.php") {
+        echo "Sitemap";
     } else {
         echo $myCompany;
     }
