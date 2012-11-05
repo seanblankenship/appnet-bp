@@ -1,35 +1,12 @@
-<?php echo ((isset($_REQUEST['m'])) && ($_REQUEST['m']=="product_detail")) ? '' : '<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>'."\n".'<script>window.jQuery || document.write(\'<script src="js/jquery-1.7.1.min.js"><\/script>\')</script>'; ?>
-
-<?php // contact form validation
-if($pageName=="contact" || $pageName=="contactRE" || $quickCommentForm=="1"){ ?>
-<script src="js/jquery.validate.js"></script><?php } ?>
-
-<?php // image fader
-if ($fader=="1" && $pageName=="default") { ?>
-<script src="js/jquery.innerfade.js"></script><?php } ?>
-
-<?php // lightbox
-if ((isset($use_lightbox)) && ($use_lightbox=="yes")) { ?>
-<script src="js/jquery.lightbox-0.5.min.js"></script><?php } ?>
-
-<?php // sexy lightbox
-if ((isset($use_s_lightbox)) && ($use_s_lightbox=="yes")) { ?>
-<script src="js/jquery.easing.1.3.js"></script>
-<script src="js/s-lightbox.v2.2.jquery.min.js"></script><?php } ?>
-
-<?php // organic tabs
-if((isset($use_tabs)) && ($use_tabs=="yes")){ ?>
-<script src="js/jquery.organictabs.js"></script><?php } ?>
-
-<?php  // twitter
-if ($twitter_display=="1" && $pageName==$twitter_pageName) { ?>
-<script src="js/jquery.twitter.js"></script><?php } ?>
+<?=((isset($_REQUEST['m'])) && ($_REQUEST['m']=="product_detail")) ? '' : '<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>'?>
+<script src="js/global-ck.js"></script>
 
 <script>
 <?php if($pageName=="contact" || $pageName=="contactRE"){ // comment form validation ?>
 $(function() {
     $("#commentForm").validate();
-});<?php } if ($quickCommentForm=="1"){ ?>
+});
+<?php } if ($quickCommentForm=="1"){ ?>
 $(function() {
     $("#quickCommentForm").validate();
 });<?php } ?>
@@ -80,25 +57,8 @@ $(function() {
     $("#description-box").organicTabs();
 });<?php } ?>
 
-<?php if ($twitter_display=="1" && $pageName==$twitter_pageName){ // twitter ?>
-$("#twitter").getTwitter({
-    userName: "<?php echo($twitter_name); ?>",
-    numTweets: <?php echo($twitter_tweets); ?>,
-    loaderText: "Loading tweets...",
-    slideIn: false,
-    showHeading: false,
-    headingText: "Latest Tweets",
-    showProfileLink: false
-});<?php } ?>
-
 <?php // lose the borders on anchor tags surrounding images ?>
 $(function() {
     $('img').parent('a').addClass('nobord');
 });
 </script>
-
-<?php // installs chrome frame if ie6 ?>
-<!--[if lt IE 7 ]>
-<script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
-<script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
-<![endif]-->

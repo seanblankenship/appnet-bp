@@ -1,59 +1,6 @@
 # Main Site Template
 
-**Version:**        4.8.2
-
-**Last Updated:**   July 20, 2012
-
-**Changelog:**
-
-    v 4.8.2 updated $bad_files array in sitemap.php
-            fixed a few minor things in readme.md
-
-    v 4.8.1 style changes across all of the stylesheets [better html5 forms support]
-
-	v 4.8.0	added mobile device detection by default
-			added function that adds click to call functionality for phone numbers on mobile devices
-			added ability to add google map not based on variables in _config using google_map()
-			broke style.css up a little; moved some styles into css/forms.css and css/programming.css 
-			refactored functions.php and updated most other files to reflect the changes
-
-    v 4.7.1 bug fix with sitemap.php
-
-    v 4.7.0 taking off spam checks code as it is no longer needed on our new email server
-
-    v 4.6.1 updated style.css to include styling for search.php
-            also added table of contents to stylesheet for ease of use
-
-    v 4.6.0 deleted all 404 error info from this site template
-            made small tweaks for php and stylesheet issues
-            changed all links from appnet.com to www.appnet.com in copyright
-            rebuilt sitemap page to be seperated by letter and fit into design instead of white page
-            sitemap page now uses header.htm, body.htm and footer.htm to build itself (same as programming)
-
-    v 4.5.1 minor code tweaks of things that were bugging me
-
-    v 4.5.0 updated functions.php to include correct copyright links for new appnet.com
-
-    v 4.4.4 updated style.css to delete media queries and restyled the warnings on the contact form
-            created css/mq.css to deal with media queries in the future
-
-    v 4.4.3 fixed includes on header.htm and footer.htm
-
-    v 4.4.2 added a class of 'nobord' to kill border-bottom on links
-
-    v 4.4.1 updated array bad_files in sitemap.php
-
-    v 4.4.0 critical fix to sitemap.php
-
-    v 4.3.0 updated inc/contact.inc.php to use 'for' correctly on labels
-            small text changes/corrections
-    
-    v 4.2.0 renamed include files to cause less confusion
-
-    v 4.1.0 fixed an error with inc/scripts.footer.php
-
-    v 4.0.0 restructured the entire site template
-
+**Version:**        5.0.0
 
 
 ## Programming Navigation Links
@@ -138,9 +85,9 @@ To use this function, just type: `<?php echo get_directions(); ?>`. It will, usi
 
 To use this function in its most simple form, just type: `<?php echo google_map(); ?>`. This will create a map based on the information in _config.php with a width of 100%, a height of 400px, and a zoom level of 15. To change any of these values, just pass arguments to the function. Make sure if you are passing pixels values to not include 'px', only the number.
 
-As an example, if you wanted to create a 200px x 200px map with a zoom level of 15, you would type: `<?php writeGoogleMap('200', '200'); ?>`. You wouldn't need to include the zoom level since it already defaults to 15.
+As an example, if you wanted to create a 200px x 200px map with a zoom level of 15, you would type: `<?php echo google_map(200,200); ?>`. You wouldn't need to include the zoom level since it already defaults to 15.
 
-Also, if you wanted to get a map based on an address that was not stored in the default variables in _config, use something similar to `<?php google_map(400,400,15,"123 King Street","Apt 1","Boone","NC",28607); ?>`
+Also, if you wanted to get a map based on an address that was not stored in the default variables in _config, use something similar to `<?php echo google_map(400,400,15,"123 King Street","Apt 1","Boone","NC",28607); ?>`
 
 
 ### email_link()

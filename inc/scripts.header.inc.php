@@ -1,1 +1,3 @@
-<script src="js/modernizr-2.0.6.min.js"></script>
+
+<!-- load scripts -->   
+<script src="js/modernizr-2.6.2.min.js"></script>

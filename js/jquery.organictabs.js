@@ -66,7 +66,14 @@
     };
     
     $.organicTabs.defaultOptions = {
-        "speed": 300
+        // this must be set to zero to get google maps to load inside tabs with the following code added to the map
+        // put an id of 'map-click' on the anchor that selects the map
+        // var el = document.getElementById('map-click');
+        // el.onclick = loadScript;
+        //
+        // instead of the normal code, which is:
+        // window.onload = loadScript;
+        "speed": 0
     };
     
     $.fn.organicTabs = function(options) {

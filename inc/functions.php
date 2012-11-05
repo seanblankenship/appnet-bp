@@ -7,6 +7,13 @@ if ($detect->isMobile()){
     $ismobile = true;
 }
 
+//  set the pageName variable
+if (!isset($pageName)) {
+    $pn_array = array();
+    $pn_array = explode('.', basename($_SERVER['PHP_SELF']));
+    $pageName = $pn_array[0];
+}
+
 //  function for writing telephone numbers with ability to click to call
 function phone($pn) {
     global $ismobile;
@@ -132,7 +139,7 @@ function pr($var) {
 }
 
 //  writes site navigation
-function nav($array, $writeSubNav="", $domain="", $cut_first="") {
+function nav($array, $writeSubNav="", $cut_first="", $domain="") {
 
     $domain .= ($domain=="" ? "" : "/"); 
     
