@@ -1,6 +1,6 @@
 # Main Site Template
 
-**Version:**        5.0.1
+**Version:**        5.1.0
 
 
 ## Programming Navigation Links
@@ -80,32 +80,35 @@ use the code below as a starting point for body.htm or footer.htm files if neede
 
 ### contact.php and ok.php
 
-paste the following code: `<?php include "inc/contact.php"; ?>`, then change `$pageName` to "contact", "contactRE", or "ok"
+paste the following code: `<?php include "inc/contact.inc.php"; ?>`. if it is a real estate site, and you would like to use the expanded contact form, add the following code instead:
+
+```php
+<?php
+    $is_real_estate = 1;
+    include "inc/contact.inc.php";
+?>
+```
 
 
 ### Lightbox
 
-add `$use_lightbox = "yes";` to the top of your document next to the `$pageName="XXXX"` variable (it will look like this `<?php $pageName="default"; $use_lightbox="yes"; ?>`) and `class="gallery"` must wrap the gallery (ie `<table class="gallery">` or `<ul class="gallery">`)
+add `$use_lightbox = "yes";` to the top of your document and `class="gallery"` must wrap the gallery (ie `<table class="gallery">` or `<ul class="gallery">`)
 
 to use titles, add the title attribute to the anchor tag (ie `<a title="this is a title" href="#">IMG</a>`)
 	
 
 ### Sexy Lightbox
 
-add `$use_s_lightbox = "yes";` to the top of your document next to the `$pageName="XXXX"` variable, it will look like this:
+add `$use_s_lightbox = "yes";` to the top of your document.
 
-```php
-<?php $pageName="default"; $use_s_lightbox="yes"; ?>
-```
-
-finally, all links must be setup as follows:
+all links must be setup as follows (where XXXXXXXX is replaced with your numbers):
 
     <a href="PAGETOLOAD.htm?TB_iframe=true&amp;height=XXXXXXXX&amp;width=XXXXXXXX" rel="sexylightbox">text</a> 
 
 
 ### Displaying Twitter Feeds
 
-include the file `inc/twitter.inc.php` and then edit that file to adjust your twitter id and post count. this file will create a `<ul>` with an id of 'twitter'. each tweet will be inside of a `<li>` that contains a `<div>` with a class of 'text' (contains the tweet) and one with a class of 'time' (contains the time the tweet was posted). 
+paste the following code: `<?php include "inc/twitter.inc.php"; ?>`. then, edit that file to adjust your twitter id and post count. this file will create a `<ul>` with an id of 'twitter'. each tweet will be inside of a `<li>` that contains a `<div>` with a class of 'text' (contains the tweet) and one with a class of 'time' (contains the time the tweet was posted). 
 
 
 
