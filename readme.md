@@ -105,7 +105,7 @@ finally, all links must be setup as follows:
 
 ### Displaying Twitter Feeds
 
-include the file `inc/twitter.inc.php' and then edit that file to adjust your twitter id and post count. this file will create a `<ul>` with an id of 'twitter'. each tweet will be inside of a `<li>` that contains a `<div>` with a class of 'text' (contains the tweet) and one with a class of 'time' (contains the time the tweet was posted). 
+include the file `inc/twitter.inc.php` and then edit that file to adjust your twitter id and post count. this file will create a <ul> with an id of 'twitter'. each tweet will be inside of a <li> that contains a <div> with a class of 'text' (contains the tweet) and one with a class of 'time' (contains the time the tweet was posted). 
 
 
 
