@@ -7,7 +7,7 @@ $etagHeader=(isset($_SERVER['HTTP_IF_NONE_MATCH']) ? trim($_SERVER['HTTP_IF_NONE
 
 // set up some headers
 header('Last-Modified: '.gmdate("D, d M Y H:i:s", $lastModified).' GMT');
-header('Etag: $etagFile');
+header('Etag: '.$etagFile);
 header('Cache-Control: public'); // make sure caching is turned on
 header('Expires: '.gmdate("D, d M Y H:i:s", time() + 3600 * 24 * 7).' GMT');    
 header('Content-Type: text/html; charset=utf-8');

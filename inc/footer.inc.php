@@ -35,4 +35,4 @@
     </div>
 </footer>
 
-<small>Copyright &copy; <?=$myDate?><?=(!empty($myCompany)) ? ' '.$myCompany : ''; ?>. <a href="<?=(!empty($myState)) ? $myStateurl[$myState] : 'http://www.appnet.com'; ?>"><?=(!empty($myState)) ? $myStatename[$myState].' ' : ''; ?>Web Design</a> by AppNet.com. <?=($pageName == "default") ? '<br><a href="sitemap.php">sitemap</a>' : ''?></small>
+<small>Copyright &copy; <?=$myDate?><?=(!empty($myCompany)) ? ' '.$myCompany : ''?>. <a href="<?=(!empty($myState)) ? $myStateurl[$myState] : 'http://www.appnet.com'?>"><?=(!empty($myState)) ? $myStatename[$myState].' ' : ''?>Web Design</a> by AppNet.com. <?=($pageName == "default") ? '<br><a href="sitemap.php">sitemap</a>' : ''?></small>
