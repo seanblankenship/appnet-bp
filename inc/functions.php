@@ -174,16 +174,52 @@ function nav($array, $writeSubNav="", $cut_first="", $domain="") {
                 // loop through the dropdown array
                 foreach (array_slice($value, 1) as $key2 => $value2){
 
-                    // is there a secondary dropdown array
+                    // is there a second dropdown array
                     if(is_array($value2)){
                         $link2 = $value2[0];
                         $values = checkTarget($link2);
                         $nav_arr[] = '<li><a href="'.$domain.$values[0].'"'.$values[1].'>'.$key2.'</a><ul>';
 
-                        // loop through the secondary dropdown
+                        // loop through the second dropdown
                         foreach (array_slice($value2, 1) as $key3 => $value3){
-                            $values = checkTarget($value3);  
-                            $nav_arr[] = '<li><a href="'.$domain.$values[0].'"'.$values[1].'>'.$key3.'</a></li>';
+                        
+                            // is there a third dropdown array
+                            if(is_array($value3)){
+                            
+                                $link3 = $value3[0];
+                                $values = checkTarget($link3);
+                                $nav_arr[] = '<li><a href="'.$domain.$values[0].'"'.$values[1].'>'.$key3.'</a><ul>';
+                                
+                                // loop through the third dropdown
+                                foreach (array_slice($value3, 1) as $key4 => $value4){
+                                    
+                                    // is there a fourth dropdown array
+                                    if(is_array($value4)){
+                                    
+                                        $link4 = $value4[0];
+                                        $values = checkTarget($link4);
+                                        $nav_arr[] = '<li><a href="'.$domain.$values[0].'"'.$values[1].'>'.$key4.'</a><ul>';
+                                        
+                                        // loop through the fourth dropdown
+                                        foreach (array_slice($value4, 1) as $key5 => $value5){ 
+                                            $values = checkTarget($value5);  
+                                            $nav_arr[] = '<li><a href="'.$domain.$values[0].'"'.$values[1].'>'.$key5.'</a></li>';
+                                        }
+                                        $nav_arr[] = '</ul></li>';
+                                
+                                    } else {
+                                        $values = checkTarget($value4);  
+                                        $nav_arr[] = '<li><a href="'.$domain.$values[0].'"'.$values[1].'>'.$key4.'</a></li>';
+                                    }
+                                    
+                                }
+                                $nav_arr[] = '</ul></li>';
+                        
+                            } else {
+                                $values = checkTarget($value3);  
+                                $nav_arr[] = '<li><a href="'.$domain.$values[0].'"'.$values[1].'>'.$key3.'</a></li>';
+                            }
+                            
                         }
                         $nav_arr[] = '</ul></li>';
 
