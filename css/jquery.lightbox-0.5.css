@@ -66,12 +66,12 @@
 #lightbox-nav-btnPrev { 
 	left: 0; 
 	float: left;
-	background: url('images/lightbox-btn-prev.gif') left 15% no-repeat !important;
+	background: url('../images/lightbox-btn-prev.gif') left 15% no-repeat !important;
 }
 #lightbox-nav-btnNext { 
 	right: 0; 
 	float: right;
-	background: url('images/lightbox-btn-next.gif') right 15% no-repeat !important;
+	background: url('../images/lightbox-btn-next.gif') right 15% no-repeat !important;
 }
 #lightbox-container-image-data-box {
 	background-color: #fff;

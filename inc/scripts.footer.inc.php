@@ -43,7 +43,7 @@ $(function() {
 <?php if ((isset($use_s_lightbox)) && ($use_s_lightbox=="yes")) { // sexy lightbox ?>
 $(function(){
     SexyLightbox.initialize({
-        imagesdir: 'css/images',
+        imagesdir: 'images',
         color:'white',
         OverlayStyles:{
             'background-color':'#000',
