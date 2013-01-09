@@ -8,6 +8,7 @@ audio, canvas, video {display:inline-block;} /* Corrects `inline-block` not defi
 audio:not([controls]) {display:none; height:0;} /* Prevents browsers from displaying `audio` without controls. Remove excess height in iOS 5 */
 [hidden] {display:none;} /* Addresses styling for `hidden` attribute not present in IE 8/9 */
 html {-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;} /* Prevents iOS text size adjust after orientation change, w/o disabling user zoom */
+font {display:none;} /* makes people who use the font tag go crazy (as they rightly should) */
 
 
 
