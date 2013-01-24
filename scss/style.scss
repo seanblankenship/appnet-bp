@@ -1,5 +1,13 @@
 /* ==========================================================================
-   based on normalize.css
+   Variables
+   ========================================================================== */
+
+$color:#000;
+
+
+
+/* ==========================================================================
+   Resets are based on normalize.css
    ========================================================================== */
    
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {display:block;} /* Corrects `block` not defined in IE 8/9 */
@@ -27,12 +35,12 @@ font {display:none;} /* makes people who use the font tag go crazy (as they righ
    ========================================================================== */
 
 /* selected text */
-::-moz-selection, ::selection {background:#39f; color:#fff; text-shadow:0 1px 0 #0a3b6c;}
+::-moz-selection, ::selection {background:#39f; color:white; text-shadow:0 1px 0 #0a3b6c;}
 
-/* styles */
+// styles
 body {
-    background:#fff;
-    color:#000;
+    background:white;
+    color:black;
     font:13px/20px 'Open Sans', Arial, Helvetica, sans-serif;
     margin:0;
     min-width:960px;
@@ -41,18 +49,96 @@ body {
 p, ul, ol {margin:0 0 15px 0; padding:0;}
 ul li, ol li {margin:0 0 0 18px; padding:0;}
 
+.pull-left {float:left;}
+.pull-right {float:right;}
+.txt-right {text-align:right;}
+
+.btn {
+    background:#333;
+    border:1px solid black;
+    border-radius:4px;
+    box-shadow:inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 8px 10px -6px rgba(0, 0, 0, 1);
+    color:#fff;
+    display:inline-block;
+    font-size:16px;
+    padding:0 25px;
+    line-height:30px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.75);
+}
+    .btn:hover {
+        color: #fff;
+        background: #666;
+        border:1px solid black;
+    }
+.btn-center {display:block; text-align:center;}
+
+
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+
+// normalize
+abbr[title] {border-bottom:1px dotted;}
+b, strong {font-weight:700;}
+dfn {font-style:italic;}
+mark {background:#ff0; color:black;}
+code, kbd, pre, samp {font-family:monospace, serif; font-size:1em;}
+pre {white-space:pre; white-space:pre-wrap; word-wrap:break-word;}
+q {quotes:"\201C" "\201D" "\2018" "\2019";}
+sub, sup {font-size:75%; line-height:0; position:relative; vertical-align:baseline;}
+sup {top:-0.5em;}
+sub {bottom:-0.25em;}
+
+// styles
+h1, h2, h3, h4, h5, h6 {
+    font-weight:400;
+    margin:0;
+}
+
+h1 {
+    font-size:24px; 
+    line-height:30px;
+    padding:10px 0;
+}
+h2 {
+    font-size:22px; 
+    line-height:28px;
+    padding:10px 0;
+}
+h3 {
+    font-size:20px;
+    line-height:26px;
+    padding:10px 0 5px 0;
+}
+h4 {
+    font-size:18px; 
+    line-height:24px;
+    padding:5px 0;
+}
+h5 {
+    font-size:18px; 
+    line-height:24px;
+    padding:10px 0;
+}
+h6 {
+    font-size:14px; 
+    line-height:20px;
+    padding:5px 0;
+}
+
 
 
 /* ==========================================================================
    Links
    ========================================================================== */
 
-/* normalize */
+// normalize
 a:focus {outline:thin dotted;}
 a:active, a:hover {outline:0;}
 
-/* styles */
-a:link, a:visited, a:active {
+// styles
+a {
     border-bottom:1px dotted transparent;
     color:#090;
     text-decoration:none;
@@ -85,7 +171,7 @@ nav {}
 	margin:0;
 	padding:0;
 	
-	li {   /* main navigation */
+	li {   // main navigation
     	float:left;
         margin:0;
         padding:0;
@@ -94,18 +180,18 @@ nav {}
         a:link, a:visited, a:active {
             background:transparent;
             border:0;
-            color:#000;
+            color:black;
             display:block;
             line-height:40px;
         }
         a:hover {
-            background:#000;
+            background:black;
             border:0;
-            color:#fff;
+            color:white;
         }
 	}
 	
-	ul {   /* start dropdowns */
+	ul {   // start dropdowns
         list-style:none;
         margin:0; 
         padding:0; 
@@ -115,14 +201,14 @@ nav {}
         z-index:9999;
         
         li a:link, li a:active, li a:visited {
-            background:#fff; 
-            color:#000; 
+            background:white; 
+            color:black; 
             display:block; 
             height:25px; 
             line-height:25px; 
             padding:0px 15px;
         }
-        li a:hover {background:#000; color:#fff;}
+        li a:hover {background:black; color:white;}
     }
     
     li:hover ul {left:0; top:40px;} 
@@ -134,63 +220,8 @@ nav {}
 
 }
 
-/* disables dropdowns in ie6 */
+// disables dropdowns in ie6
 .ie6 #navlist ul {display:none !important;}
-
-
-
-/* ==========================================================================
-   Typography
-   ========================================================================== */
-
-/* normalize */
-abbr[title] {border-bottom:1px dotted;}
-b, strong {font-weight:700;}
-dfn {font-style:italic;}
-mark {background:#ff0; color:#000;}
-code, kbd, pre, samp {font-family:monospace, serif; font-size:1em;}
-pre {white-space:pre; white-space:pre-wrap; word-wrap:break-word;}
-q {quotes:"\201C" "\201D" "\2018" "\2019";}
-sub, sup {font-size:75%; line-height:0; position:relative; vertical-align:baseline;}
-sup {top:-0.5em;}
-sub {bottom:-0.25em;}
-
-/* styles */
-h1, h2, h3, h4, h5, h6 {
-    font-weight:400;
-    margin:0;
-}
-
-h1 {
-	font-size:24px; 
-	line-height:30px;
-	padding:10px 0;
-}
-h2 {
-	font-size:22px; 
-	line-height:28px;
-	padding:10px 0;
-}
-h3 {
-	font-size:20px;
-	line-height:26px;
-	padding:10px 0 5px 0;
-}
-h4 {
-	font-size:18px; 
-	line-height:24px;
-	padding:5px 0;
-}
-h5 {
-	font-size:18px; 
-	line-height:24px;
-	padding:10px 0;
-}
-h6 {
-	font-size:14px; 
-	line-height:20px;
-	padding:5px 0;
-}
 
 
 
@@ -198,10 +229,10 @@ h6 {
    Embedded content
    ========================================================================== */
 
-/* normalize */
+// normalize
 svg:not(:root) {overflow:hidden;}
 
-/* styles */
+// styles
 img {border:0;}
 
 img.center {display:block; margin:10px auto;}
@@ -209,13 +240,13 @@ img.align-r {float:right; margin:0 0 10px 10px;}
 img.align-l {float:left; margin:0 10px 10px 0;}
 
 img.border {
-    background:#fff;
+    background:white;
     border:1px solid #ccc;
     padding:4px;
 }
 
 iframe {
-    background:#fff;
+    background:white;
     border:1px solid #ccc;
     padding:4px;
 }
@@ -258,11 +289,11 @@ footer {
 
     a:link, a:visited, a:active {
         border-bottom:1px dotted transparent;
-        color:#000;
+        color:black;
     }
     a:hover, a:focus {
-        border-bottom:1px dotted #000;
-        color:#000;
+        border-bottom:1px dotted black;
+        color:black;
     }
     
     section {
@@ -315,9 +346,8 @@ small {
    Tables
    ========================================================================== */
 
-/* Remove most spacing between table cells */
+// Remove most spacing between table cells
 table {border-collapse:collapse; border-spacing:0;}
-
 
 
 
@@ -325,8 +355,8 @@ table {border-collapse:collapse; border-spacing:0;}
    Forms
    ========================================================================== */
 
-/* normalize */
-fieldset {border:1px solid #c0c0c0; margin:0 2px; padding:10px;}
+// normalize
+fieldset {border:0; margin:0; padding:0;}
 legend {border:0; padding:0;}
 button, input {line-height:normal;}
 button, html input[type="button"], input[type="reset"], input[type="submit"] {-webkit-appearance:button; cursor:pointer;}
@@ -336,11 +366,18 @@ input[type="search"] {-webkit-appearance:textfield; -moz-box-sizing:content-box;
 input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {-webkit-appearance: none;}
 button::-moz-focus-inner, input::-moz-focus-inner {border:0; padding:0;}
 
-/* styles */
+// styles
 form {
     margin:0; 
     padding:0; 
     width:auto;
+}
+fieldset {
+    background:#fdfdfd;
+    border:1px solid #c0c0c0; 
+    border-radius:5px; 
+    padding:20px;
+    text-shadow:0 1px 0 #fff;
 }
 button, input, select, textarea {
     border-radius:5px;
@@ -482,7 +519,7 @@ input[type='submit'] {
 }
  
     
-/* colors */
+// colors
 div.warning {
     background:#fbe3e4 url('images/error.gif') no-repeat 10px center;
     border:1px solid #fbc2c4;
@@ -514,7 +551,7 @@ input:focus, textarea:focus, select:focus,
     input:invalid:focus, textarea:invalid:focus, select:invalid:focus, 
     #reachQuickly input:invalid:focus, #reachQuickly textarea:invalid:focus, #reachQuickly select:invalid:focus 
     {
-        background:#fff;
+        background:white;
         border:1px solid #999;
         color:#333;
 }
@@ -522,7 +559,7 @@ input:focus, textarea:focus, select:focus,
 input[type='submit'], input[type='reset'] {
     background:#333;
     border:1px solid #222;
-    color:#fff;
+    color:white;
     
     -webkit-transition: background .4s ease;
     -moz-transition:    background .4s ease;
@@ -541,6 +578,7 @@ input[type='submit'], input[type='reset'] {
 ul.sitemap {
     list-style:none; 
     margin:0 0 15px 0;
+    overflow:hidden;
     padding:0;
     
     li {
@@ -549,7 +587,6 @@ ul.sitemap {
         height:20px;
         line-height:20px;
         margin:0; 
-        overflow:hidden;
         padding:0 1% 0 0; 
         width:32.3333%;
     }
