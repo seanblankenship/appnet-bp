@@ -4,24 +4,24 @@
 // 	Site variables
 // ================================================================
 
-$myCompany       = "COMPANY NAME";
+$myCompany       = "";
 	
 $serverFolder    = "something.com";
 	
 $myDomain        = "http://".$serverFolder;
 $myEmail         = "info@".$serverFolder;
 		
-$publishdate     = "2012";
+$publishdate     = "2013";
 	
-$myAddressOne    = "ADDRESS ONE";
-$myAddressTwo    = "ADDRESS TWO";
-$myCity          = "CITY";
-$myState         = "STATE"; // use two-letter abbreviation
-$myZip           = "ZIP";
+$myAddressOne    = "";
+$myAddressTwo    = "";
+$myCity          = "";
+$myState         = ""; // use two-letter abbreviation
+$myZip           = "";
 	
-$myPhoneLocal    = "555-555-5555";
-$myPhoneTollFree = "444-444-4444";
-$myFax           = "333-333-3333";
+$myPhoneLocal    = "";
+$myPhoneTollFree = "";
+$myFax           = "";
 	
 
 // ================================================================
