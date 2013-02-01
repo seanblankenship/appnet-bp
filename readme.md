@@ -1,6 +1,6 @@
 # Main Site Template
 
-**Version:**        5.3.2
+**Version:**        5.4.0
 
 
 ## Programming Navigation Links
@@ -11,12 +11,17 @@ latest article
 
     article.php?table=article&amp;mode=search
 
+article with type
+
+    article_list.php?table=article&amp;mode=search&amp;archived=false&amp;type=XXXXX
+
 all articles
 
     article_list.php?table=article&amp;mode=search&amp;archived=false
 
 
 ### Rental Module
+
     result.php?mode=search&amp;table=rental
 	
 
@@ -52,12 +57,6 @@ events.php?view=w&amp;m=<?php echo date("m"); ?>&amp;y=<?php echo date("Y"); ?>&
 
 ## Instructions  
 
-### /inc/navigation.inc.php
-
-To open a link in a new window, add _new to the end of the link (ie default.php_new or http://google.com_new)
-
-PDFs will always open in a new window by default
-
 
 ### if/else Code
 
@@ -90,6 +89,13 @@ paste the following code: `<?php include "inc/contact.inc.php"; ?>`. if it is a 
 ```
 
 
+### /inc/navigation.inc.php
+
+To open a link in a new window, add _new to the end of the link (ie default.php_new or http://google.com_new)
+
+PDFs will always open in a new window by default
+
+
 ### Lightbox
 
 add `$use_lightbox = "yes";` to the top of your document and `class="gallery"` must wrap the gallery (ie `<table class="gallery">` or `<ul class="gallery">`)
@@ -119,19 +125,6 @@ paste the following code: `<?php include "inc/twitter.inc.php"; ?>`. then, edit 
 `phone()` takes on argument; `$pn`
 
 To use this function, type something similar to: `<?php echo phone($myPhoneLocal); ?>`. This will check if the user is on a mobile device, and if they are, add the ability to click on the phone number to call. 
-
-### write_imgs()
-
-`write_imgs()` takes three arguments; they are `$f`, `$m`, and `$l`. These arguments translate to three parts of the filename of an image. This function is usually used in the inc/header.php file to write fader images.
-
-To use this function, type something similar to: `<?php echo write_imgs('fader', '1', '.jpg'); ?>`. This will look for fader1.jpg in the directory and then, if it is found, write it and then look for fader2.jpg, etc...
-
-
-### random_img()
-
-`random_img()` takes three arguments; they are `$f`, `$m`, and `$l`. These arguments translate to three parts of the filename of an image.
-
-To use this function, type something similar to: `<?php echo random_img('image', '1', '.jpg'); ?>`. This example searches the directory for image1.jpg then, in order, loads image1.jpg, image2.jpg, etc. into an array then spits out a random img.
 
 
 ### get_directions()

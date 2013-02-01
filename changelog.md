@@ -1,3 +1,13 @@
+### 5.4.0 (February 1, 2013)
+
+* Added support for compass
+* Modified readme.md
+* Quick fixes on `header.htm`
+* Added `_styleguide.php`
+* Changes to the stylesheet
+* Incorporated a grid system by default
+* Simplified `sitemap.php` a little
+
 ### 5.3.2 (January 28, 2013)
 
 * Updated `$publishdate` to 2013 (better late than never)
