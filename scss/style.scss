@@ -2,7 +2,21 @@
    Variables
    ========================================================================== */
 
-$color:#000;
+// links
+$links:#090;
+$links_hover:#900;
+$links_border:1px dotted transparent;
+$links_border_hover:1px dotted #900;
+
+// buttons
+$button_background:#333;
+$button_background_hover:#666;
+$button_border:black;
+$button_box_shadow_top:inset 0 1px 0 rgba(255, 255, 255, 0.2);
+$button_box_shadow_bottom:0 8px 10px -6px rgba(0, 0, 0, 0.75);
+$button_text:white;
+$button_text_hover:white;
+$button_text_shadow:0 1px 1px rgba(0, 0, 0, 0.75);
 
 
 
@@ -46,31 +60,98 @@ body {
     min-width:960px;
 }
 
-p, ul, ol {margin:0 0 15px 0; padding:0;}
-ul li, ol li {margin:0 0 0 18px; padding:0;}
+ul {
+    list-style:none; 
+    margin:0; 
+    padding:0;
+
+    li {
+        margin:0;
+        padding:0;
+    }
+}
+ul.bullets {list-style:disc;}
+ul.bot-margin {margin-bottom:15px;}
+p, ul.bullets, ol {
+    margin:0 0 15px 0; 
+    padding:0;
+}
+ul.bullets li, ol li {
+    margin:0 0 0 18px; 
+    padding:0;
+}
+
+blockquote {
+    border-left:3px solid #ccc;
+    margin:0 0 15px 0;
+    padding:5px 0 5px 10px;
+}
+pre {
+    border:1px solid #ccc;
+    border-radius:7px;
+    padding:15px;
+    margin:0 0 15px 0;
+}
 
 .pull-left {float:left;}
 .pull-right {float:right;}
 .txt-right {text-align:right;}
 
 .btn {
-    background:#333;
-    border:1px solid black;
+    background:$button_background;
+    border:1px solid $button_border;
     border-radius:4px;
-    box-shadow:inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 8px 10px -6px rgba(0, 0, 0, 1);
-    color:#fff;
+    box-shadow:$button_box_shadow_top, $button_box_shadow_bottom;
+    color:$button_text;
     display:inline-block;
-    font-size:16px;
+    font-size:14px;
     padding:0 25px;
-    line-height:30px;
-    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.75);
+    line-height:40px;
+    text-shadow:$button_text_shadow;
 }
     .btn:hover {
-        color: #fff;
-        background: #666;
-        border:1px solid black;
+        color:$button_text_hover;
+        background:$button_background_hover;
+        border:1px solid $button_border;
     }
 .btn-center {display:block; text-align:center;}
+
+/* seperate the grid and spacing */
+.row {overflow:hidden;}
+
+.pad {padding:25px;}
+.pad > :last-child {padding-bottom:0;}
+.no-pad-top {padding-top:0;}
+.no-pad-bot {padding-bottom:0;}
+
+/* grids */
+.span1, .span2, .span3, .span4, .span5, .span6, .span7, .span8, .span9, .span10, .span11, .span12 {float:left; margin:0 10px;}
+.span1 {width:60px;}
+.span2 {width:140px;}
+.span3 {width:220px;}
+.span4 {width:300px;}
+.span5 {width:380px;}
+.span6 {width:460px;}
+.span7 {width:540px;}
+.span8 {width:620px;}
+.span9 {width:700px;}
+.span10 {width:780px;}
+.span11 {width:860px;}
+.span12 {width:940px;}
+
+.span1_full, .span2_full, .span3_full, .span4_full, .span5_full, .span6_full, .span7_full, .span8_full, .span9_full, .span10_full, .span11_full, .span12_full {float:left;}
+.span1_full {width:80px;}
+.span2_full {width:160px;}
+.span3_full {width:240px;}
+.span4_full {width:320px;}
+.span5_full {width:400px;}
+.span6_full {width:480px;}
+.span7_full {width:560px;}
+.span8_full {width:640px;}
+.span9_full {width:720px;}
+.span10_full {width:800px;}
+.span11_full {width:880px;}
+.span12_full {width:990px;}
 
 
 
@@ -94,37 +175,59 @@ sub {bottom:-0.25em;}
 h1, h2, h3, h4, h5, h6 {
     font-weight:400;
     margin:0;
+    padding:0;
 }
 
 h1 {
     font-size:24px; 
     line-height:30px;
-    padding:10px 0;
 }
 h2 {
     font-size:22px; 
     line-height:28px;
-    padding:10px 0;
 }
 h3 {
     font-size:20px;
     line-height:26px;
-    padding:10px 0 5px 0;
 }
 h4 {
     font-size:18px; 
     line-height:24px;
-    padding:5px 0;
 }
 h5 {
     font-size:18px; 
     line-height:24px;
-    padding:10px 0;
 }
 h6 {
     font-size:14px; 
     line-height:20px;
-    padding:5px 0;
+}
+
+
+
+/* ==========================================================================
+   Embedded content
+   ========================================================================== */
+
+// normalize
+svg:not(:root) {overflow:hidden;}
+
+// styles
+img {border:0;}
+
+img.center {display:block; margin:10px auto;}
+img.align-r {float:right; margin:0 0 10px 10px;}
+img.align-l {float:left; margin:0 10px 10px 0;}
+.border {
+    background:white;
+    border:1px solid #ccc;
+    padding:4px;
+}
+
+iframe {
+    background:white;
+    border:1px solid #ccc;
+    padding:4px;
 }
 
 
@@ -139,8 +242,8 @@ a:active, a:hover {outline:0;}
 
 // styles
 a {
-    border-bottom:1px dotted transparent;
-    color:#090;
+    border-bottom:$links_border;
+    color:$links;
     text-decoration:none;
     
     -webkit-transition: background .4s ease, border .4s ease, color .4s ease;
@@ -150,8 +253,8 @@ a {
     transition:         background .4s ease, border .4s ease, color .4s ease;
 }
     a:hover, a:focus {
-        border-bottom:1px dotted #900;
-        color:#900;
+        border-bottom:$links_border_hover;
+        color:$links_hover;
         text-decoration:none;
     }
 
@@ -164,20 +267,13 @@ a.nobord {border:0 !important;}
    Navigation
    ========================================================================== */
 
-nav {}
-
 #navlist {
-	list-style:none;
-	margin:0;
-	padding:0;
-	
-	li {   // main navigation
-    	float:left;
-        margin:0;
-        padding:0;
+    
+    li {   // main navigation
+        float:left;
         position:relative;
         
-        a:link, a:visited, a:active {
+        a {
             background:transparent;
             border:0;
             color:black;
@@ -189,18 +285,15 @@ nav {}
             border:0;
             color:white;
         }
-	}
-	
-	ul {   // start dropdowns
-        list-style:none;
-        margin:0; 
-        padding:0; 
+    }
+    
+    ul {   // start dropdowns
         position:absolute; 
             top:-9999px; left:-9999px; 
         width:200px; 
         z-index:9999;
         
-        li a:link, li a:active, li a:visited {
+        li a {
             background:white; 
             color:black; 
             display:block; 
@@ -226,34 +319,6 @@ nav {}
 
 
 /* ==========================================================================
-   Embedded content
-   ========================================================================== */
-
-// normalize
-svg:not(:root) {overflow:hidden;}
-
-// styles
-img {border:0;}
-
-img.center {display:block; margin:10px auto;}
-img.align-r {float:right; margin:0 0 10px 10px;}
-img.align-l {float:left; margin:0 10px 10px 0;}
-
-img.border {
-    background:white;
-    border:1px solid #ccc;
-    padding:4px;
-}
-
-iframe {
-    background:white;
-    border:1px solid #ccc;
-    padding:4px;
-}
-
-
-
-/* ==========================================================================
    Content
    ========================================================================== */
 
@@ -273,21 +338,16 @@ aside {
 }
 
 ul.gallery {
-    list-style:none; 
-    margin:0; 
-    padding:0;
     
     li {
         float:left; 
-        margin:0; 
-        padding:0; 
         text-align:center;
     }
 }
 
 footer {
 
-    a:link, a:visited, a:active {
+    a {
         border-bottom:1px dotted transparent;
         color:black;
     }
@@ -303,28 +363,19 @@ footer {
     }
     
     .sl {
-        list-style:none;
-        margin:0;
         overflow:hidden;
-        padding:0;
         
         li {
             float:left;
-            margin:0;
-            padding:0;
         }
     }
     
     .ci {
-        list-style:none;
-        margin:0;
         overflow:hidden;
-        padding:0;
     
         li {
             float:left;
-            margin:0;
-            padding:0 0 7px 0;
+            padding-bottom:7px;
             width:50%;
         }
     }
@@ -392,9 +443,18 @@ textarea {
     vertical-align:top;
 } 
 input[type='submit'] {
+    background:$button_background;
+    border:1px solid $button_border;
+    border-radius:4px;
+    box-shadow:$button_box_shadow_top, $button_box_shadow_bottom;
+    color:$button_text;
     cursor:pointer;
-    margin:0 5px 0 0;
-    padding:5px 15px;
+    display:inline-block;
+    font-size:14px;
+    margin:0;
+    padding:0 15px;
+    line-height:25px;
+    text-shadow:$button_text_shadow;
     text-transform:uppercase;
 }
 
@@ -500,14 +560,10 @@ input[type='submit'] {
         select.modifier {width:212px;}
     }   
     ul {
-        list-style:none; 
         margin:0 0 15px 0; 
-        padding:0;
     }
     ul li {
         float:left; 
-        margin:0; 
-        padding:0;
         width:50%;
     }
     ul li input {
@@ -526,7 +582,7 @@ div.warning {
     color:#900;
 }
 
-::-webkit-input-placeholder {color:#333;}
+::-webkit-input-placeholder {color:#333; font-size:90%; font-style:italic;}
 ::-moz-placeholder {color:#333;}
 
 input, textarea, select, 
@@ -576,17 +632,14 @@ input[type='submit'], input[type='reset'] {
    ========================================================================== */
 
 ul.sitemap {
-    list-style:none; 
     margin:0 0 15px 0;
     overflow:hidden;
-    padding:0;
     
     li {
         float:left;
         font-size:13px;
         height:20px;
         line-height:20px;
-        margin:0; 
         padding:0 1% 0 0; 
         width:32.3333%;
     }

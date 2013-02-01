@@ -12,12 +12,12 @@ include_once "_config.php";
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
 <meta http-equiv="Expires" content="never">
-<meta name="description" content="<?=$meta_desc?>">
+<meta name="description" content="<?=(isset($meta_desc)) ? $meta_desc : ''?>">
 <meta name="language" content="English">
 <meta name="revisit-after" content="21">
 <meta name="robots" content="INDEX,FOLLOW">
-<title><?=$meta_title?></title>
-<?=$linkcss?>
+<title><?=(isset($meta_title)) ? $meta_title : $myCompany?></title>
+<?=(isset($linkcss)) ? $linkcss : ''?>
 <script src="lib/utility.js"></script>
 <script src="lib/popup.js"></script>
 
