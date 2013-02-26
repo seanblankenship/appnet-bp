@@ -96,6 +96,7 @@ pre {
 .pull-left {float:left;}
 .pull-right {float:right;}
 .txt-right {text-align:right;}
+.txt-center {text-align:center;}
 
 .btn {
     background:$button_background;
@@ -151,7 +152,7 @@ pre {
 .span9_full {width:720px;}
 .span10_full {width:800px;}
 .span11_full {width:880px;}
-.span12_full {width:990px;}
+.span12_full {width:960px;}
 
 
 
@@ -613,22 +614,22 @@ input:focus, textarea:focus, select:focus,
 }
         
 input[type='submit'], input[type='reset'] {
-    background:#333;
-    border:1px solid #222;
-    color:white;
+    background:$button_background;
+    border:1px solid $button_border;
+    color:$button_text;
     
-    -webkit-transition: background .4s ease;
-    -moz-transition:    background .4s ease;
-    -o-transition:      background .4s ease;
-    -ms-transition:     background .4s ease;
-    transition:         background .4s ease;
+    -webkit-transition: background .4s ease, color .4s ease;
+    -moz-transition:    background .4s ease, color .4s ease;
+    -o-transition:      background .4s ease, color .4s ease;
+    -ms-transition:     background .4s ease, color .4s ease;
+    transition:         background .4s ease, color .4s ease;
 }
-    input[type='submit']:hover, input[type='reset']:hover {background:#444;}
+    input[type='submit']:hover, input[type='reset']:hover {background:$button_background_hover; color:$button_text_hover;}
 
 
 
 /* ==========================================================================
-   Sitemap
+   Others
    ========================================================================== */
 
 ul.sitemap {
@@ -640,7 +641,23 @@ ul.sitemap {
         font-size:13px;
         height:20px;
         line-height:20px;
+        overflow:hidden;
         padding:0 1% 0 0; 
         width:32.3333%;
+    }
+}
+ol.err404 {
+    margin:0 0 20px 0;
+
+    li {margin-left:30px;}
+}
+#goog-fixurl ul {
+    margin:0 0 15px 0;
+    overflow:hidden;
+
+    li {margin-bottom:10px;}
+    input[type="submit"] {
+        display:block;
+        margin:10px 0 0 0;
     }
 }
