@@ -1,3 +1,11 @@
+### 5.5.0 (February 26, 2013)
+
+* Added 404 page and styled it with `style.scss`
+* Put if/else code in `body.htm`
+* Updated `inc/fader.inc.php` to reflects `images/`
+* Fixed error with .span_12full class in `style.scss`
+* Added variable support to form buttons
+
 ### 5.4.0 (February 1, 2013)
 
 * Added support for compass
