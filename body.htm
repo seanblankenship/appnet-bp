@@ -1,2 +1,14 @@
 <body>
-    <!-- content goes here -->
+    <h1><?php
+        if (basename($_SERVER[PHP_SELF])=="sitemap.php") {
+            echo "Sitemap";
+        } elseif (basename($_SERVER[PHP_SELF])=="404.php") {
+            echo "404 Error: Page Not Found";
+        } elseif (basename($_SERVER[PHP_SELF])=="search.php") {
+            echo "Search All Available Properties";
+        } elseif (basename($_SERVER[PHP_SELF])=="search_advanced.php") {
+            echo "Search All Available Properties";
+        } else {
+            echo $myCompany;
+        }
+    ?></h1>
