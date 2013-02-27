@@ -1,3 +1,8 @@
+### 5.5.1 (February 27, 2013)
+
+* Fixed an error with validation warning images not appearing
+* Added standard content to `inc/aside.inc.php`
+
 ### 5.5.0 (February 26, 2013)
 
 * Added 404 page and styled it with `style.scss`
