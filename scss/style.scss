@@ -330,6 +330,15 @@ aside {
     margin:0 0 20px 20px;
     padding:15px;
     width:270px;
+
+    section {border-top:1px dotted black; padding-top:15px;}
+    section:first-child {border-top:0; padding-top:0;}
+
+    h3 {margin-bottom:5px;}
+    .ci li {
+        line-height:20px;
+        margin-bottom:15px;
+    }
 }
 
 #moreinfo {
