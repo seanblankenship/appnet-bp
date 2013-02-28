@@ -1,10 +1,10 @@
 <footer>
     <div class="container cf">
-        <section>
+        <section class="span4">
             <h5>Site Navigation</h5>
             <ul class="sl"><?=nav($mainnav,0)?></ul>
         </section>
-        <section>
+        <section class="span4">
             <h5>Contact Us Quickly</h5>
             <form id="reachQuickly" action="email.php" method="post">
                 <input type="hidden" name="Subject" value="<?=$myCompany?> - Reach Us Quickly">
@@ -16,7 +16,7 @@
                 <input type="submit" name="Submit" value="Submit">
             </form>
         </section>
-        <section>
+        <section class="span4">
             <h5>Contact Information</h5>
             <ul class="ci">
                 <li><strong>Address:</strong><?php

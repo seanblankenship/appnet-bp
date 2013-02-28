@@ -1,6 +1,7 @@
 ### 5.5.2 (February 28, 2013)
 
 * Added some styling to the aside element in `style.scss`
+* Updated section elements in footer to reflect grid pattern
 
 ### 5.5.1 (February 27, 2013)
 
