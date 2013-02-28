@@ -1,3 +1,7 @@
+### 5.5.2 (February 28, 2013)
+
+* Added some styling to the aside element in `style.scss`
+
 ### 5.5.1 (February 27, 2013)
 
 * Fixed an error with validation warning images not appearing
