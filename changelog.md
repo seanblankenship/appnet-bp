@@ -1,3 +1,7 @@
+### 5.6.0 (March 7, 2013)
+
+* Added organictabs to the default files
+
 ### 5.5.2 (February 28, 2013)
 
 * Added some styling to the aside element in `style.scss`
