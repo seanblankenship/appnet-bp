@@ -1,3 +1,11 @@
+### 5.6.1 (March 28, 2013)
+
+* Added font stacks to variables section of `style.scss`
+* Fixed dropdown navigation issue in `style.scss`
+* Made all images block by default
+* Added another version of Open Sans (300 & 300italic) by default
+* Removed _styleguide.php
+
 ### 5.6.0 (March 7, 2013)
 
 * Added organictabs to the default files
