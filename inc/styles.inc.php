@@ -1,8 +1,10 @@
 <!-- load fonts -->
-<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic">
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,700,700italic">
 <!--[if lte IE 8]>
 <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans">
 <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400italic">
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300">
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300italic">
 <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:700">
 <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:700italic">
 <![endif]-->

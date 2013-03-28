@@ -18,6 +18,11 @@ $button_text:white;
 $button_text_hover:white;
 $button_text_shadow:0 1px 1px rgba(0, 0, 0, 0.75);
 
+// colors
+
+
+// fonts
+$font1:'Open Sans', Arial, Helvetica, sans-serif;
 
 
 /* ==========================================================================
@@ -55,7 +60,7 @@ font {display:none;} /* makes people who use the font tag go crazy (as they righ
 body {
     background:white;
     color:black;
-    font:13px/20px 'Open Sans', Arial, Helvetica, sans-serif;
+    font:14px/25px $font1;
     margin:0;
     min-width:960px;
 }
@@ -214,7 +219,7 @@ h6 {
 svg:not(:root) {overflow:hidden;}
 
 // styles
-img {border:0;}
+img {border:0; display:block;}
 
 img.center {display:block; margin:10px auto;}
 img.align-r {float:right; margin:0 0 10px 10px;}
@@ -308,7 +313,7 @@ a.nobord {border:0 !important;}
     li:hover ul {left:0; top:40px;} 
     
     li ul a {float:left; width:170px;}
-    ul ul {top:auto; left:170px; margin:0;}
+    ul li:hover ul {top:auto; left:170px; margin:0;}
     li:hover ul ul, li:hover ul ul ul, li:hover ul ul ul ul {display:none;}
     li:hover ul, li li:hover ul, li li li:hover ul, li li li li:hover ul {display:block;}
 
