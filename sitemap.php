@@ -5,7 +5,7 @@ include_once "_config.php";
 $my_root = "D:\\users\\".$serverFolder;
 
 // create an array of files that are not to be included
-$bad_files = array('_config.php', '_styleguide.php', '404.php', 'article.php', 'article_list.php', 'article_output.php', 'article_recent.php', 'ar_output.php', 'ar_o_list.php', 'ar_o_list_xml.php', 'calendar.php', 'details.php', 'email.php', 'emailfriend.php', 'email_rm.php', 'list_events.php', 'member_save.php', 'member_view.php', 'ok.php', 'output.php', 'pg_output.php', 'pg_o_list.php', 'pg_o_list_xml.php', 'pg_rss_list.php', 'photo.php', 'photo_list.php', 'photo_output.php', 'photo_recent.php', 'portfolio_featured.php', 'process-quote.php', 'recaptchalib.php', 'register.php', 'result.php', 'rss_list.php', 'sitemap.php','test.php', 'test2.php', 'ver.php');
+$bad_files = array('_config.php', '404.php', 'article.php', 'article_list.php', 'article_output.php', 'article_recent.php', 'ar_output.php', 'ar_o_list.php', 'ar_o_list_xml.php', 'calendar.php', 'details.php', 'email.php', 'emailfriend.php', 'email_rm.php', 'list_events.php', 'member_save.php', 'member_view.php', 'ok.php', 'output.php', 'pg_output.php', 'pg_o_list.php', 'pg_o_list_xml.php', 'pg_rss_list.php', 'photo.php', 'photo_list.php', 'photo_output.php', 'photo_recent.php', 'portfolio_featured.php', 'process-quote.php', 'recaptchalib.php', 'register.php', 'result.php', 'rss_list.php', 'sitemap.php','test.php', 'test2.php', 'ver.php');
 
 // create an array of extensions that are to be included
 $good_extensions = array('php'); 
