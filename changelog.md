@@ -5,6 +5,8 @@
 * Made all images block by default
 * Added another version of Open Sans (300 & 300italic) by default
 * Removed _styleguide.php
+* Edited the `$bad_files` array in `sitemap.php`
+* Modified how `$good_extensions` is verified in `sitemap.php`
 
 ### 5.6.0 (March 7, 2013)
 
