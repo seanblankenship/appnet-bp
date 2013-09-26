@@ -64,12 +64,34 @@ use the code below as a starting point for body.htm or footer.htm files if neede
 
 ```php
 <?php 
-    if ($_REQUEST["table"] == "realman") {
-        echo "";
-    } elseif (basename($_SERVER[PHP_SELF])=="events.php") {
-        echo "";
-    } elseif (basename($_SERVER[PHP_SELF])=="sitemap.php") {
+    if (basename($_SERVER[PHP_SELF])=="sitemap.php") {
         echo "Sitemap";
+    } elseif ($_REQUEST['table']=="photo") {
+        echo "Photo Gallery";
+    } elseif ($_REQUEST['table']=="article") {
+        echo "Latest Articles";
+    } elseif ($_REQUEST['table']=="realman") {
+        if (isset($sRow["title"])) {
+            echo $sRow["title"];
+        } elseif (isset($meta_title)) {
+            echo $meta_title;
+        } elseif (!empty($sRow['addr_1'])) {
+            echo $sRow["addr_1"].', '.$sRow["city"].', '.$sRow["state"].' '.$sRow["zipcode"];
+        } else {
+            echo "Real Estate Listings";
+        }
+    } elseif (basename($_SERVER[PHP_SELF])=="events.php") {
+        echo "Events Calendar";
+    } elseif (basename($_SERVER[PHP_SELF])=="404.php") {
+        echo "404 Error: Page Not Found";
+    } elseif (basename($_SERVER[PHP_SELF])=="404.php") {
+        echo "404 Error: Page Not Found";
+    } elseif (basename($_SERVER[PHP_SELF])=="search.php") {
+        echo "Search All Available Properties";
+    } elseif (basename($_SERVER[PHP_SELF])=="search_advanced.php") {
+        echo "Search All Available Properties";
+    } elseif (isset($meta_title)) {
+        echo $meta_title;
     } else {
         echo $myCompany;
     }

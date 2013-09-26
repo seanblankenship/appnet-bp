@@ -2,7 +2,7 @@
 
 // get myDomain info
 include_once "_config.php";
-$my_root = "D:\\users\\".$serverFolder;
+$my_root = "/var/www/vhosts/".$serverFolder;
 
 // create an array of files that are not to be included
 $bad_files = array('_config.php', '404.php', 'article.php', 'article_list.php', 'article_output.php', 'article_recent.php', 'ar_output.php', 'ar_o_list.php', 'ar_o_list_xml.php', 'calendar.php', 'details.php', 'email.php', 'emailfriend.php', 'email_rm.php', 'list_events.php', 'member_save.php', 'member_view.php', 'ok.php', 'output.php', 'pg_output.php', 'pg_o_list.php', 'pg_o_list_xml.php', 'pg_rss_list.php', 'photo.php', 'photo_list.php', 'photo_output.php', 'photo_recent.php', 'portfolio_featured.php', 'process-quote.php', 'recaptchalib.php', 'register.php', 'result.php', 'rss_list.php', 'sitemap.php','test.php', 'test2.php', 'ver.php');
@@ -21,14 +21,12 @@ if ($handle = opendir($my_root)) {
     
         // get the file extension
         $extension_explode = explode('.', $entry);
-        $arr_count = count($extension_explode);
-        $k = $arr_count - 1;
 
-        // if there is a file extension, continue
-        if (isset($extension_explode[$k])) {
+        // only grab files like something.php not something.inc.php
+        if ( (isset($extension_explode[1])) && (!isset($extension_explode[2])) ) {
 
             // set the file extension to lowercase, just in case
-            $extension_explode = strtolower($extension_explode[$k]);
+            $extension_explode = strtolower($extension_explode[1]);
        
             // do work if the file is good and the extension is correct
             if ((!in_array($entry, $bad_files)) && (in_array($extension_explode, $good_extensions))){
