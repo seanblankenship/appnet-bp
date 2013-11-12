@@ -84,8 +84,6 @@ use the code below as a starting point for body.htm or footer.htm files if neede
         echo "Events Calendar";
     } elseif (basename($_SERVER[PHP_SELF])=="404.php") {
         echo "404 Error: Page Not Found";
-    } elseif (basename($_SERVER[PHP_SELF])=="404.php") {
-        echo "404 Error: Page Not Found";
     } elseif (basename($_SERVER[PHP_SELF])=="search.php") {
         echo "Search All Available Properties";
     } elseif (basename($_SERVER[PHP_SELF])=="search_advanced.php") {

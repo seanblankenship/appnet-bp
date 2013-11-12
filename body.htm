@@ -1,33 +1,31 @@
 <body>
     <h1><?php
-        if (basename($_SERVER[PHP_SELF])=="sitemap.php") {
-            echo "Sitemap";
-        } elseif ($_REQUEST['table']=="photo") {
-            echo "Photo Gallery";
+        if ($_REQUEST['table']=="agent") {
+            echo "Meet Our Experience Agents";
         } elseif ($_REQUEST['table']=="article") {
-            echo "Latest Articles";
-        } elseif ($_REQUEST['table']=="realman") {
-            if (isset($sRow["title"])) {
-                echo $sRow["title"];
-            } elseif (isset($meta_title)) {
-                echo $meta_title;
-            } elseif (!empty($sRow['addr_1'])) {
-                echo $sRow["addr_1"].', '.$sRow["city"].', '.$sRow["state"].' '.$sRow["zipcode"];
+            if (!empty($aRes[$myi]['title'])) {
+                echo $aRes[$myi]['title'];
             } else {
-                echo "Real Estate Listings";
+                echo "Latest Articles";
             }
-        } elseif (basename($_SERVER[PHP_SELF])=="events.php") {
-            echo "Events Calendar";
-        } elseif (basename($_SERVER[PHP_SELF])=="404.php") {
-            echo "404 Error: Page Not Found";
-        } elseif (basename($_SERVER[PHP_SELF])=="404.php") {
-            echo "404 Error: Page Not Found";
         } elseif (basename($_SERVER[PHP_SELF])=="search.php") {
             echo "Search All Available Properties";
         } elseif (basename($_SERVER[PHP_SELF])=="search_advanced.php") {
             echo "Search All Available Properties";
+        } elseif (basename($_SERVER[PHP_SELF])=="sitemap.php") {
+            echo "Sitemap";
+        } elseif (basename($_SERVER[PHP_SELF])=="login.php") {
+            echo "Login to Save Your Listing";
+        } elseif (basename($_SERVER[PHP_SELF])=="404.php") {
+            echo "404 Error: Page Not Found";
         } elseif (isset($meta_title)) {
-            echo $meta_title;
+            if ($_REQUEST['mode']=='friend') {
+                echo "Tell a Friend About: $meta_title";
+            } elseif (!empty($meta_title)) {
+                echo "$meta_title";
+            }
+        } elseif ($_REQUEST['our_listings']==1) {
+            echo "Featured ".ucwords($_REQUEST['type'])." Listings";
         } else {
             echo $myCompany;
         }
