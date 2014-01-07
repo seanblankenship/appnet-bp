@@ -6,12 +6,12 @@
 
 $myCompany       = "";
 	
-$serverFolder    = "something.com";
+$serverFolder    = ".com";
 	
 $myDomain        = "http://".$serverFolder;
 $myEmail         = "info@".$serverFolder;
 		
-$publishdate     = "2013";
+$publishdate     = "2014";
 	
 $myAddressOne    = "";
 $myAddressTwo    = "";
@@ -40,7 +40,7 @@ $quickCommentForm="0";
 
 
 // include all functions
-include "inc/functions.php";
+include "inc/_functions.php";
 
 // include navigation
 include "inc/navigation.inc.php";

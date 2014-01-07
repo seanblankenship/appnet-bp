@@ -2,6 +2,9 @@
    Variables
    ========================================================================== */
 
+// colors
+
+
 // links
 $links:#090;
 $links_hover:#900;
@@ -18,9 +21,6 @@ $button_text:white;
 $button_text_hover:white;
 $button_text_shadow:0 1px 1px rgba(0, 0, 0, 0.75);
 
-// colors
-
-
 // fonts
 $font1:'Open Sans', Arial, Helvetica, sans-serif;
 
@@ -28,6 +28,9 @@ $font1:'Open Sans', Arial, Helvetica, sans-serif;
 /* ==========================================================================
    Resets are based on normalize.css
    ========================================================================== */
+ 
+// this will NOT work in IE7 or earlier
+*{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;}
    
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {display:block;} /* Corrects `block` not defined in IE 8/9 */
 figure {margin:0;} /* Addresses margin not present in IE 8/9 and Safari 5. */
@@ -38,7 +41,6 @@ html {-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;} /* Prevents iOS
 font {display:none;} /* makes people who use the font tag go crazy (as they rightly should) */
 
 
-
 /* ==========================================================================
    Clearfix
    ========================================================================== */
@@ -46,7 +48,6 @@ font {display:none;} /* makes people who use the font tag go crazy (as they righ
 .cf:before, .cf:after {content:""; display:table;}
 .cf:after {clear:both;}
 .cf {zoom:1;}
-
 
 
 /* ==========================================================================
@@ -270,8 +271,10 @@ a.nobord {border:0 !important;}
 
 
 /* ==========================================================================
-   Navigation
+   Content
    ========================================================================== */
+
+#pagewrap, .container {margin:0 auto; width:960px;}
 
 #navlist {
     
@@ -318,17 +321,6 @@ a.nobord {border:0 !important;}
     li:hover ul, li li:hover ul, li li li:hover ul, li li li li:hover ul {display:block;}
 
 }
-
-// disables dropdowns in ie6
-.ie6 #navlist ul {display:none !important;}
-
-
-
-/* ==========================================================================
-   Content
-   ========================================================================== */
-
-#pagewrap, .container {margin:0 auto; width:960px;}
 
 aside {
     float:right;

@@ -1,12 +1,5 @@
 <?php
 
-//  include mobile detection
-include "__detect_mobile.php";
-$detect = new Mobile_Detect();
-if ($detect->isMobile()){
-    $ismobile = true;
-}
-
 //  set the pageName variable
 if (!isset($pageName)) {
     $pn_array = array();
@@ -14,19 +7,27 @@ if (!isset($pageName)) {
     $pageName = $pn_array[0];
 }
 
-//  function for writing telephone numbers with ability to click to call
-function phone($pn) {
-    global $ismobile;
-    if ($ismobile==true) {
-        $pn_stripped = preg_replace('/[^\d.]/', '', $pn);
-        $length = strlen($pn_stripped);
-        if($length==10){
-            $pn = '<a href="tel:+1'.$pn_stripped.'">'.$pn.'</a>';
-        } elseif($length==11) {
-            $pn = '<a href="tel:+'.$pn_stripped.'">'.$pn.'</a>';
-        }    
-    }
-    return $pn;    
+// function to grab redirect_script_url from server and use as title
+function writeScriptUrlAsTitle() {
+    $returnThis = basename($_SERVER['REDIRECT_SCRIPT_URL']);
+    $returnThis = str_replace("-", " ", $returnThis);
+    $returnThis = ucwords(strtolower($returnThis));
+
+    // add a space at the beginning and end to deal with the abreviations issues below
+    $returnThis = " ".$returnThis." ";
+
+    // array of bad abbreviations (IN for Indiana has been taken out)
+    $bad_abbreviations  = array(' A ', ' By ', ' To ', ' Al ', ' Ak ', ' Az ', ' Ar ', ' Ca ', ' Co ', ' Ct ', ' De ', ' Dc ', ' Fl ', ' Ga ', ' Hi ', ' Id ', ' Il ', ' Ia ', ' Ks ', ' Ky ', ' La ', ' Me ', ' Md ', ' Ma ', ' Mi ', ' Mn ', ' Ms ', ' Mo ', ' Mt ', ' Ne ', ' Nv ', ' Nh ', ' Nj ', ' Nm ', ' Ny ', ' Nc ', ' Nd ', ' Oh ', ' Ok ', ' Or ', ' Pa ', ' Ri ', ' Sc ', ' Sd ', ' Tn ', ' Tx ', ' Ut ', ' Vt ', ' Va ', ' Wa ', ' Wv ', ' Wi ', ' Wy ');
+    $good_abbreviations = array(' a ', ' by ', ' to ', ' AL ', ' AK ', ' AZ ', ' AR ', ' CA ', ' CO ', ' CT ', ' DE ', ' DC ', ' FL ', ' GA ', ' HI ', ' ID ', ' IL ', ' IA ', ' KS ', ' KY ', ' LA ', ' ME ', ' MD ', ' MA ', ' MI ', ' MN ', ' MS ', ' MO ', ' MT ', ' NE ', ' NV ', ' NH ', ' NJ ', ' NM ', ' NY ', ' NC ', ' ND ', ' OH ', ' OK ', ' OR ', ' PA ', ' RI ', ' SC ', ' SD ', ' TN ', ' TX ', ' UT ', ' VT ', ' VA ', ' WA ', ' WV ', ' WI ', ' WY ');   
+
+    // replace abbreviations
+    $returnThis = str_replace($bad_abbreviations, $good_abbreviations, $returnThis);
+
+    // get rid of space at beginning and end of the title now that the abreviations have been replaced
+    $returnThis = substr($returnThis, 1);
+    $returnThis = substr($returnThis, 0, -1);
+    
+    return $returnThis;
 }
     
 //  function for writing images, one after another
@@ -281,8 +282,6 @@ function checkTarget($link) {
  */
 
 //  sets myPhoneMoreInfo for include.moreinfo.php
-$myPhoneTollFree = phone($myPhoneTollFree);
-$myPhoneLocal = phone($myPhoneLocal);
 $myPhone = $myPhoneTollFree." or ".$myPhoneLocal;    
 if($myPhoneLocal=="" || $myPhoneTollFree=="") {
     if($myPhoneLocal=="") {
@@ -418,3 +417,9 @@ $myStatename = array(
     'WI' => 'Wisconsin', 
     'WY' => 'Wyoming'
 );
+
+// create an array of files that are not to be included in the sitemap
+$bad_files = array('_config.php', '404.php', 'article.php', 'article_list.php', 'article_output.php', 'article_recent.php', 'ar_output.php', 'ar_o_list.php', 'ar_o_list_xml.php', 'calendar.php', 'details.php', 'email.php', 'emailfriend.php', 'email_rm.php', 'list_events.php', 'member_save.php', 'member_view.php', 'ok.php', 'output.php', 'pg_output.php', 'pg_o_list.php', 'pg_o_list_xml.php', 'pg_rss_list.php', 'photo.php', 'photo_list.php', 'photo_output.php', 'photo_recent.php', 'portfolio_featured.php', 'process-quote.php', 'recaptchalib.php', 'register.php', 'result.php', 'rss_list.php', 'sitemap.php','test.php', 'test2.php', 'ver.php');
+
+// create an array of extensions that are to be included in the sitemap
+$good_extensions = array('php'); 

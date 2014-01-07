@@ -1,10 +1,5 @@
-<?php 
-
-require "header.htm";
-require "body.htm";
-
-?>
-
+<?php require "header.htm";
+require "body.htm"; ?>
 <p>Sorry, but the page you were trying to view does not exist.</p>
 <p>It looks like this was the result of either:</p>
 <ol class="err404">
@@ -15,7 +10,4 @@ require "body.htm";
     var GOOG_FIXURL_LANG = (navigator.language || '').slice(0,2),GOOG_FIXURL_SITE = location.host;
 </script>
 <script src="http://linkhelp.clients.google.com/tbproxy/lh/wm/fixurl.js"></script>
-
-<?php
-
-require "footer.htm";
+<?php require "footer.htm";
