@@ -1,7 +1,5 @@
 # Main Site Template
 
-**Version:**        5.6.1
-
 
 ## Programming Navigation Links
 	
