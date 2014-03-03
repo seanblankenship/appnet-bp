@@ -2,7 +2,24 @@
 <head>
 <meta charset="utf-8">
 <? if ($pageName=="programming") { 
-    echo '<meta http-equiv="Expires" content="never"><meta name="description" content="'.(isset($meta_desc)) ? $meta_desc : ''.'"><meta name="language" content="English"><meta name="revisit-after" content="21"><meta name="robots" content="INDEX,FOLLOW"><title>'.(isset($meta_title)) ? $meta_title : $myCompany.'</title>'.(isset($linkcss)) ? $linkcss : '';
+    echo '<meta http-equiv="Expires" content="never"><meta name="description" content="';
+    echo (isset($meta_desc)) ? $meta_desc : '';
+    echo '"><meta name="language" content="English"><meta name="revisit-after" content="21"><meta name="robots" content="INDEX,FOLLOW">';
+    echo '<title>';
+    if ( (isset($title_special)) && (!empty($title_special)) ) {
+        echo $title_special;
+    } elseif (isset($_REQUEST['our_listings'])) {
+        echo $title_special;
+    } elseif (!empty($meta_title)) {
+        echo "$meta_title : $myCompany";
+    } elseif (!empty($title)) {
+        echo $title;
+    } else {
+        echo $myCompany;
+    }
+    echo '</title>';
+    echo (isset($linkcss)) ? $linkcss : '';
+    echo (isset($userCss)) ? $userCss : '';
 } else {
     if (file_exists("meta/$pageName.txt")) { include "meta/$pageName.txt"; } else { echo "<title>$myCompany</title>\n"; } 
 } ?>
