@@ -103,7 +103,6 @@
 						<p class="expl">
 							This XML Sitemap contains <xsl:value-of select="count(sitemap:urlset/sitemap:url)"/> URLs.
 						</p>
-						<p class="expl"><a href="http://www.1stchoicerealty-sc.com/sitemap_index.xml">&#8593; Sitemap Index</a></p>
 						<table id="sitemap" cellpadding="3">
 							<thead>
 								<tr>

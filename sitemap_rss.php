@@ -60,3 +60,5 @@ echo '    <url>
       
     closedir($handle);
 }
+echo '</urlset>';
+?>
